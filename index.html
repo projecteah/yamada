@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yamada</title>
+  <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
 </head>
 <body>
   <div id="app">
     <h1>Yamada</h1>
     <p>Local music player.</p>
   </div>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {};
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
