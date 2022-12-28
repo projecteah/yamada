@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yamada</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/dist/index.css">
   <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.27/dist/index.full.min.js"></script>
 </head>
 <body>
   <div id="app">
-    <h1>Yamada</h1>
-    <p>Local music player.</p>
+    <el-container>
+      <el-header>
+        <h1>Yamada</h1>
+      </el-header>
+      <el-main>
+        <p>Local music player.</p>
+      </el-main>
+    </el-container>
   </div>
   <script>
     const { createApp } = Vue;
-    createApp({
+    const app = createApp({
       data() {
         return {};
       }
-    }).mount('#app');
+    });
+    app.use(ElementPlus);
+    app.mount('#app');
   </script>
 </body>
 </html>
