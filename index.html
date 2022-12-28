@@ -11,14 +11,20 @@
 <body>
   <div id="app">
     <el-container>
-      <el-header>
-        <h1>Yamada</h1>
+      <el-header class="header">
+        <span class="title">Yamada</span>
+        <span class="subtitle">Local music player</span>
       </el-header>
       <el-main>
-        <p>Local music player.</p>
+        <p>Open a file to start playing.</p>
       </el-main>
     </el-container>
   </div>
+  <style>
+    .header { display: flex; align-items: center; gap: 12px; }
+    .title { font-size: 20px; font-weight: 600; }
+    .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
+  </style>
   <script>
     const { createApp } = Vue;
     const app = createApp({
