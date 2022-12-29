@@ -16,7 +16,8 @@
         <span class="subtitle">Local music player</span>
       </el-header>
       <el-main>
-        <p>Open a file to start playing.</p>
+        <el-button type="primary" @click="openFile">Open File</el-button>
+        <input type="file" ref="fileInput" accept="audio/*" style="display:none" @change="onFileChange">
       </el-main>
     </el-container>
   </div>
@@ -26,10 +27,13 @@
     .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
   </style>
   <script>
-    const { createApp } = Vue;
+    const { createApp, ref } = Vue;
     const app = createApp({
-      data() {
-        return {};
+      setup() {
+        const fileInput = ref(null);
+        const openFile = () => { fileInput.value.click(); };
+        const onFileChange = () => {};
+        return { fileInput, openFile, onFileChange };
       }
     });
     app.use(ElementPlus);
