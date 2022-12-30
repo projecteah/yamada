@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yamada</title>
   <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/dist/index.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.27/dist/index.full.min.js"></script>
 </head>
@@ -19,34 +20,10 @@
         <el-button type="primary" @click="openFile">Open File</el-button>
         <input type="file" ref="fileInput" accept="audio/*" style="display:none" @change="onFileChange">
         <p v-if="fileName">{{ fileName }}</p>
+        <audio v-if="fileUrl" :src="fileUrl" controls ref="audio" class="audio"></audio>
       </el-main>
     </el-container>
   </div>
-  <style>
-    .header { display: flex; align-items: center; gap: 12px; }
-    .title { font-size: 20px; font-weight: 600; }
-    .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
-  </style>
-  <script>
-    const { createApp, ref } = Vue;
-    const app = createApp({
-      setup() {
-        const fileInput = ref(null);
-        const fileName = ref('');
-        const fileUrl = ref('');
-        const openFile = () => { fileInput.value.click(); };
-        const onFileChange = (e) => {
-          const file = e.target.files[0];
-          if (!file) return;
-          fileName.value = file.name;
-          if (fileUrl.value) URL.revokeObjectURL(fileUrl.value);
-          fileUrl.value = URL.createObjectURL(file);
-        };
-        return { fileInput, fileName, openFile, onFileChange };
-      }
-    });
-    app.use(ElementPlus);
-    app.mount('#app');
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
