@@ -7,6 +7,7 @@ const app = createApp({
     const fileName = ref('');
     const fileUrl = ref('');
     const playing = ref(false);
+    const progress = ref(0);
 
     const openFile = () => {
       fileInput.value.click();
@@ -24,6 +25,7 @@ const app = createApp({
 
       fileUrl.value = URL.createObjectURL(file);
       playing.value = false;
+      progress.value = 0;
     };
 
     const togglePlay = () => {
@@ -34,7 +36,13 @@ const app = createApp({
       }
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, openFile, onFileChange, togglePlay };
+    const updateProgress = () => {
+      if (audio.value.duration) {
+        progress.value = (audio.value.currentTime / audio.value.duration) * 100;
+      }
+    };
+
+    return { fileInput, audio, fileName, fileUrl, playing, progress, openFile, onFileChange, togglePlay, updateProgress };
   }
 });
 

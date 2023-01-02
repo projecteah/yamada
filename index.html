@@ -22,7 +22,8 @@
         <p v-if="fileName">{{ fileName }}</p>
         <div v-if="fileUrl" class="player">
           <el-button @click="togglePlay">{{ playing ? 'Pause' : 'Play' }}</el-button>
-          <audio :src="fileUrl" ref="audio" @play="playing = true" @pause="playing = false"></audio>
+          <el-progress :percentage="progress" :stroke-width="4" class="progress" />
+          <audio :src="fileUrl" ref="audio" @play="playing = true" @pause="playing = false" @timeupdate="updateProgress"></audio>
         </div>
       </el-main>
     </el-container>
