@@ -1,4 +1,5 @@
 .header { display: flex; align-items: center; gap: 12px; }
 .title { font-size: 20px; font-weight: 600; }
 .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
-.audio { margin-top: 16px; width: 100%; }
+.player { margin-top: 16px; }
+audio { display: none; }

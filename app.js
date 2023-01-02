@@ -6,9 +6,12 @@ const app = createApp({
     const audio = ref(null);
     const fileName = ref('');
     const fileUrl = ref('');
+    const playing = ref(false);
+
     const openFile = () => {
       fileInput.value.click();
     };
+
     const onFileChange = (e) => {
       const file = e.target.files[0];
       if (!file) return;
@@ -20,8 +23,18 @@ const app = createApp({
       }
 
       fileUrl.value = URL.createObjectURL(file);
+      playing.value = false;
     };
-    return { fileInput, audio, fileName, fileUrl, openFile, onFileChange };
+
+    const togglePlay = () => {
+      if (audio.value.paused) {
+        audio.value.play();
+      } else {
+        audio.value.pause();
+      }
+    };
+
+    return { fileInput, audio, fileName, fileUrl, playing, openFile, onFileChange, togglePlay };
   }
 });
 

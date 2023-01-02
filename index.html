@@ -20,7 +20,10 @@
         <el-button type="primary" @click="openFile">Open File</el-button>
         <input type="file" ref="fileInput" accept="audio/*" style="display:none" @change="onFileChange">
         <p v-if="fileName">{{ fileName }}</p>
-        <audio v-if="fileUrl" :src="fileUrl" controls ref="audio" class="audio"></audio>
+        <div v-if="fileUrl" class="player">
+          <el-button @click="togglePlay">{{ playing ? 'Pause' : 'Play' }}</el-button>
+          <audio :src="fileUrl" ref="audio" @play="playing = true" @pause="playing = false"></audio>
+        </div>
       </el-main>
     </el-container>
   </div>
