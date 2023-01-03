@@ -42,7 +42,13 @@ const app = createApp({
       }
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, openFile, onFileChange, togglePlay, updateProgress };
+    const seek = (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const pct = (e.clientX - rect.left) / rect.width;
+      audio.value.currentTime = pct * audio.value.duration;
+    };
+
+    return { fileInput, audio, fileName, fileUrl, playing, progress, openFile, onFileChange, togglePlay, updateProgress, seek };
   }
 });
 
