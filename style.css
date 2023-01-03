@@ -2,5 +2,7 @@
 .title { font-size: 20px; font-weight: 600; }
 .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
 .player { margin-top: 16px; }
-.player .progress { margin-top: 12px; cursor: pointer; }
+.progress-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+.progress { flex: 1; cursor: pointer; }
+.time { font-size: 12px; color: var(--el-text-color-secondary); min-width: 40px; }
 audio { display: none; }
