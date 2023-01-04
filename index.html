@@ -27,6 +27,10 @@
             <el-progress :percentage="progress" :stroke-width="4" @click="seek" class="progress" />
             <span class="time">{{ formatTime(duration) }}</span>
           </div>
+          <div class="volume-row">
+            <span class="label">Vol</span>
+            <el-slider v-model="volume" :show-tooltip="false" @input="setVolume" class="volume-slider" />
+          </div>
           <audio
             :src="fileUrl"
             ref="audio"

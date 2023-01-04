@@ -10,6 +10,7 @@ const app = createApp({
     const progress = ref(0);
     const currentTime = ref(0);
     const duration = ref(0);
+    const volume = ref(100);
 
     const openFile = () => {
       fileInput.value.click();
@@ -54,6 +55,10 @@ const app = createApp({
       audio.value.currentTime = pct * audio.value.duration;
     };
 
+    const setVolume = () => {
+      audio.value.volume = volume.value / 100;
+    };
+
     const formatTime = (s) => {
       if (!s) return '0:00';
       const m = Math.floor(s / 60);
@@ -61,7 +66,7 @@ const app = createApp({
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, openFile, onFileChange, togglePlay, updateProgress, seek, formatTime };
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, openFile, onFileChange, togglePlay, updateProgress, seek, setVolume, formatTime };
   }
 });
 
