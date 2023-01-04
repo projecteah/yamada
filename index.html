@@ -17,10 +17,15 @@
         <span class="subtitle">Local music player</span>
       </el-header>
       <el-main>
-        <el-button type="primary" @click="openFile">Open File</el-button>
-        <input type="file" ref="fileInput" accept="audio/*" style="display:none" @change="onFileChange">
-        <p v-if="fileName">{{ fileName }}</p>
+        <el-button type="primary" @click="openFile">Open Files</el-button>
+        <input type="file" ref="fileInput" accept="audio/*" multiple style="display:none" @change="onFileChange">
+        <div v-if="playlist.length" class="playlist">
+          <el-table :data="playlist" size="small" @row-click="playIndex" highlight-current-row>
+            <el-table-column prop="name" label="Name" />
+          </el-table>
+        </div>
         <div v-if="fileUrl" class="player">
+          <p v-if="fileName">{{ fileName }}</p>
           <el-button @click="togglePlay">{{ playing ? 'Pause' : 'Play' }}</el-button>
           <div class="progress-row">
             <span class="time">{{ formatTime(currentTime) }}</span>

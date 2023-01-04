@@ -1,4 +1,4 @@
-const { createApp, ref } = Vue;
+const { createApp, ref, computed } = Vue;
 
 const app = createApp({
   setup() {
@@ -11,26 +11,48 @@ const app = createApp({
     const currentTime = ref(0);
     const duration = ref(0);
     const volume = ref(100);
+    const playlist = ref([]);
+    const currentIndex = ref(0);
+
+    const hasPrev = computed(() => currentIndex.value > 0);
+    const hasNext = computed(() => currentIndex.value < playlist.value.length - 1);
 
     const openFile = () => {
       fileInput.value.click();
     };
 
     const onFileChange = (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
+      const files = Array.from(e.target.files);
+      if (!files.length) return;
 
-      fileName.value = file.name;
+      files.forEach(f => {
+        playlist.value.push({ name: f.name, url: URL.createObjectURL(f) });
+      });
 
+      if (!fileUrl.value) {
+        loadTrack(0);
+      }
+    };
+
+    const loadTrack = (i) => {
       if (fileUrl.value) {
         URL.revokeObjectURL(fileUrl.value);
       }
 
-      fileUrl.value = URL.createObjectURL(file);
+      currentIndex.value = i;
+
+      const track = playlist.value[i];
+      fileName.value = track.name;
+      fileUrl.value = track.url;
       playing.value = false;
       progress.value = 0;
       currentTime.value = 0;
       duration.value = 0;
+    };
+
+    const playIndex = (row) => {
+      const i = playlist.value.findIndex(t => t.name === row.name);
+      loadTrack(i);
     };
 
     const togglePlay = () => {
@@ -66,7 +88,7 @@ const app = createApp({
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, openFile, onFileChange, togglePlay, updateProgress, seek, setVolume, formatTime };
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, openFile, onFileChange, playIndex, togglePlay, updateProgress, seek, setVolume, formatTime };
   }
 });
 
