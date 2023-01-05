@@ -27,6 +27,8 @@
         <div v-if="fileUrl" class="player">
           <p v-if="fileName">{{ fileName }}</p>
           <el-button @click="togglePlay">{{ playing ? 'Pause' : 'Play' }}</el-button>
+          <el-button @click="prev" :disabled="!hasPrev">Prev</el-button>
+          <el-button @click="next" :disabled="!hasNext">Next</el-button>
           <div class="progress-row">
             <span class="time">{{ formatTime(currentTime) }}</span>
             <el-progress :percentage="progress" :stroke-width="4" @click="seek" class="progress" />
@@ -42,7 +44,8 @@
             @play="playing = true"
             @pause="playing = false"
             @timeupdate="updateProgress"
-            @loadedmetadata="duration = audio.duration">
+            @loadedmetadata="duration = audio.duration"
+            @ended="next">
           </audio>
         </div>
       </el-main>

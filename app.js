@@ -63,6 +63,18 @@ const app = createApp({
       }
     };
 
+    const prev = () => {
+      if (hasPrev.value) {
+        loadTrack(currentIndex.value - 1);
+      }
+    };
+
+    const next = () => {
+      if (hasNext.value) {
+        loadTrack(currentIndex.value + 1);
+      }
+    };
+
     const updateProgress = () => {
       currentTime.value = audio.value.currentTime;
 
@@ -88,7 +100,7 @@ const app = createApp({
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, openFile, onFileChange, playIndex, togglePlay, updateProgress, seek, setVolume, formatTime };
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, openFile, onFileChange, playIndex, togglePlay, prev, next, updateProgress, seek, setVolume, formatTime };
   }
 });
 
