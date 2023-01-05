@@ -13,9 +13,16 @@ const app = createApp({
     const volume = ref(100);
     const playlist = ref([]);
     const currentIndex = ref(0);
+    const repeatMode = ref('none');
 
     const hasPrev = computed(() => currentIndex.value > 0);
     const hasNext = computed(() => currentIndex.value < playlist.value.length - 1);
+
+    const cycleRepeat = () => {
+      const modes = ['none', 'all', 'one'];
+      const i = modes.indexOf(repeatMode.value);
+      repeatMode.value = modes[(i + 1) % 3];
+    };
 
     const openFile = () => {
       fileInput.value.click();
@@ -75,6 +82,19 @@ const app = createApp({
       }
     };
 
+    const onEnded = () => {
+      if (repeatMode.value === 'one') {
+        audio.value.currentTime = 0;
+        audio.value.play();
+      } else if (repeatMode.value === 'all' && hasNext.value) {
+        loadTrack(currentIndex.value + 1);
+        audio.value.play();
+      } else if (repeatMode.value === 'all' && !hasNext.value && playlist.value.length > 0) {
+        loadTrack(0);
+        audio.value.play();
+      }
+    };
+
     const updateProgress = () => {
       currentTime.value = audio.value.currentTime;
 
@@ -100,7 +120,11 @@ const app = createApp({
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, openFile, onFileChange, playIndex, togglePlay, prev, next, updateProgress, seek, setVolume, formatTime };
+    const repeatLabel = () => {
+      return { 'none': 'Repeat: Off', 'all': 'Repeat: All', 'one': 'Repeat: One' }[repeatMode.value];
+    };
+
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, repeatMode, openFile, onFileChange, playIndex, togglePlay, prev, next, onEnded, updateProgress, seek, setVolume, formatTime, cycleRepeat, repeatLabel };
   }
 });
 
