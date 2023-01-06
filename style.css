@@ -1,6 +1,7 @@
 .header { display: flex; align-items: center; gap: 12px; }
 .title { font-size: 20px; font-weight: 600; }
 .subtitle { font-size: 13px; color: var(--el-text-color-secondary); }
+.theme-switch { margin-left: auto; }
 .playlist { margin-top: 16px; }
 .player { margin-top: 16px; }
 .progress-row { display: flex; align-items: center; gap: 8px; margin-top: 12px; }

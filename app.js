@@ -14,6 +14,7 @@ const app = createApp({
     const playlist = ref([]);
     const currentIndex = ref(0);
     const repeatMode = ref('none');
+    const isDark = ref(false);
 
     const hasPrev = computed(() => currentIndex.value > 0);
     const hasNext = computed(() => currentIndex.value < playlist.value.length - 1);
@@ -22,6 +23,11 @@ const app = createApp({
       const modes = ['none', 'all', 'one'];
       const i = modes.indexOf(repeatMode.value);
       repeatMode.value = modes[(i + 1) % 3];
+    };
+
+    const toggleDark = (val) => {
+      document.documentElement.classList.toggle('dark', val);
+      localStorage.setItem('yamada-dark', val);
     };
 
     const openFile = () => {
@@ -124,7 +130,7 @@ const app = createApp({
       return { 'none': 'Repeat: Off', 'all': 'Repeat: All', 'one': 'Repeat: One' }[repeatMode.value];
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, repeatMode, openFile, onFileChange, playIndex, togglePlay, prev, next, onEnded, updateProgress, seek, setVolume, formatTime, cycleRepeat, repeatLabel };
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, repeatMode, isDark, openFile, onFileChange, playIndex, togglePlay, prev, next, onEnded, updateProgress, seek, setVolume, formatTime, cycleRepeat, repeatLabel, toggleDark };
   }
 });
 

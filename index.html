@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yamada</title>
   <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/dist/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/theme-chalk/dark/css-vars.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.27/dist/index.full.min.js"></script>
@@ -15,6 +16,7 @@
       <el-header class="header">
         <span class="title">Yamada</span>
         <span class="subtitle">Local music player</span>
+        <el-switch v-model="isDark" @change="toggleDark" class="theme-switch" />
       </el-header>
       <el-main>
         <el-button type="primary" @click="openFile">Open Files</el-button>
