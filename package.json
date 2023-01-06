@@ -1,0 +1,12 @@
+{
+  "name": "yamada",
+  "version": "0.1.0",
+  "description": "Local music player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}
