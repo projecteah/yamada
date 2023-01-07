@@ -127,10 +127,11 @@ const app = createApp({
     };
 
     const repeatLabel = () => {
-      return { 'none': 'Repeat: Off', 'all': 'Repeat: All', 'one': 'Repeat: One' }[repeatMode.value];
+      const key = { 'none': 'repeatOff', 'all': 'repeatAll', 'one': 'repeatOne' }[repeatMode.value];
+      return i18n.t(key);
     };
 
-    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, repeatMode, isDark, openFile, onFileChange, playIndex, togglePlay, prev, next, onEnded, updateProgress, seek, setVolume, formatTime, cycleRepeat, repeatLabel, toggleDark };
+    return { fileInput, audio, fileName, fileUrl, playing, progress, currentTime, duration, volume, playlist, hasPrev, hasNext, repeatMode, isDark, i18n, openFile, onFileChange, playIndex, togglePlay, prev, next, onEnded, updateProgress, seek, setVolume, formatTime, cycleRepeat, repeatLabel, toggleDark };
   }
 });
 

@@ -15,22 +15,25 @@
     <el-container>
       <el-header class="header">
         <span class="title">Yamada</span>
-        <span class="subtitle">Local music player</span>
+        <span class="subtitle">{{ i18n.t('subtitle') }}</span>
+        <el-select v-model="i18n.locale" size="small" class="lang-select">
+          <el-option label="English" value="en" />
+        </el-select>
         <el-switch v-model="isDark" @change="toggleDark" class="theme-switch" />
       </el-header>
       <el-main>
-        <el-button type="primary" @click="openFile">Open Files</el-button>
+        <el-button type="primary" @click="openFile">{{ i18n.t('openFiles') }}</el-button>
         <input type="file" ref="fileInput" accept="audio/*" multiple style="display:none" @change="onFileChange">
         <div v-if="playlist.length" class="playlist">
           <el-table :data="playlist" size="small" @row-click="playIndex" highlight-current-row>
-            <el-table-column prop="name" label="Name" />
+            <el-table-column prop="name" :label="i18n.t('name')" />
           </el-table>
         </div>
         <div v-if="fileUrl" class="player">
           <p v-if="fileName">{{ fileName }}</p>
-          <el-button @click="togglePlay">{{ playing ? 'Pause' : 'Play' }}</el-button>
-          <el-button @click="prev" :disabled="!hasPrev">Prev</el-button>
-          <el-button @click="next" :disabled="!hasNext">Next</el-button>
+          <el-button @click="togglePlay">{{ playing ? i18n.t('pause') : i18n.t('play') }}</el-button>
+          <el-button @click="prev" :disabled="!hasPrev">{{ i18n.t('prev') }}</el-button>
+          <el-button @click="next" :disabled="!hasNext">{{ i18n.t('next') }}</el-button>
           <el-button @click="cycleRepeat">{{ repeatLabel() }}</el-button>
           <div class="progress-row">
             <span class="time">{{ formatTime(currentTime) }}</span>
@@ -54,6 +57,7 @@
       </el-main>
     </el-container>
   </div>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
