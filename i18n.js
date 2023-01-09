@@ -43,6 +43,21 @@ const messages = {
     darkMode: '深色',
     lightMode: '淺色',
     noFile: '未載入檔案。'
+  },
+  lzh: {
+    subtitle: '本音之器',
+    openFiles: '啟文',
+    name: '名',
+    play: '奏',
+    pause: '止',
+    prev: '前章',
+    next: '後章',
+    repeatOff: '復已斷',
+    repeatAll: '復其序',
+    repeatOne: '復其曲',
+    darkMode: '墨',
+    lightMode: '素',
+    noFile: '未有載文。'
   }
 };
 
