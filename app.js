@@ -1,4 +1,4 @@
-const { createApp, ref, computed } = Vue;
+const { createApp, ref, computed, onMounted, onUnmounted } = Vue;
 
 const app = createApp({
   setup() {
@@ -15,6 +15,25 @@ const app = createApp({
     const currentIndex = ref(0);
     const repeatMode = ref('none');
     const isDark = ref(false);
+
+    const handleKeydown = (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      } else if (e.code === 'ArrowLeft') {
+        prev();
+      } else if (e.code === 'ArrowRight') {
+        next();
+      }
+    };
+
+    onMounted(() => {
+      document.addEventListener('keydown', handleKeydown);
+    });
+
+    onUnmounted(() => {
+      document.removeEventListener('keydown', handleKeydown);
+    });
 
     const hasPrev = computed(() => currentIndex.value > 0);
     const hasNext = computed(() => currentIndex.value < playlist.value.length - 1);
