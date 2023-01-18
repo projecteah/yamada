@@ -4,63 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yamada</title>
-  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/dist/index.css">
-  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.27/theme-chalk/dark/css-vars.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/vue@3.2.45/dist/vue.global.prod.js"></script>
-  <script src="https://unpkg.com/element-plus@2.2.27/dist/index.full.min.js"></script>
 </head>
 <body>
-  <div id="app">
-    <el-container>
-      <el-header class="header">
-        <span class="title">Yamada</span>
-        <span class="subtitle">{{ i18n.t('subtitle') }}</span>
-        <el-select v-model="i18n.locale" size="small" class="lang-select">
-          <el-option label="English" value="en" />
-          <el-option label="简体中文" value="zh-Hans-CN" />
-          <el-option label="繁體中文" value="zh-Hant-TW" />
-          <el-option label="文言" value="lzh" />
-        </el-select>
-        <el-switch v-model="isDark" @change="toggleDark" class="theme-switch" />
-      </el-header>
-      <el-main>
-        <el-button type="primary" @click="openFile">{{ i18n.t('openFiles') }}</el-button>
-        <input type="file" ref="fileInput" accept="audio/*" multiple style="display:none" @change="onFileChange">
-        <div v-if="playlist.length" class="playlist">
-          <el-table :data="playlist" size="small" @row-click="playIndex" highlight-current-row>
-            <el-table-column prop="name" :label="i18n.t('name')" />
-          </el-table>
-        </div>
-        <div v-if="fileUrl" class="player">
-          <p v-if="fileName">{{ fileName }}</p>
-          <el-button @click="togglePlay">{{ playing ? i18n.t('pause') : i18n.t('play') }}</el-button>
-          <el-button @click="prev" :disabled="!hasPrev">{{ i18n.t('prev') }}</el-button>
-          <el-button @click="next" :disabled="!hasNext">{{ i18n.t('next') }}</el-button>
-          <el-button @click="cycleRepeat">{{ repeatLabel() }}</el-button>
-          <div class="progress-row">
-            <span class="time">{{ formatTime(currentTime) }}</span>
-            <el-progress :percentage="progress" :stroke-width="4" @click="seek" class="progress" />
-            <span class="time">{{ formatTime(duration) }}</span>
-          </div>
-          <div class="volume-row">
-            <span class="label">Vol</span>
-            <el-slider v-model="volume" :show-tooltip="false" @input="setVolume" class="volume-slider" />
-          </div>
-          <audio
-            :src="fileUrl"
-            ref="audio"
-            @play="playing = true"
-            @pause="playing = false"
-            @timeupdate="updateProgress"
-            @loadedmetadata="duration = audio.duration"
-            @ended="onEnded">
-          </audio>
-        </div>
-      </el-main>
-    </el-container>
-  </div>
-  <script src="i18n.js"></script>
-  <script src="app.js"></script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
