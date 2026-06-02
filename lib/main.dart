@@ -1,18 +1,23 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:window_manager/window_manager.dart';
-import 'app.dart';
+
+import 'package:yamada/app.dart';
+import 'package:yamada/providers/settings_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (!Platform.isAndroid) {
+  final prefs = await SharedPreferences.getInstance();
+
+  if (Platform.isWindows) {
     await windowManager.ensureInitialized();
-    WindowOptions windowOptions = WindowOptions(
+    WindowOptions windowOptions = const WindowOptions(
       title: "Yamada",
-      size: const Size(1200, 800),
-      minimumSize: const Size(1000, 600),
+      size: Size(1200, 800),
+      minimumSize: Size(1000, 600),
       center: true,
       skipTaskbar: false,
       windowButtonVisibility: false,
@@ -24,5 +29,12 @@ Future<void> main() async {
     });
   }
 
-  runApp(ProviderScope(child: const App()));
+  runApp(
+    ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
+      ],
+      child: const App(),
+    ),
+  );
 }
