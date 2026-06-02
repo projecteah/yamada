@@ -1,0 +1,6 @@
+arb-dir: lib/locales
+template-arb-file: en.arb
+output-localization-file: app_localizations.dart
+output-class: AppLocalizations
+preferred-supported-locales: en
+use-deferred-loading: false

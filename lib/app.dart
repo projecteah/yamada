@@ -1,65 +1,91 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'constants.dart';
-import 'pages/_router.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
-class App extends ConsumerStatefulWidget {
+import 'package:yamada/locales/app_localizations.dart';
+import 'package:yamada/constants.dart';
+import 'package:yamada/pages/_router.dart';
+import 'package:yamada/providers/appearance_provider.dart';
+
+class App extends ConsumerWidget {
   const App({super.key});
 
-  @override
-  ConsumerState<App> createState() => _AppState();
-}
-
-class _AppState extends ConsumerState<App> {
-  static const _locales = [
-    Locale('en'),
-    Locale('ja'),
-    Locale.fromSubtags(
-        languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
-    Locale.fromSubtags(
-        languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
+  static const _localizationsDelegates = [
+    AppLocalizations.delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
   ];
 
   @override
-  Widget build(BuildContext context) {
-    return Platform.isWindows ? _buildFluentApp() : _buildMaterialApp();
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider);
+    final locale = ref.watch(localeProvider);
+    final design = ref.read(designProvider);
+
+    return DesignScope(
+      design: design,
+      child: design == AppDesign.fluent
+          ? _buildFluentApp(themeMode, locale)
+          : _buildMaterialApp(themeMode, locale),
+    );
   }
 
-  Widget _buildMaterialApp() {
+  Widget _buildMaterialApp(ThemeMode themeMode, Locale? locale) {
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent)),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+      ),
       darkTheme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.blue, brightness: Brightness.dark)),
-      supportedLocales: _locales,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blueAccent,
+          brightness: Brightness.dark,
+        ),
+      ),
+      themeMode: themeMode,
+      locale: locale,
+      localizationsDelegates: _localizationsDelegates,
+      supportedLocales: supportedLocales,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
       routeInformationProvider: router.routeInformationProvider,
     );
   }
 
-  Widget _buildFluentApp() {
-    final glowFactor = fluent.is10footScreen(context) ? 2.0 : 0.0;
-    final baseTheme = fluent.FluentThemeData(
-      visualDensity: VisualDensity.standard,
-      accentColor: fluent.Colors.blue,
-      focusTheme: fluent.FocusThemeData(glowFactor: glowFactor),
-    );
-
+  Widget _buildFluentApp(ThemeMode themeMode, Locale? locale) {
     return fluent.FluentApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
-      theme: baseTheme,
-      darkTheme: baseTheme.copyWith(brightness: fluent.Brightness.dark),
-      supportedLocales: _locales,
+      theme: fluent.FluentThemeData(
+        visualDensity: VisualDensity.standard,
+        accentColor: fluent.Colors.blue,
+      ),
+      darkTheme: fluent.FluentThemeData(
+        brightness: fluent.Brightness.dark,
+        visualDensity: VisualDensity.standard,
+        accentColor: fluent.Colors.blue,
+      ),
+      themeMode: _toFluentThemeMode(themeMode),
+      locale: locale,
+      localizationsDelegates: _localizationsDelegates,
+      supportedLocales: supportedLocales,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
       routeInformationProvider: router.routeInformationProvider,
     );
+  }
+
+  fluent.ThemeMode _toFluentThemeMode(ThemeMode mode) {
+    switch (mode) {
+      case ThemeMode.light:
+        return fluent.ThemeMode.light;
+      case ThemeMode.dark:
+        return fluent.ThemeMode.dark;
+      case ThemeMode.system:
+        return fluent.ThemeMode.system;
+    }
   }
 }

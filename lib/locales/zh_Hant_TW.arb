@@ -1,0 +1,17 @@
+{
+  "@@locale": "zh_Hant_TW",
+  "home": "首頁",
+  "settings": "設定",
+  "language": "語言",
+  "themeMode": "主題",
+  "themeSystem": "跟隨系統",
+  "themeLight": "淺色",
+  "themeDark": "深色",
+  "design": "設計",
+  "designMaterial": "Material",
+  "designFluent": "Fluent UI",
+  "appearance": "外觀",
+  "about": "關於",
+  "version": "版本",
+  "licenses": "開放原始碼授權"
+}

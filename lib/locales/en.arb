@@ -1,0 +1,17 @@
+{
+  "@@locale": "en",
+  "home": "Home",
+  "settings": "Settings",
+  "language": "Language",
+  "themeMode": "Theme",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "design": "Design",
+  "designMaterial": "Material",
+  "designFluent": "Fluent UI",
+  "appearance": "Appearance",
+  "about": "About",
+  "version": "Version",
+  "licenses": "Open Source Licenses"
+}

@@ -1,34 +1,35 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
+import 'package:yamada/locales/app_localizations.dart';
+import 'package:yamada/providers/appearance_provider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
-  static const pageTitle = Text('Home');
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isFluent = DesignScope.of(context) == AppDesign.fluent;
+    final l10n = AppLocalizations.of(context)!;
+    return isFluent
+        ? fluent.ScaffoldPage(
+            header: fluent.PageHeader(title: Text(l10n.home)),
+            content: const _HomeContent(),
+          )
+        : Scaffold(
+            appBar: AppBar(title: Text(l10n.home)),
+            body: const _HomeContent(),
+          );
+  }
+}
+
+class _HomeContent extends StatelessWidget {
+  const _HomeContent();
 
   @override
   Widget build(BuildContext context) {
-    if (Platform.isWindows) return buildFluent(context);
-    return buildMaterial(context);
-  }
-
-  Widget buildMaterial(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: pageTitle),
-      body: homeContent(context),
-    );
-  }
-
-  Widget buildFluent(BuildContext context) {
-    return fluent.ScaffoldPage(
-      header: const fluent.PageHeader(title: pageTitle),
-      content: homeContent(context),
-    );
-  }
-
-  Widget homeContent(BuildContext context) {
-    return Center(
-      child: const Text('Test', style: TextStyle(fontSize: 16)),
+    return const Center(
+      child: Text('Test', style: TextStyle(fontSize: 16)),
     );
   }
 }
