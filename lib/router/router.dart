@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:go_router/go_router.dart';
 
-import 'package:yamada/components/global/app_navigation.dart';
+import 'package:yamada/router/app_navigation.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/pages/home.dart';
 import 'package:yamada/pages/settings.dart';

@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/constants.dart';
-import 'package:yamada/pages/_router.dart';
+import 'package:yamada/router/router.dart';
 import 'package:yamada/providers/appearance_provider.dart';
 
 class App extends ConsumerWidget {
