@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'package:yamada/app.dart';
-import 'package:yamada/providers/settings_provider.dart';
+import 'package:yamada/providers/preferences_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

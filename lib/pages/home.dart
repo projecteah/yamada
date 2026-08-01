@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/appearance_provider.dart';
+import 'package:yamada/providers/preferences_provider.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isFluent = DesignScope.of(context) == AppDesign.fluent;
+    final isFluent = ref.watch(designProvider).isFluent;
     final l10n = AppLocalizations.of(context)!;
     return isFluent
         ? fluent.ScaffoldPage(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:yamada/providers/appearance_provider.dart';
+import 'package:yamada/providers/preferences_provider.dart';
 import 'fluent_item_card.dart';
 
 class SettingGroupHeader extends StatelessWidget {
@@ -17,7 +18,7 @@ class SettingGroupHeader extends StatelessWidget {
   }
 }
 
-class SettingTile extends StatelessWidget {
+class SettingTile extends ConsumerWidget {
   final IconData icon;
   final IconData? fluentIcon;
   final String title;
@@ -34,8 +35,8 @@ class SettingTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final isFluent = DesignScope.of(context) == AppDesign.fluent;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isFluent = ref.watch(designProvider).isFluent;
     if (isFluent) {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),

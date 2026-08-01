@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/appearance_provider.dart';
+import 'package:yamada/providers/preferences_provider.dart';
 import 'setting_tile.dart';
-
-final packageInfoProvider = FutureProvider<PackageInfo>((ref) async {
-  return PackageInfo.fromPlatform();
-});
 
 class AboutSetting extends ConsumerWidget {
   const AboutSetting({super.key});
@@ -17,11 +12,11 @@ class AboutSetting extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
-    final isFluent = DesignScope.of(context) == AppDesign.fluent;
+    final isFluent = ref.watch(designProvider).isFluent;
     final asyncInfo = ref.watch(packageInfoProvider);
 
     final versionText = asyncInfo.when(
-      data: (info) => Text('${info.version} (${info.buildNumber})'),
+      data: (info) => Text(info.version),
       loading: () => const SizedBox(
         width: 16,
         height: 16,

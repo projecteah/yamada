@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/constants.dart';
 import 'package:yamada/router/router.dart';
-import 'package:yamada/providers/appearance_provider.dart';
+import 'package:yamada/providers/preferences_provider.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -22,14 +22,11 @@ class App extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeModeProvider);
     final locale = ref.watch(localeProvider);
-    final design = ref.read(designProvider);
+    final design = ref.watch(designProvider);
 
-    return DesignScope(
-      design: design,
-      child: design == AppDesign.fluent
-          ? _buildFluentApp(themeMode, locale)
-          : _buildMaterialApp(themeMode, locale),
-    );
+    return design.isFluent
+        ? _buildFluentApp(themeMode, locale)
+        : _buildMaterialApp(themeMode, locale);
   }
 
   Widget _buildMaterialApp(ThemeMode themeMode, Locale? locale) {
