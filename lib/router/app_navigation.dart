@@ -63,7 +63,6 @@ class AppNavigation extends ConsumerWidget {
                       ),
                   ],
                 ),
-                const VerticalDivider(thickness: 1, width: 1),
                 Expanded(child: child),
               ],
             ),
@@ -191,8 +190,15 @@ class AppNavigation extends ConsumerWidget {
 
   // ==================== Helpers ====================
   int _indexOf(String path) {
-    final i = appRoutes.indexWhere((r) => r.path == path);
-    return i < 0 ? 0 : i;
+    // Match top-level tab by path prefix so sub-routes (e.g. /settings/general)
+    // keep the parent tab highlighted.
+    for (int i = appRoutes.length - 1; i >= 0; i--) {
+      if (path == appRoutes[i].path ||
+          path.startsWith('${appRoutes[i].path}/')) {
+        return i;
+      }
+    }
+    return 0;
   }
 }
 

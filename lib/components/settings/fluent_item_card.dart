@@ -11,6 +11,7 @@ class FluentItemCard extends StatelessWidget {
     this.leading,
     required this.label,
     this.trailing,
+    this.onTap,
     this.contentBackgroundColor,
     this.contentPadding = const EdgeInsets.all(16.0),
   });
@@ -33,6 +34,9 @@ class FluentItemCard extends StatelessWidget {
   ///
   ///  * [ToggleSwitch], used to toggle a setting between two states
   final Widget? trailing;
+
+  /// Called when the user taps this card.
+  final VoidCallback? onTap;
 
   /// The background color of the content.
   final WidgetStateProperty<Color>? contentBackgroundColor;
@@ -60,6 +64,7 @@ class FluentItemCard extends StatelessWidget {
     final children = [
       // Content
       HoverButton(
+        onPressed: onTap,
         hitTestBehavior: HitTestBehavior.deferToChild,
         builder: (context, states) {
           return Container(

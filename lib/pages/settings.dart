@@ -1,38 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fluent_ui/fluent_ui.dart' as fluent;
+import 'package:go_router/go_router.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/preferences_provider.dart';
-import 'package:yamada/components/settings/language_setting.dart';
-import 'package:yamada/components/settings/appearance_setting.dart';
-import 'package:yamada/components/settings/about_setting.dart';
+import 'package:yamada/components/settings/setting_tile.dart';
 
-class SettingsPage extends ConsumerWidget {
+class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isFluent = ref.watch(designProvider).isFluent;
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final body = ListView(
-      children: const [
-        LanguageSetting(),
-        SizedBox(height: 16),
-        AppearanceSetting(),
-        SizedBox(height: 16),
-        AboutSetting(),
-      ],
-    );
 
-    return isFluent
-        ? fluent.ScaffoldPage(
-            header: fluent.PageHeader(title: Text(l10n.settings)),
-            content: body,
-          )
-        : Scaffold(
-            appBar: AppBar(title: Text(l10n.settings)),
-            body: body,
-          );
+    return Scaffold(
+      appBar: AppBar(title: Text(l10n.settings)),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        children: [
+          SettingTile(
+            icon: Icons.settings_outlined,
+            title: l10n.settingsGeneral,
+            onTap: () => context.go('/settings/general'),
+          ),
+          SettingTile(
+            icon: Icons.palette_outlined,
+            title: l10n.settingsAppearance,
+            onTap: () => context.go('/settings/appearance'),
+          ),
+          SettingTile(
+            icon: Icons.info_outline,
+            title: l10n.settingsAbout,
+            onTap: () => context.go('/settings/about'),
+          ),
+        ],
+      ),
+    );
   }
 }

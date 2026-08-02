@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:yamada/providers/preferences_provider.dart';
-import 'fluent_item_card.dart';
 
 class SettingGroupHeader extends StatelessWidget {
   final String text;
@@ -12,45 +8,43 @@ class SettingGroupHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-      child: Text(text, style: Theme.of(context).textTheme.titleSmall),
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.primary,
+          fontWeight: FontWeight.w600,
+          fontSize: 13,
+        ),
+      ),
     );
   }
 }
 
-class SettingTile extends ConsumerWidget {
+class SettingTile extends StatelessWidget {
   final IconData icon;
-  final IconData? fluentIcon;
   final String title;
+  final String? subtitle;
   final Widget? trailing;
   final VoidCallback? onTap;
 
   const SettingTile({
     super.key,
     required this.icon,
-    this.fluentIcon,
     required this.title,
+    this.subtitle,
     this.trailing,
     this.onTap,
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isFluent = ref.watch(designProvider).isFluent;
-    if (isFluent) {
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-        child: FluentItemCard(
-          leading: Icon(fluentIcon ?? icon),
-          label: Text(title),
-          trailing: trailing,
-        ),
-      );
-    }
+  Widget build(BuildContext context) {
     return ListTile(
       leading: Icon(icon),
       title: Text(title),
-      trailing: trailing,
+      subtitle: subtitle != null ? Text(subtitle!) : null,
+      trailing:
+          trailing ?? (onTap != null ? const Icon(Icons.chevron_right) : null),
       onTap: onTap,
     );
   }

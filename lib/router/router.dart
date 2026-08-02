@@ -6,6 +6,9 @@ import 'package:yamada/router/app_navigation.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/pages/home.dart';
 import 'package:yamada/pages/settings.dart';
+import 'package:yamada/pages/settings/general_page.dart';
+import 'package:yamada/pages/settings/appearance_page.dart';
+import 'package:yamada/pages/settings/about_page.dart';
 
 class AppRoute {
   final String path;
@@ -14,6 +17,7 @@ class AppRoute {
   final IconData icon;
   final IconData selectedIcon;
   final IconData fluentIcon;
+  final List<AppSubRoute> children;
 
   const AppRoute({
     required this.path,
@@ -22,6 +26,19 @@ class AppRoute {
     required this.icon,
     required this.selectedIcon,
     required this.fluentIcon,
+    this.children = const [],
+  });
+}
+
+class AppSubRoute {
+  final String path;
+  final GoRouterWidgetBuilder builder;
+  final String Function(BuildContext) labelOf;
+
+  const AppSubRoute({
+    required this.path,
+    required this.builder,
+    required this.labelOf,
   });
 }
 
@@ -30,8 +47,8 @@ final List<AppRoute> appRoutes = [
     path: '/',
     builder: (context, state) => const HomePage(),
     labelOf: (ctx) => AppLocalizations.of(ctx)!.home,
-    icon: Icons.home_outlined,
-    selectedIcon: Icons.home,
+    icon: Icons.my_library_music_outlined,
+    selectedIcon: Icons.my_library_music_rounded,
     fluentIcon: fluent.WindowsIcons.home,
   ),
   AppRoute(
@@ -39,8 +56,25 @@ final List<AppRoute> appRoutes = [
     builder: (context, state) => const SettingsPage(),
     labelOf: (ctx) => AppLocalizations.of(ctx)!.settings,
     icon: Icons.settings_outlined,
-    selectedIcon: Icons.settings,
+    selectedIcon: Icons.settings_rounded,
     fluentIcon: fluent.WindowsIcons.settings,
+    children: [
+      AppSubRoute(
+        path: 'general',
+        builder: (context, state) => const GeneralPage(),
+        labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsGeneral,
+      ),
+      AppSubRoute(
+        path: 'appearance',
+        builder: (context, state) => const AppearancePage(),
+        labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsAppearance,
+      ),
+      AppSubRoute(
+        path: 'about',
+        builder: (context, state) => const AboutPage(),
+        labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsAbout,
+      ),
+    ],
   ),
 ];
 
@@ -60,6 +94,13 @@ final router = GoRouter(
           GoRoute(
             path: route.path,
             builder: route.builder,
+            routes: [
+              for (final sub in route.children)
+                GoRoute(
+                  path: sub.path,
+                  builder: sub.builder,
+                ),
+            ],
           ),
       ],
     ),
