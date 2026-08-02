@@ -1,17 +1,23 @@
 {
   "@@locale": "zh_Hant_TW",
-  "home": "首頁",
-  "settings": "設定",
-  "language": "語言",
-  "themeMode": "主題",
-  "themeSystem": "跟隨系統",
-  "themeLight": "淺色",
-  "themeDark": "深色",
-  "design": "設計",
-  "designMaterial": "Material",
-  "designFluent": "Fluent UI",
-  "appearance": "外觀",
-  "about": "關於",
-  "version": "版本",
-  "licenses": "開放原始碼授權"
+
+  "navHome": "音樂庫",
+  "navSettings": "設定",
+
+  "settingsGeneral": "一般",
+  "settingsAppearance": "外觀",
+  "settingsAbout": "關於",
+  "settingsLanguage": "語言",
+
+  "settingsThemeMode": "主題",
+  "settingsThemeSystem": "跟隨系統",
+  "settingsThemeLight": "淺色",
+  "settingsThemeDark": "深色",
+
+  "settingsDesign": "設計",
+  "settingsDesignMaterial": "Material",
+  "settingsDesignFluent": "Fluent UI",
+
+  "settingsVersion": "版本",
+  "settingsLicenses": "開放原始碼授權"
 }

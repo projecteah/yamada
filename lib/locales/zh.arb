@@ -1,17 +1,23 @@
 {
   "@@locale": "zh",
-  "home": "首页",
-  "settings": "设置",
-  "language": "语言",
-  "themeMode": "主题",
-  "themeSystem": "跟随系统",
-  "themeLight": "浅色",
-  "themeDark": "深色",
-  "design": "设计",
-  "designMaterial": "Material",
-  "designFluent": "Fluent UI",
-  "appearance": "外观",
-  "about": "关于",
-  "version": "版本",
-  "licenses": "开放源代码许可"
+
+  "navHome": "音乐库",
+  "navSettings": "设置",
+
+  "settingsGeneral": "通用",
+  "settingsAppearance": "外观",
+  "settingsAbout": "关于",
+  "settingsLanguage": "语言",
+
+  "settingsThemeMode": "主题",
+  "settingsThemeSystem": "跟随系统",
+  "settingsThemeLight": "浅色",
+  "settingsThemeDark": "深色",
+
+  "settingsDesign": "设计",
+  "settingsDesignMaterial": "Material",
+  "settingsDesignFluent": "Fluent UI",
+
+  "settingsVersion": "版本",
+  "settingsLicenses": "开放源代码许可"
 }

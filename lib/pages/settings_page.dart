@@ -12,22 +12,22 @@ class SettingsPage extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.settings)),
+      appBar: AppBar(title: Text(l10n.navSettings)),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8),
         children: [
           SettingTile(
-            icon: Icons.settings_outlined,
+            icon: Icons.settings_rounded,
             title: l10n.settingsGeneral,
             onTap: () => context.go('/settings/general'),
           ),
           SettingTile(
-            icon: Icons.palette_outlined,
+            icon: Icons.palette_rounded,
             title: l10n.settingsAppearance,
             onTap: () => context.go('/settings/appearance'),
           ),
           SettingTile(
-            icon: Icons.info_outline,
+            icon: Icons.info_rounded,
             title: l10n.settingsAbout,
             onTap: () => context.go('/settings/about'),
           ),

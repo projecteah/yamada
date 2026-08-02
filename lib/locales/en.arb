@@ -1,17 +1,32 @@
 {
   "@@locale": "en",
-  "home": "Home",
-  "settings": "Settings",
-  "language": "Language",
-  "themeMode": "Theme",
-  "themeSystem": "System",
-  "themeLight": "Light",
-  "themeDark": "Dark",
-  "design": "Design",
-  "designMaterial": "Material",
-  "designFluent": "Fluent UI",
-  "appearance": "Appearance",
-  "about": "About",
-  "version": "Version",
-  "licenses": "Open Source Licenses"
+
+  "navHome": "Library",
+  "navSettings": "Settings",
+
+  "settingsGeneral": "General",
+  "settingsAppearance": "Appearance",
+  "settingsAbout": "About",
+  "settingsLanguage": "Language",
+
+  "settingsThemeMode": "Theme",
+  "settingsThemeSystem": "System",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+
+  "settingsDesign": "Design",
+  "@settingsDesign": {
+    "description": "Label for the design language setting (Material or Fluent)."
+  },
+  "settingsDesignMaterial": "Material",
+  "@settingsDesignMaterial": {
+    "description": "Google's Material Design."
+  },
+  "settingsDesignFluent": "Fluent UI",
+  "@settingsDesignFluent": {
+    "description": "Microsoft's Fluent UI design system."
+  },
+
+  "settingsVersion": "Version",
+  "settingsLicenses": "Open Source Licenses"
 }

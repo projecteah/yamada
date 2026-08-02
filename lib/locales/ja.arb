@@ -1,17 +1,23 @@
 {
   "@@locale": "ja",
-  "home": "ホーム",
-  "settings": "設定",
-  "language": "言語",
-  "themeMode": "テーマ",
-  "themeSystem": "システム",
-  "themeLight": "ライト",
-  "themeDark": "ダーク",
-  "design": "デザイン",
-  "designMaterial": "マテリアル",
-  "designFluent": "Fluent UI",
-  "appearance": "外観",
-  "about": "について",
-  "version": "バージョン",
-  "licenses": "オープンソースライセンス"
+
+  "navHome": "ライブラリ",
+  "navSettings": "設定",
+
+  "settingsGeneral": "一般",
+  "settingsAppearance": "外観",
+  "settingsAbout": "について",
+  "settingsLanguage": "言語",
+
+  "settingsThemeMode": "テーマ",
+  "settingsThemeSystem": "システム",
+  "settingsThemeLight": "ライト",
+  "settingsThemeDark": "ダーク",
+
+  "settingsDesign": "デザイン",
+  "settingsDesignMaterial": "マテリアル",
+  "settingsDesignFluent": "Fluent UI",
+
+  "settingsVersion": "バージョン",
+  "settingsLicenses": "オープンソースライセンス"
 }

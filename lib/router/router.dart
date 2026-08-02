@@ -4,8 +4,8 @@ import 'package:go_router/go_router.dart';
 
 import 'package:yamada/router/app_navigation.dart';
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/pages/home.dart';
-import 'package:yamada/pages/settings.dart';
+import 'package:yamada/pages/home_page.dart';
+import 'package:yamada/pages/settings_page.dart';
 import 'package:yamada/pages/settings/general_page.dart';
 import 'package:yamada/pages/settings/appearance_page.dart';
 import 'package:yamada/pages/settings/about_page.dart';
@@ -46,7 +46,7 @@ final List<AppRoute> appRoutes = [
   AppRoute(
     path: '/',
     builder: (context, state) => const HomePage(),
-    labelOf: (ctx) => AppLocalizations.of(ctx)!.home,
+    labelOf: (ctx) => AppLocalizations.of(ctx)!.navHome,
     icon: Icons.my_library_music_outlined,
     selectedIcon: Icons.my_library_music_rounded,
     fluentIcon: fluent.WindowsIcons.home,
@@ -54,7 +54,7 @@ final List<AppRoute> appRoutes = [
   AppRoute(
     path: '/settings',
     builder: (context, state) => const SettingsPage(),
-    labelOf: (ctx) => AppLocalizations.of(ctx)!.settings,
+    labelOf: (ctx) => AppLocalizations.of(ctx)!.navSettings,
     icon: Icons.settings_outlined,
     selectedIcon: Icons.settings_rounded,
     fluentIcon: fluent.WindowsIcons.settings,

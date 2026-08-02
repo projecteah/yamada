@@ -1,0 +1,23 @@
+{
+  "@@locale": "es",
+
+  "navHome": "Biblioteca",
+  "navSettings": "Ajustes",
+
+  "settingsGeneral": "General",
+  "settingsAppearance": "Apariencia",
+  "settingsAbout": "Acerca de",
+  "settingsLanguage": "Idioma",
+
+  "settingsThemeMode": "Tema",
+  "settingsThemeSystem": "Sistema",
+  "settingsThemeLight": "Claro",
+  "settingsThemeDark": "Oscuro",
+
+  "settingsDesign": "Diseño",
+  "settingsDesignMaterial": "Material",
+  "settingsDesignFluent": "Fluent UI",
+
+  "settingsVersion": "Versión",
+  "settingsLicenses": "Licencias de código abierto"
+}

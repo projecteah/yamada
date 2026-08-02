@@ -9,44 +9,47 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get home => 'Home';
+  String get navHome => 'Library';
 
   @override
-  String get settings => 'Settings';
+  String get navSettings => 'Settings';
 
   @override
-  String get language => 'Language';
+  String get settingsGeneral => 'General';
 
   @override
-  String get themeMode => 'Theme';
+  String get settingsAppearance => 'Appearance';
 
   @override
-  String get themeSystem => 'System';
+  String get settingsAbout => 'About';
 
   @override
-  String get themeLight => 'Light';
+  String get settingsLanguage => 'Language';
 
   @override
-  String get themeDark => 'Dark';
+  String get settingsThemeMode => 'Theme';
 
   @override
-  String get design => 'Design';
+  String get settingsThemeSystem => 'System';
 
   @override
-  String get designMaterial => 'Material';
+  String get settingsThemeLight => 'Light';
 
   @override
-  String get designFluent => 'Fluent UI';
+  String get settingsThemeDark => 'Dark';
 
   @override
-  String get appearance => 'Appearance';
+  String get settingsDesign => 'Design';
 
   @override
-  String get about => 'About';
+  String get settingsDesignMaterial => 'Material';
 
   @override
-  String get version => 'Version';
+  String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get licenses => 'Open Source Licenses';
+  String get settingsVersion => 'Version';
+
+  @override
+  String get settingsLicenses => 'Open Source Licenses';
 }

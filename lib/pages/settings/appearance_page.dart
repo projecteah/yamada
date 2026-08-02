@@ -18,18 +18,16 @@ class AppearancePage extends ConsumerWidget {
       appBar: AppBar(title: Text(l10n.settingsAppearance)),
       body: ListView(
         children: [
-          SettingGroupHeader(l10n.themeMode),
           SettingTile(
             icon: Icons.brightness_6_rounded,
-            title: l10n.themeMode,
+            title: l10n.settingsThemeMode,
             subtitle: _themeModeLabel(themeMode, l10n),
             onTap: () =>
                 _showThemeModeDialog(context, ref, themeMode, l10n),
           ),
-          SettingGroupHeader(l10n.design),
           SettingTile(
-            icon: Icons.palette_rounded,
-            title: l10n.design,
+            icon: Icons.design_services_rounded,
+            title: l10n.settingsDesign,
             subtitle: _designLabel(design, l10n),
             onTap: () => _showDesignDialog(context, ref, design, l10n),
           ),
@@ -47,7 +45,7 @@ class AppearancePage extends ConsumerWidget {
     return showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(l10n.themeMode),
+        title: Text(l10n.settingsThemeMode),
         content: SizedBox(
           width: double.maxFinite,
           child: RadioGroup<ThemeMode>(
@@ -61,15 +59,15 @@ class AppearancePage extends ConsumerWidget {
               children: [
                 RadioListTile<ThemeMode>(
                   value: ThemeMode.system,
-                  title: Text(l10n.themeSystem),
+                  title: Text(l10n.settingsThemeSystem),
                 ),
                 RadioListTile<ThemeMode>(
                   value: ThemeMode.light,
-                  title: Text(l10n.themeLight),
+                  title: Text(l10n.settingsThemeLight),
                 ),
                 RadioListTile<ThemeMode>(
                   value: ThemeMode.dark,
-                  title: Text(l10n.themeDark),
+                  title: Text(l10n.settingsThemeDark),
                 ),
               ],
             ),
@@ -88,7 +86,7 @@ class AppearancePage extends ConsumerWidget {
     return showDialog<void>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(l10n.design),
+        title: Text(l10n.settingsDesign),
         content: SizedBox(
           width: double.maxFinite,
           child: RadioGroup<AppDesign>(
@@ -102,11 +100,11 @@ class AppearancePage extends ConsumerWidget {
               children: [
                 RadioListTile<AppDesign>(
                   value: AppDesign.material,
-                  title: Text(l10n.designMaterial),
+                  title: Text(l10n.settingsDesignMaterial),
                 ),
                 RadioListTile<AppDesign>(
                   value: AppDesign.fluent,
-                  title: Text(l10n.designFluent),
+                  title: Text(l10n.settingsDesignFluent),
                 ),
               ],
             ),
@@ -126,15 +124,15 @@ class AppearancePage extends ConsumerWidget {
   String _themeModeLabel(ThemeMode mode, AppLocalizations l10n) {
     switch (mode) {
       case ThemeMode.system:
-        return l10n.themeSystem;
+        return l10n.settingsThemeSystem;
       case ThemeMode.light:
-        return l10n.themeLight;
+        return l10n.settingsThemeLight;
       case ThemeMode.dark:
-        return l10n.themeDark;
+        return l10n.settingsThemeDark;
     }
   }
 
   String _designLabel(AppDesign design, AppLocalizations l10n) {
-    return design == AppDesign.fluent ? l10n.designFluent : l10n.designMaterial;
+    return design == AppDesign.fluent ? l10n.settingsDesignFluent : l10n.settingsDesignMaterial;
   }
 }

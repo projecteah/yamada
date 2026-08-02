@@ -6,7 +6,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
 import 'app_localizations_ja.dart';
+import 'app_localizations_pt.dart';
 import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
@@ -96,95 +98,106 @@ abstract class AppLocalizations {
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
+    Locale('es'),
     Locale('ja'),
+    Locale('lzh'),
+    Locale('pt'),
+    Locale('pt', 'BR'),
+    Locale('yue'),
     Locale('zh'),
     Locale.fromSubtags(
         languageCode: 'zh', countryCode: 'TW', scriptCode: 'Hant')
   ];
 
-  /// No description provided for @home.
+  /// No description provided for @navHome.
   ///
   /// In en, this message translates to:
-  /// **'Home'**
-  String get home;
+  /// **'Library'**
+  String get navHome;
 
-  /// No description provided for @settings.
+  /// No description provided for @navSettings.
   ///
   /// In en, this message translates to:
   /// **'Settings'**
-  String get settings;
+  String get navSettings;
 
-  /// No description provided for @language.
+  /// No description provided for @settingsGeneral.
   ///
   /// In en, this message translates to:
-  /// **'Language'**
-  String get language;
+  /// **'General'**
+  String get settingsGeneral;
 
-  /// No description provided for @themeMode.
-  ///
-  /// In en, this message translates to:
-  /// **'Theme'**
-  String get themeMode;
-
-  /// No description provided for @themeSystem.
-  ///
-  /// In en, this message translates to:
-  /// **'System'**
-  String get themeSystem;
-
-  /// No description provided for @themeLight.
-  ///
-  /// In en, this message translates to:
-  /// **'Light'**
-  String get themeLight;
-
-  /// No description provided for @themeDark.
-  ///
-  /// In en, this message translates to:
-  /// **'Dark'**
-  String get themeDark;
-
-  /// No description provided for @design.
-  ///
-  /// In en, this message translates to:
-  /// **'Design'**
-  String get design;
-
-  /// No description provided for @designMaterial.
-  ///
-  /// In en, this message translates to:
-  /// **'Material'**
-  String get designMaterial;
-
-  /// No description provided for @designFluent.
-  ///
-  /// In en, this message translates to:
-  /// **'Fluent UI'**
-  String get designFluent;
-
-  /// No description provided for @appearance.
+  /// No description provided for @settingsAppearance.
   ///
   /// In en, this message translates to:
   /// **'Appearance'**
-  String get appearance;
+  String get settingsAppearance;
 
-  /// No description provided for @about.
+  /// No description provided for @settingsAbout.
   ///
   /// In en, this message translates to:
   /// **'About'**
-  String get about;
+  String get settingsAbout;
 
-  /// No description provided for @version.
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsThemeMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get settingsThemeMode;
+
+  /// No description provided for @settingsThemeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get settingsThemeSystem;
+
+  /// No description provided for @settingsThemeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get settingsThemeLight;
+
+  /// No description provided for @settingsThemeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get settingsThemeDark;
+
+  /// Label for the design language setting (Material or Fluent).
+  ///
+  /// In en, this message translates to:
+  /// **'Design'**
+  String get settingsDesign;
+
+  /// Google's Material Design.
+  ///
+  /// In en, this message translates to:
+  /// **'Material'**
+  String get settingsDesignMaterial;
+
+  /// Microsoft's Fluent UI design system.
+  ///
+  /// In en, this message translates to:
+  /// **'Fluent UI'**
+  String get settingsDesignFluent;
+
+  /// No description provided for @settingsVersion.
   ///
   /// In en, this message translates to:
   /// **'Version'**
-  String get version;
+  String get settingsVersion;
 
-  /// No description provided for @licenses.
+  /// No description provided for @settingsLicenses.
   ///
   /// In en, this message translates to:
   /// **'Open Source Licenses'**
-  String get licenses;
+  String get settingsLicenses;
 }
 
 class _AppLocalizationsDelegate
@@ -197,8 +210,15 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'ja', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'en',
+        'es',
+        'ja',
+        'lzh',
+        'pt',
+        'yue',
+        'zh'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -211,12 +231,28 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsZhHantTw();
   }
 
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'pt':
+      {
+        switch (locale.countryCode) {
+          case 'BR':
+            return AppLocalizationsPtBr();
+        }
+        break;
+      }
+  }
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
     case 'en':
       return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
     case 'ja':
       return AppLocalizationsJa();
+    case 'pt':
+      return AppLocalizationsPt();
     case 'zh':
       return AppLocalizationsZh();
   }

@@ -9,46 +9,49 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get home => '首页';
+  String get navHome => '音乐库';
 
   @override
-  String get settings => '设置';
+  String get navSettings => '设置';
 
   @override
-  String get language => '语言';
+  String get settingsGeneral => '通用';
 
   @override
-  String get themeMode => '主题';
+  String get settingsAppearance => '外观';
 
   @override
-  String get themeSystem => '跟随系统';
+  String get settingsAbout => '关于';
 
   @override
-  String get themeLight => '浅色';
+  String get settingsLanguage => '语言';
 
   @override
-  String get themeDark => '深色';
+  String get settingsThemeMode => '主题';
 
   @override
-  String get design => '设计';
+  String get settingsThemeSystem => '跟随系统';
 
   @override
-  String get designMaterial => 'Material';
+  String get settingsThemeLight => '浅色';
 
   @override
-  String get designFluent => 'Fluent UI';
+  String get settingsThemeDark => '深色';
 
   @override
-  String get appearance => '外观';
+  String get settingsDesign => '设计';
 
   @override
-  String get about => '关于';
+  String get settingsDesignMaterial => 'Material';
 
   @override
-  String get version => '版本';
+  String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get licenses => '开放源代码许可';
+  String get settingsVersion => '版本';
+
+  @override
+  String get settingsLicenses => '开放源代码许可';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -56,44 +59,47 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   AppLocalizationsZhHantTw() : super('zh_Hant_TW');
 
   @override
-  String get home => '首頁';
+  String get navHome => '音樂庫';
 
   @override
-  String get settings => '設定';
+  String get navSettings => '設定';
 
   @override
-  String get language => '語言';
+  String get settingsGeneral => '一般';
 
   @override
-  String get themeMode => '主題';
+  String get settingsAppearance => '外觀';
 
   @override
-  String get themeSystem => '跟隨系統';
+  String get settingsAbout => '關於';
 
   @override
-  String get themeLight => '淺色';
+  String get settingsLanguage => '語言';
 
   @override
-  String get themeDark => '深色';
+  String get settingsThemeMode => '主題';
 
   @override
-  String get design => '設計';
+  String get settingsThemeSystem => '跟隨系統';
 
   @override
-  String get designMaterial => 'Material';
+  String get settingsThemeLight => '淺色';
 
   @override
-  String get designFluent => 'Fluent UI';
+  String get settingsThemeDark => '深色';
 
   @override
-  String get appearance => '外觀';
+  String get settingsDesign => '設計';
 
   @override
-  String get about => '關於';
+  String get settingsDesignMaterial => 'Material';
 
   @override
-  String get version => '版本';
+  String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get licenses => '開放原始碼授權';
+  String get settingsVersion => '版本';
+
+  @override
+  String get settingsLicenses => '開放原始碼授權';
 }

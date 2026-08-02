@@ -9,44 +9,47 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get home => 'ホーム';
+  String get navHome => 'ライブラリ';
 
   @override
-  String get settings => '設定';
+  String get navSettings => '設定';
 
   @override
-  String get language => '言語';
+  String get settingsGeneral => '一般';
 
   @override
-  String get themeMode => 'テーマ';
+  String get settingsAppearance => '外観';
 
   @override
-  String get themeSystem => 'システム';
+  String get settingsAbout => 'について';
 
   @override
-  String get themeLight => 'ライト';
+  String get settingsLanguage => '言語';
 
   @override
-  String get themeDark => 'ダーク';
+  String get settingsThemeMode => 'テーマ';
 
   @override
-  String get design => 'デザイン';
+  String get settingsThemeSystem => 'システム';
 
   @override
-  String get designMaterial => 'マテリアル';
+  String get settingsThemeLight => 'ライト';
 
   @override
-  String get designFluent => 'Fluent UI';
+  String get settingsThemeDark => 'ダーク';
 
   @override
-  String get appearance => '外観';
+  String get settingsDesign => 'デザイン';
 
   @override
-  String get about => 'について';
+  String get settingsDesignMaterial => 'マテリアル';
 
   @override
-  String get version => 'バージョン';
+  String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get licenses => 'オープンソースライセンス';
+  String get settingsVersion => 'バージョン';
+
+  @override
+  String get settingsLicenses => 'オープンソースライセンス';
 }

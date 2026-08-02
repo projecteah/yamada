@@ -28,12 +28,12 @@ class AboutPage extends ConsumerWidget {
         children: [
           ListTile(
             leading: const Icon(Icons.info_outline),
-            title: Text(l10n.version),
+            title: Text(l10n.settingsVersion),
             trailing: versionText,
           ),
           ListTile(
             leading: const Icon(Icons.description_outlined),
-            title: Text(l10n.licenses),
+            title: Text(l10n.settingsLicenses),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => showLicensePage(context: context),
           ),
