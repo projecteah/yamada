@@ -5,19 +5,29 @@
   "navSettings": "設定",
 
   "settingsGeneral": "一般",
-  "settingsAppearance": "外觀",
-  "settingsAbout": "關於",
+  "settingsGeneralDescription": "語言、全域行為",
   "settingsLanguage": "語言",
-
+  "settingsAppearance": "外觀",
+  "settingsAppearanceDescription": "主題、動態色調",
   "settingsThemeMode": "主題",
   "settingsThemeSystem": "跟隨系統",
   "settingsThemeLight": "淺色",
   "settingsThemeDark": "深色",
-
   "settingsDesign": "設計",
   "settingsDesignMaterial": "Material",
   "settingsDesignFluent": "Fluent UI",
-
+  "settingsPlatform": "串流媒體服務",
+  "settingsPlatformDescription": "管理第三方串流媒體服務、登入帳號",
+  "settingsPlatformYouTube": "YouTube",
+  "settingsPlatformBilibili": "嗶哩嗶哩",
+  "settingsPlatformNetease": "網易雲音樂",
+  "settingsPlatformLogin": "登入",
+  "settingsPlatformLogout": "登出",
+  "settingsPlatformLoggedIn": "已登入",
+  "settingsPlatformNotLoggedIn": "未登入",
+  "settingsPlatformHint": "拖曳手把排序，點擊卡片可登入或登出。",
+  "settingsAbout": "關於",
+  "settingsAboutDescription": "版本資訊、更新",
   "settingsVersion": "版本",
   "settingsLicenses": "開放原始碼授權"
 }

@@ -100,10 +100,8 @@ abstract class AppLocalizations {
     Locale('en'),
     Locale('es'),
     Locale('ja'),
-    Locale('lzh'),
     Locale('pt'),
     Locale('pt', 'BR'),
-    Locale('yue'),
     Locale('zh'),
     Locale.fromSubtags(
         languageCode: 'zh', countryCode: 'TW', scriptCode: 'Hant')
@@ -127,23 +125,29 @@ abstract class AppLocalizations {
   /// **'General'**
   String get settingsGeneral;
 
-  /// No description provided for @settingsAppearance.
+  /// No description provided for @settingsGeneralDescription.
   ///
   /// In en, this message translates to:
-  /// **'Appearance'**
-  String get settingsAppearance;
-
-  /// No description provided for @settingsAbout.
-  ///
-  /// In en, this message translates to:
-  /// **'About'**
-  String get settingsAbout;
+  /// **'Language, global behavior'**
+  String get settingsGeneralDescription;
 
   /// No description provided for @settingsLanguage.
   ///
   /// In en, this message translates to:
   /// **'Language'**
   String get settingsLanguage;
+
+  /// No description provided for @settingsAppearance.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get settingsAppearance;
+
+  /// No description provided for @settingsAppearanceDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme, dynamic colors'**
+  String get settingsAppearanceDescription;
 
   /// No description provided for @settingsThemeMode.
   ///
@@ -187,6 +191,78 @@ abstract class AppLocalizations {
   /// **'Fluent UI'**
   String get settingsDesignFluent;
 
+  /// No description provided for @settingsPlatform.
+  ///
+  /// In en, this message translates to:
+  /// **'Streaming Platform'**
+  String get settingsPlatform;
+
+  /// No description provided for @settingsPlatformDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage third-party streaming platforms, sign in accounts'**
+  String get settingsPlatformDescription;
+
+  /// No description provided for @settingsPlatformYouTube.
+  ///
+  /// In en, this message translates to:
+  /// **'YouTube'**
+  String get settingsPlatformYouTube;
+
+  /// No description provided for @settingsPlatformBilibili.
+  ///
+  /// In en, this message translates to:
+  /// **'bilibili'**
+  String get settingsPlatformBilibili;
+
+  /// No description provided for @settingsPlatformNetease.
+  ///
+  /// In en, this message translates to:
+  /// **'Netease Cloud Music'**
+  String get settingsPlatformNetease;
+
+  /// No description provided for @settingsPlatformLogin.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get settingsPlatformLogin;
+
+  /// No description provided for @settingsPlatformLogout.
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get settingsPlatformLogout;
+
+  /// No description provided for @settingsPlatformLoggedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Logged in'**
+  String get settingsPlatformLoggedIn;
+
+  /// No description provided for @settingsPlatformNotLoggedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Not logged in'**
+  String get settingsPlatformNotLoggedIn;
+
+  /// No description provided for @settingsPlatformHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Long press the handle to reorder, tap a tile to sign in or out.'**
+  String get settingsPlatformHint;
+
+  /// No description provided for @settingsAbout.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get settingsAbout;
+
+  /// No description provided for @settingsAboutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Version info, updates'**
+  String get settingsAboutDescription;
+
   /// No description provided for @settingsVersion.
   ///
   /// In en, this message translates to:
@@ -210,15 +286,8 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) => <String>[
-        'en',
-        'es',
-        'ja',
-        'lzh',
-        'pt',
-        'yue',
-        'zh'
-      ].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['en', 'es', 'ja', 'pt', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;

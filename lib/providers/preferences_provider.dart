@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -113,3 +115,87 @@ extension AppDesignX on AppDesign {
 final packageInfoProvider = FutureProvider<PackageInfo>(
   (ref) => PackageInfo.fromPlatform(),
 );
+
+enum StreamingPlatformId { youtube, bilibili, netease }
+
+class StreamingPlatformConfig {
+  final StreamingPlatformId id;
+  final bool enabled;
+  final bool loggedIn;
+
+  const StreamingPlatformConfig({
+    required this.id,
+    this.enabled = false,
+    this.loggedIn = false,
+  });
+
+  StreamingPlatformConfig copyWith({bool? enabled, bool? loggedIn}) =>
+      StreamingPlatformConfig(
+        id: id,
+        enabled: enabled ?? this.enabled,
+        loggedIn: loggedIn ?? this.loggedIn,
+      );
+
+  Map<String, dynamic> toJson() => {
+        'id': id.name,
+        'enabled': enabled,
+        'loggedIn': loggedIn,
+      };
+
+  factory StreamingPlatformConfig.fromJson(Map<String, dynamic> json) =>
+      StreamingPlatformConfig(
+        id: StreamingPlatformId.values.byName(json['id'] as String),
+        enabled: json['enabled'] as bool,
+        loggedIn: json['loggedIn'] as bool,
+      );
+}
+
+class StreamingPlatformsNotifier
+    extends PreferenceNotifier<List<StreamingPlatformConfig>> {
+  @override
+  String get key => 'streaming_platforms';
+
+  @override
+  List<StreamingPlatformConfig> get defaultValue => const [
+        StreamingPlatformConfig(id: StreamingPlatformId.youtube),
+        StreamingPlatformConfig(id: StreamingPlatformId.bilibili),
+        StreamingPlatformConfig(id: StreamingPlatformId.netease),
+      ];
+
+  @override
+  List<StreamingPlatformConfig> decode(String value) {
+    final list = jsonDecode(value) as List<dynamic>;
+    return list
+        .map((e) => StreamingPlatformConfig.fromJson(e as Map<String, dynamic>))
+        .toList();
+  }
+
+  @override
+  String encode(List<StreamingPlatformConfig> value) =>
+      jsonEncode(value.map((e) => e.toJson()).toList());
+
+  Future<void> reorder(int oldIndex, int newIndex) async {
+    final current = [...state];
+    final item = current.removeAt(oldIndex);
+    current.insert(newIndex, item);
+    await set(current);
+  }
+
+  Future<void> setEnabled(StreamingPlatformId id, bool value) async {
+    await set([
+      for (final p in state)
+        if (p.id == id) p.copyWith(enabled: value) else p,
+    ]);
+  }
+
+  Future<void> setLoggedIn(StreamingPlatformId id, bool value) async {
+    await set([
+      for (final p in state)
+        if (p.id == id) p.copyWith(loggedIn: value) else p,
+    ]);
+  }
+}
+
+final streamingPlatformsProvider =
+    NotifierProvider<StreamingPlatformsNotifier, List<StreamingPlatformConfig>>(
+        StreamingPlatformsNotifier.new);

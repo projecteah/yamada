@@ -18,13 +18,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsGeneral => 'Geral';
 
   @override
-  String get settingsAppearance => 'Aparência';
-
-  @override
-  String get settingsAbout => 'Acerca';
+  String get settingsGeneralDescription => 'Idioma, comportamento global';
 
   @override
   String get settingsLanguage => 'Idioma';
+
+  @override
+  String get settingsAppearance => 'Aparência';
+
+  @override
+  String get settingsAppearanceDescription => 'Tema, cores dinâmicas';
 
   @override
   String get settingsThemeMode => 'Tema';
@@ -48,6 +51,44 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
+  String get settingsPlatform => 'Plataforma de streaming';
+
+  @override
+  String get settingsPlatformDescription =>
+      'Gerir plataformas de streaming de terceiros, iniciar sessão em contas';
+
+  @override
+  String get settingsPlatformYouTube => 'YouTube';
+
+  @override
+  String get settingsPlatformBilibili => 'bilibili';
+
+  @override
+  String get settingsPlatformNetease => 'Netease Cloud Music';
+
+  @override
+  String get settingsPlatformLogin => 'Iniciar sessão';
+
+  @override
+  String get settingsPlatformLogout => 'Terminar sessão';
+
+  @override
+  String get settingsPlatformLoggedIn => 'Sessão iniciada';
+
+  @override
+  String get settingsPlatformNotLoggedIn => 'Sem sessão';
+
+  @override
+  String get settingsPlatformHint =>
+      'Mantenha o controlo premido para reordenar, toque num mosaico para iniciar ou terminar sessão.';
+
+  @override
+  String get settingsAbout => 'Acerca';
+
+  @override
+  String get settingsAboutDescription => 'Informação da versão, atualizações';
+
+  @override
   String get settingsVersion => 'Versão';
 
   @override
@@ -68,13 +109,16 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get settingsGeneral => 'Geral';
 
   @override
-  String get settingsAppearance => 'Aparência';
-
-  @override
-  String get settingsAbout => 'Sobre';
+  String get settingsGeneralDescription => 'Idioma, comportamento global';
 
   @override
   String get settingsLanguage => 'Idioma';
+
+  @override
+  String get settingsAppearance => 'Aparência';
+
+  @override
+  String get settingsAppearanceDescription => 'Tema, cores dinâmicas';
 
   @override
   String get settingsThemeMode => 'Tema';
@@ -96,6 +140,44 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get settingsDesignFluent => 'Fluent UI';
+
+  @override
+  String get settingsPlatform => 'Plataforma de streaming';
+
+  @override
+  String get settingsPlatformDescription =>
+      'Gerenciar plataformas de streaming de terceiros, entrar em contas';
+
+  @override
+  String get settingsPlatformYouTube => 'YouTube';
+
+  @override
+  String get settingsPlatformBilibili => 'bilibili';
+
+  @override
+  String get settingsPlatformNetease => 'Netease Cloud Music';
+
+  @override
+  String get settingsPlatformLogin => 'Entrar';
+
+  @override
+  String get settingsPlatformLogout => 'Sair';
+
+  @override
+  String get settingsPlatformLoggedIn => 'Conectado';
+
+  @override
+  String get settingsPlatformNotLoggedIn => 'Desconectado';
+
+  @override
+  String get settingsPlatformHint =>
+      'Segure a alça para reordenar, toque em um cartão para entrar ou sair.';
+
+  @override
+  String get settingsAbout => 'Sobre';
+
+  @override
+  String get settingsAboutDescription => 'Informações da versão, atualizações';
 
   @override
   String get settingsVersion => 'Versão';

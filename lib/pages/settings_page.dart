@@ -19,16 +19,25 @@ class SettingsPage extends StatelessWidget {
           SettingTile(
             icon: Icons.settings_rounded,
             title: l10n.settingsGeneral,
+            subtitle: l10n.settingsGeneralDescription,
             onTap: () => context.go('/settings/general'),
           ),
           SettingTile(
             icon: Icons.palette_rounded,
             title: l10n.settingsAppearance,
+            subtitle: l10n.settingsAppearanceDescription,
             onTap: () => context.go('/settings/appearance'),
+          ),
+          SettingTile(
+            icon: Icons.cloud_rounded,
+            title: l10n.settingsPlatform,
+            subtitle: l10n.settingsPlatformDescription,
+            onTap: () => context.go('/settings/streaming'),
           ),
           SettingTile(
             icon: Icons.info_rounded,
             title: l10n.settingsAbout,
+            subtitle: l10n.settingsAboutDescription,
             onTap: () => context.go('/settings/about'),
           ),
         ],

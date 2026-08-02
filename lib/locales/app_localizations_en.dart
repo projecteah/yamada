@@ -18,13 +18,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsGeneral => 'General';
 
   @override
-  String get settingsAppearance => 'Appearance';
-
-  @override
-  String get settingsAbout => 'About';
+  String get settingsGeneralDescription => 'Language, global behavior';
 
   @override
   String get settingsLanguage => 'Language';
+
+  @override
+  String get settingsAppearance => 'Appearance';
+
+  @override
+  String get settingsAppearanceDescription => 'Theme, dynamic colors';
 
   @override
   String get settingsThemeMode => 'Theme';
@@ -46,6 +49,44 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsDesignFluent => 'Fluent UI';
+
+  @override
+  String get settingsPlatform => 'Streaming Platform';
+
+  @override
+  String get settingsPlatformDescription =>
+      'Manage third-party streaming platforms, sign in accounts';
+
+  @override
+  String get settingsPlatformYouTube => 'YouTube';
+
+  @override
+  String get settingsPlatformBilibili => 'bilibili';
+
+  @override
+  String get settingsPlatformNetease => 'Netease Cloud Music';
+
+  @override
+  String get settingsPlatformLogin => 'Login';
+
+  @override
+  String get settingsPlatformLogout => 'Logout';
+
+  @override
+  String get settingsPlatformLoggedIn => 'Logged in';
+
+  @override
+  String get settingsPlatformNotLoggedIn => 'Not logged in';
+
+  @override
+  String get settingsPlatformHint =>
+      'Long press the handle to reorder, tap a tile to sign in or out.';
+
+  @override
+  String get settingsAbout => 'About';
+
+  @override
+  String get settingsAboutDescription => 'Version info, updates';
 
   @override
   String get settingsVersion => 'Version';

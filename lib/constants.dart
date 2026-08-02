@@ -19,7 +19,7 @@ const kLanguages = <Language>[
   ),
   Language(Locale('ja'), '日本語'),
   Language(
-    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
+    Locale.fromSubtags(languageCode: 'zh'),
     '简体中文',
   ),
   Language(

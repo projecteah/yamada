@@ -9,6 +9,7 @@ import 'package:yamada/pages/settings_page.dart';
 import 'package:yamada/pages/settings/general_page.dart';
 import 'package:yamada/pages/settings/appearance_page.dart';
 import 'package:yamada/pages/settings/about_page.dart';
+import 'package:yamada/pages/settings/streaming_page.dart';
 
 class AppRoute {
   final String path;
@@ -68,6 +69,11 @@ final List<AppRoute> appRoutes = [
         path: 'appearance',
         builder: (context, state) => const AppearancePage(),
         labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsAppearance,
+      ),
+      AppSubRoute(
+        path: 'streaming',
+        builder: (context, state) => const StreamingPage(),
+        labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsPlatform,
       ),
       AppSubRoute(
         path: 'about',

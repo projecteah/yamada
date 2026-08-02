@@ -5,19 +5,29 @@
   "navSettings": "Ajustes",
 
   "settingsGeneral": "General",
-  "settingsAppearance": "Apariencia",
-  "settingsAbout": "Acerca de",
+  "settingsGeneralDescription": "Idioma, comportamiento global",
   "settingsLanguage": "Idioma",
-
+  "settingsAppearance": "Apariencia",
+  "settingsAppearanceDescription": "Tema, colores dinámicos",
   "settingsThemeMode": "Tema",
   "settingsThemeSystem": "Sistema",
   "settingsThemeLight": "Claro",
   "settingsThemeDark": "Oscuro",
-
   "settingsDesign": "Diseño",
   "settingsDesignMaterial": "Material",
   "settingsDesignFluent": "Fluent UI",
-
+  "settingsPlatform": "Plataforma de streaming",
+  "settingsPlatformDescription": "Gestionar plataformas de streaming de terceros, iniciar sesión en cuentas",
+  "settingsPlatformYouTube": "YouTube",
+  "settingsPlatformBilibili": "bilibili",
+  "settingsPlatformNetease": "Netease Cloud Music",
+  "settingsPlatformLogin": "Iniciar sesión",
+  "settingsPlatformLogout": "Cerrar sesión",
+  "settingsPlatformLoggedIn": "Sesión iniciada",
+  "settingsPlatformNotLoggedIn": "Sesión no iniciada",
+  "settingsPlatformHint": "Mantén presionado el asa para reordenar, toca una tarjeta para iniciar o cerrar sesión.",
+  "settingsAbout": "Acerca de",
+  "settingsAboutDescription": "Información de versión, actualizaciones",
   "settingsVersion": "Versión",
   "settingsLicenses": "Licencias de código abierto"
 }

@@ -5,15 +5,14 @@
   "navSettings": "Settings",
 
   "settingsGeneral": "General",
-  "settingsAppearance": "Appearance",
-  "settingsAbout": "About",
+  "settingsGeneralDescription": "Language, global behavior",
   "settingsLanguage": "Language",
-
+  "settingsAppearance": "Appearance",
+  "settingsAppearanceDescription": "Theme, dynamic colors",
   "settingsThemeMode": "Theme",
   "settingsThemeSystem": "System",
   "settingsThemeLight": "Light",
   "settingsThemeDark": "Dark",
-
   "settingsDesign": "Design",
   "@settingsDesign": {
     "description": "Label for the design language setting (Material or Fluent)."
@@ -26,7 +25,18 @@
   "@settingsDesignFluent": {
     "description": "Microsoft's Fluent UI design system."
   },
-
+  "settingsPlatform": "Streaming Platform",
+  "settingsPlatformDescription": "Manage third-party streaming platforms, sign in accounts",
+  "settingsPlatformYouTube": "YouTube",
+  "settingsPlatformBilibili": "bilibili",
+  "settingsPlatformNetease": "Netease Cloud Music",
+  "settingsPlatformLogin": "Login",
+  "settingsPlatformLogout": "Logout",
+  "settingsPlatformLoggedIn": "Logged in",
+  "settingsPlatformNotLoggedIn": "Not logged in",
+  "settingsPlatformHint": "Long press the handle to reorder, tap a tile to sign in or out.",
+  "settingsAbout": "About",
+  "settingsAboutDescription": "Version info, updates",
   "settingsVersion": "Version",
   "settingsLicenses": "Open Source Licenses"
 }

@@ -5,19 +5,29 @@
   "navSettings": "设置",
 
   "settingsGeneral": "通用",
-  "settingsAppearance": "外观",
-  "settingsAbout": "关于",
+  "settingsGeneralDescription": "语言、全局行为",
   "settingsLanguage": "语言",
-
+  "settingsAppearance": "外观",
+  "settingsAppearanceDescription": "主题、动态色调",
   "settingsThemeMode": "主题",
   "settingsThemeSystem": "跟随系统",
   "settingsThemeLight": "浅色",
   "settingsThemeDark": "深色",
-
   "settingsDesign": "设计",
   "settingsDesignMaterial": "Material",
   "settingsDesignFluent": "Fluent UI",
-
+  "settingsPlatform": "流媒体平台",
+  "settingsPlatformDescription": "管理第三方流媒体平台、登录账号",
+  "settingsPlatformYouTube": "YouTube",
+  "settingsPlatformBilibili": "哔哩哔哩",
+  "settingsPlatformNetease": "网易云音乐",
+  "settingsPlatformLogin": "登录",
+  "settingsPlatformLogout": "退出登录",
+  "settingsPlatformLoggedIn": "已登录",
+  "settingsPlatformNotLoggedIn": "未登录",
+  "settingsPlatformHint": "长按拖拽手柄排序，启用后点击卡片可登录或退出。",
+  "settingsAbout": "关于",
+  "settingsAboutDescription": "版本信息、更新",
   "settingsVersion": "版本",
   "settingsLicenses": "开放源代码许可"
 }

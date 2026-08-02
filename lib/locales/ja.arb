@@ -5,19 +5,29 @@
   "navSettings": "設定",
 
   "settingsGeneral": "一般",
-  "settingsAppearance": "外観",
-  "settingsAbout": "について",
+  "settingsGeneralDescription": "言語、グローバル設定",
   "settingsLanguage": "言語",
-
+  "settingsAppearance": "外観",
+  "settingsAppearanceDescription": "テーマ、ダイナミックカラー",
   "settingsThemeMode": "テーマ",
   "settingsThemeSystem": "システム",
   "settingsThemeLight": "ライト",
   "settingsThemeDark": "ダーク",
-
   "settingsDesign": "デザイン",
   "settingsDesignMaterial": "マテリアル",
   "settingsDesignFluent": "Fluent UI",
-
+  "settingsPlatform": "ストリーミングプラットフォーム",
+  "settingsPlatformDescription": "サードパーティのストリーミングプラットフォームを管理、アカウントにログイン",
+  "settingsPlatformYouTube": "YouTube",
+  "settingsPlatformBilibili": "bilibili",
+  "settingsPlatformNetease": "Netease Cloud Music",
+  "settingsPlatformLogin": "ログイン",
+  "settingsPlatformLogout": "ログアウト",
+  "settingsPlatformLoggedIn": "ログイン済み",
+  "settingsPlatformNotLoggedIn": "未ログイン",
+  "settingsPlatformHint": "ドラッグで並べ替え、カードをタップしてログインまたはログアウト。",
+  "settingsAbout": "について",
+  "settingsAboutDescription": "バージョン情報、アップデート",
   "settingsVersion": "バージョン",
   "settingsLicenses": "オープンソースライセンス"
 }
