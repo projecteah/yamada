@@ -70,9 +70,11 @@ class GeneralPage extends ConsumerWidget {
 
   String _labelFor(Locale? locale, AppLocalizations l10n) {
     if (locale == null) return l10n.settingsThemeSystem;
-    return kLanguages.firstWhere(
-      (e) => e.locale == locale,
-      orElse: () => Language(locale, locale.toLanguageTag()),
-    ).label;
+    return kLanguages
+        .firstWhere(
+          (e) => e.locale == locale,
+          orElse: () => Language(locale, locale.toLanguageTag()),
+        )
+        .label;
   }
 }

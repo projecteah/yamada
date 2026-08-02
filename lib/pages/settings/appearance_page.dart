@@ -22,8 +22,7 @@ class AppearancePage extends ConsumerWidget {
             icon: Icons.brightness_6_rounded,
             title: l10n.settingsThemeMode,
             subtitle: _themeModeLabel(themeMode, l10n),
-            onTap: () =>
-                _showThemeModeDialog(context, ref, themeMode, l10n),
+            onTap: () => _showThemeModeDialog(context, ref, themeMode, l10n),
           ),
           SettingTile(
             icon: Icons.design_services_rounded,
@@ -133,6 +132,8 @@ class AppearancePage extends ConsumerWidget {
   }
 
   String _designLabel(AppDesign design, AppLocalizations l10n) {
-    return design == AppDesign.fluent ? l10n.settingsDesignFluent : l10n.settingsDesignMaterial;
+    return design == AppDesign.fluent
+        ? l10n.settingsDesignFluent
+        : l10n.settingsDesignMaterial;
   }
 }

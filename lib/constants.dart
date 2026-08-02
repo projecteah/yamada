@@ -23,7 +23,8 @@ const kLanguages = <Language>[
     '简体中文',
   ),
   Language(
-    Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
+    Locale.fromSubtags(
+        languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
     '正體中文',
   ),
   // Language(

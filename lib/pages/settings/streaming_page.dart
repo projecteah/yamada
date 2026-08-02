@@ -25,7 +25,7 @@ class StreamingPage extends ConsumerWidget {
             onReorderItem: (oldIndex, newIndex) => ref
                 .read(streamingPlatformsProvider.notifier)
                 .reorder(oldIndex, newIndex),
-              itemBuilder: (context, index) => _StreamingTile(
+            itemBuilder: (context, index) => _StreamingTile(
               key: ValueKey(platforms[index].id),
               config: platforms[index],
               index: index,
@@ -71,8 +71,9 @@ class _StreamingTile extends ConsumerWidget {
           : l10n.settingsPlatformNotLoggedIn),
       trailing: Switch(
         value: config.enabled,
-        onChanged: (v) =>
-            ref.read(streamingPlatformsProvider.notifier).setEnabled(config.id, v),
+        onChanged: (v) => ref
+            .read(streamingPlatformsProvider.notifier)
+            .setEnabled(config.id, v),
       ),
       onTap: config.enabled
           ? () => ref
