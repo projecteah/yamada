@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/preferences_provider.dart';
+import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
+import 'package:yamada/models/streaming_platforms.dart';
 import 'package:yamada/components/settings/setting_tile.dart';
 
 class StreamingPage extends ConsumerWidget {

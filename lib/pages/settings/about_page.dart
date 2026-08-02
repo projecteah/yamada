@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/preferences_provider.dart';
+import 'package:yamada/providers/package_info_provider.dart';
 
 class AboutPage extends ConsumerWidget {
   const AboutPage({super.key});

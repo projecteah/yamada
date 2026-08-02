@@ -6,7 +6,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/constants.dart';
 import 'package:yamada/router/router.dart';
-import 'package:yamada/providers/preferences_provider.dart';
+import 'package:yamada/providers/settings/appearance_provider.dart';
+import 'package:yamada/providers/settings/locale_provider.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});

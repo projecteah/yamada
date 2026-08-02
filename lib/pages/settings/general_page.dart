@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/constants.dart';
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/providers/preferences_provider.dart';
+import 'package:yamada/providers/settings/locale_provider.dart';
 import 'package:yamada/components/settings/setting_tile.dart';
 
 class GeneralPage extends ConsumerWidget {

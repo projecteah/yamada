@@ -6,7 +6,7 @@ import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:window_manager/window_manager.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:yamada/providers/preferences_provider.dart';
+import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/router/router.dart';
 
 class AppNavigation extends ConsumerWidget {
