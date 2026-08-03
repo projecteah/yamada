@@ -13,11 +13,11 @@ class HomePage extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
     return isFluent
         ? fluent.ScaffoldPage(
-            header: fluent.PageHeader(title: Text(l10n.navHome)),
+            header: fluent.PageHeader(title: Text(l10n.home)),
             content: const _HomeContent(),
           )
         : Scaffold(
-            appBar: AppBar(title: Text(l10n.navHome)),
+            appBar: AppBar(title: Text(l10n.home)),
             body: const _HomeContent(),
           );
   }

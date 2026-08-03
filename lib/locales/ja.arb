@@ -1,8 +1,16 @@
 {
   "@@locale": "ja",
 
-  "navHome": "ライブラリ",
-  "navSettings": "設定",
+  "home": "ライブラリ",
+  "search": "検索",
+  "setting": "設定",
+  "searchPlaceholder": "曲、アーティスト、アルバムを検索...",
+  "searchTabAll": "すべて",
+  "searchTabLocal": "ローカル",
+
+  "platformYouTube": "YouTube",
+  "platformBilibili": "bilibili",
+  "platformNetease": "Netease Cloud Music",
 
   "settingsGeneral": "一般",
   "settingsGeneralDescription": "言語、グローバル設定",
@@ -16,11 +24,8 @@
   "settingsDesign": "デザイン",
   "settingsDesignMaterial": "マテリアル",
   "settingsDesignFluent": "Fluent UI",
-  "settingsPlatform": "ストリーミングプラットフォーム",
-  "settingsPlatformDescription": "サードパーティのストリーミングプラットフォームを管理、アカウントにログイン",
-  "settingsPlatformYouTube": "YouTube",
-  "settingsPlatformBilibili": "bilibili",
-  "settingsPlatformNetease": "Netease Cloud Music",
+  "settingsPlatform": "ストリーミングサービス",
+  "settingsPlatformDescription": "サードパーティのストリーミングサービスを管理、アカウントにログイン",
   "settingsPlatformLogin": "ログイン",
   "settingsPlatformLogout": "ログアウト",
   "settingsPlatformLoggedIn": "ログイン済み",

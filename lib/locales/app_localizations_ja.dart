@@ -9,10 +9,31 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get navHome => 'ライブラリ';
+  String get home => 'ライブラリ';
 
   @override
-  String get navSettings => '設定';
+  String get search => '検索';
+
+  @override
+  String get setting => '設定';
+
+  @override
+  String get searchPlaceholder => '曲、アーティスト、アルバムを検索...';
+
+  @override
+  String get searchTabAll => 'すべて';
+
+  @override
+  String get searchTabLocal => 'ローカル';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => 'bilibili';
+
+  @override
+  String get platformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsGeneral => '一般';
@@ -51,20 +72,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get settingsPlatform => 'ストリーミングプラットフォーム';
+  String get settingsPlatform => 'ストリーミングサービス';
 
   @override
-  String get settingsPlatformDescription =>
-      'サードパーティのストリーミングプラットフォームを管理、アカウントにログイン';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => 'bilibili';
-
-  @override
-  String get settingsPlatformNetease => 'Netease Cloud Music';
+  String get settingsPlatformDescription => 'サードパーティのストリーミングサービスを管理、アカウントにログイン';
 
   @override
   String get settingsPlatformLogin => 'ログイン';

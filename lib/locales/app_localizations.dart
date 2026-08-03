@@ -107,17 +107,59 @@ abstract class AppLocalizations {
         languageCode: 'zh', countryCode: 'TW', scriptCode: 'Hant')
   ];
 
-  /// No description provided for @navHome.
+  /// No description provided for @home.
   ///
   /// In en, this message translates to:
   /// **'Library'**
-  String get navHome;
+  String get home;
 
-  /// No description provided for @navSettings.
+  /// No description provided for @search.
   ///
   /// In en, this message translates to:
-  /// **'Settings'**
-  String get navSettings;
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting'**
+  String get setting;
+
+  /// No description provided for @searchPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Search songs, artists, albums...'**
+  String get searchPlaceholder;
+
+  /// No description provided for @searchTabAll.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get searchTabAll;
+
+  /// No description provided for @searchTabLocal.
+  ///
+  /// In en, this message translates to:
+  /// **'Local'**
+  String get searchTabLocal;
+
+  /// No description provided for @platformYouTube.
+  ///
+  /// In en, this message translates to:
+  /// **'YouTube'**
+  String get platformYouTube;
+
+  /// No description provided for @platformBilibili.
+  ///
+  /// In en, this message translates to:
+  /// **'bilibili'**
+  String get platformBilibili;
+
+  /// No description provided for @platformNetease.
+  ///
+  /// In en, this message translates to:
+  /// **'Netease Cloud Music'**
+  String get platformNetease;
 
   /// No description provided for @settingsGeneral.
   ///
@@ -202,24 +244,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Manage third-party streaming platforms, sign in accounts'**
   String get settingsPlatformDescription;
-
-  /// No description provided for @settingsPlatformYouTube.
-  ///
-  /// In en, this message translates to:
-  /// **'YouTube'**
-  String get settingsPlatformYouTube;
-
-  /// No description provided for @settingsPlatformBilibili.
-  ///
-  /// In en, this message translates to:
-  /// **'bilibili'**
-  String get settingsPlatformBilibili;
-
-  /// No description provided for @settingsPlatformNetease.
-  ///
-  /// In en, this message translates to:
-  /// **'Netease Cloud Music'**
-  String get settingsPlatformNetease;
 
   /// No description provided for @settingsPlatformLogin.
   ///

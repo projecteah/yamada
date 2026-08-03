@@ -1,8 +1,16 @@
 {
   "@@locale": "en",
 
-  "navHome": "Library",
-  "navSettings": "Settings",
+  "home": "Library",
+  "search": "Search",
+  "setting": "Setting",
+  "searchPlaceholder": "Search songs, artists, albums...",
+  "searchTabAll": "All",
+  "searchTabLocal": "Local",
+
+  "platformYouTube": "YouTube",
+  "platformBilibili": "bilibili",
+  "platformNetease": "Netease Cloud Music",
 
   "settingsGeneral": "General",
   "settingsGeneralDescription": "Language, global behavior",
@@ -27,9 +35,6 @@
   },
   "settingsPlatform": "Streaming Platform",
   "settingsPlatformDescription": "Manage third-party streaming platforms, sign in accounts",
-  "settingsPlatformYouTube": "YouTube",
-  "settingsPlatformBilibili": "bilibili",
-  "settingsPlatformNetease": "Netease Cloud Music",
   "settingsPlatformLogin": "Login",
   "settingsPlatformLogout": "Logout",
   "settingsPlatformLoggedIn": "Logged in",

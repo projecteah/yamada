@@ -12,7 +12,7 @@ class SettingsPage extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.navSettings)),
+      appBar: AppBar(title: Text(l10n.setting)),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8),
         children: [

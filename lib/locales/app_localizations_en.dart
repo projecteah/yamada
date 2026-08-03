@@ -9,10 +9,31 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get navHome => 'Library';
+  String get home => 'Library';
 
   @override
-  String get navSettings => 'Settings';
+  String get search => 'Search';
+
+  @override
+  String get setting => 'Setting';
+
+  @override
+  String get searchPlaceholder => 'Search songs, artists, albums...';
+
+  @override
+  String get searchTabAll => 'All';
+
+  @override
+  String get searchTabLocal => 'Local';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => 'bilibili';
+
+  @override
+  String get platformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsGeneral => 'General';
@@ -56,15 +77,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get settingsPlatformDescription =>
       'Manage third-party streaming platforms, sign in accounts';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => 'bilibili';
-
-  @override
-  String get settingsPlatformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsPlatformLogin => 'Login';

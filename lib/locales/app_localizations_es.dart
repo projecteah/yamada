@@ -9,10 +9,31 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get navHome => 'Biblioteca';
+  String get home => 'Biblioteca';
 
   @override
-  String get navSettings => 'Ajustes';
+  String get search => 'Buscar';
+
+  @override
+  String get setting => 'Ajustes';
+
+  @override
+  String get searchPlaceholder => 'Buscar canciones, artistas, álbumes...';
+
+  @override
+  String get searchTabAll => 'Todo';
+
+  @override
+  String get searchTabLocal => 'Local';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => 'bilibili';
+
+  @override
+  String get platformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsGeneral => 'General';
@@ -51,20 +72,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get settingsPlatform => 'Plataforma de streaming';
+  String get settingsPlatform => 'Servicio de streaming';
 
   @override
   String get settingsPlatformDescription =>
-      'Gestionar plataformas de streaming de terceros, iniciar sesión en cuentas';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => 'bilibili';
-
-  @override
-  String get settingsPlatformNetease => 'Netease Cloud Music';
+      'Gestionar servicios de streaming de terceros, iniciar sesión en cuentas';
 
   @override
   String get settingsPlatformLogin => 'Iniciar sesión';

@@ -9,10 +9,31 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
-  String get navHome => '音乐库';
+  String get home => '音乐库';
 
   @override
-  String get navSettings => '设置';
+  String get search => '搜索';
+
+  @override
+  String get setting => '设置';
+
+  @override
+  String get searchPlaceholder => '搜索歌曲、艺术家、专辑...';
+
+  @override
+  String get searchTabAll => '全部';
+
+  @override
+  String get searchTabLocal => '本地';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => '哔哩哔哩';
+
+  @override
+  String get platformNetease => '网易云音乐';
 
   @override
   String get settingsGeneral => '通用';
@@ -51,19 +72,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get settingsPlatform => '流媒体平台';
+  String get settingsPlatform => '流媒体服务';
 
   @override
-  String get settingsPlatformDescription => '管理第三方流媒体平台、登录账号';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => '哔哩哔哩';
-
-  @override
-  String get settingsPlatformNetease => '网易云音乐';
+  String get settingsPlatformDescription => '管理第三方流媒体服务、登录账号';
 
   @override
   String get settingsPlatformLogin => '登录';
@@ -98,10 +110,31 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   AppLocalizationsZhHantTw() : super('zh_Hant_TW');
 
   @override
-  String get navHome => '音樂庫';
+  String get home => '音樂庫';
 
   @override
-  String get navSettings => '設定';
+  String get search => '搜尋';
+
+  @override
+  String get setting => '設定';
+
+  @override
+  String get searchPlaceholder => '搜尋歌曲、藝術家、專輯...';
+
+  @override
+  String get searchTabAll => '全部';
+
+  @override
+  String get searchTabLocal => '本機';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => '嗶哩嗶哩';
+
+  @override
+  String get platformNetease => '網易雲音樂';
 
   @override
   String get settingsGeneral => '一般';
@@ -144,15 +177,6 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get settingsPlatformDescription => '管理第三方串流媒體服務、登入帳號';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => '嗶哩嗶哩';
-
-  @override
-  String get settingsPlatformNetease => '網易雲音樂';
 
   @override
   String get settingsPlatformLogin => '登入';

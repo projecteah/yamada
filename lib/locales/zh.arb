@@ -1,8 +1,16 @@
 {
   "@@locale": "zh",
 
-  "navHome": "音乐库",
-  "navSettings": "设置",
+  "home": "音乐库",
+  "search": "搜索",
+  "setting": "设置",
+  "searchPlaceholder": "搜索歌曲、艺术家、专辑...",
+  "searchTabAll": "全部",
+  "searchTabLocal": "本地",
+
+  "platformYouTube": "YouTube",
+  "platformBilibili": "哔哩哔哩",
+  "platformNetease": "网易云音乐",
 
   "settingsGeneral": "通用",
   "settingsGeneralDescription": "语言、全局行为",
@@ -16,11 +24,8 @@
   "settingsDesign": "设计",
   "settingsDesignMaterial": "Material",
   "settingsDesignFluent": "Fluent UI",
-  "settingsPlatform": "流媒体平台",
-  "settingsPlatformDescription": "管理第三方流媒体平台、登录账号",
-  "settingsPlatformYouTube": "YouTube",
-  "settingsPlatformBilibili": "哔哩哔哩",
-  "settingsPlatformNetease": "网易云音乐",
+  "settingsPlatform": "流媒体服务",
+  "settingsPlatformDescription": "管理第三方流媒体服务、登录账号",
   "settingsPlatformLogin": "登录",
   "settingsPlatformLogout": "退出登录",
   "settingsPlatformLoggedIn": "已登录",

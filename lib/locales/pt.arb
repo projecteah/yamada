@@ -1,8 +1,16 @@
 {
   "@@locale": "pt",
 
-  "navHome": "Biblioteca",
-  "navSettings": "Definições",
+  "home": "Biblioteca",
+  "search": "Pesquisar",
+  "setting": "Definições",
+  "searchPlaceholder": "Pesquisar músicas, artistas, álbuns...",
+  "searchTabAll": "Tudo",
+  "searchTabLocal": "Local",
+
+  "platformYouTube": "YouTube",
+  "platformBilibili": "bilibili",
+  "platformNetease": "Netease Cloud Music",
 
   "settingsGeneral": "Geral",
   "settingsGeneralDescription": "Idioma, comportamento global",
@@ -16,11 +24,8 @@
   "settingsDesign": "Desenho",
   "settingsDesignMaterial": "Material",
   "settingsDesignFluent": "Fluent UI",
-  "settingsPlatform": "Plataforma de streaming",
-  "settingsPlatformDescription": "Gerir plataformas de streaming de terceiros, iniciar sessão em contas",
-  "settingsPlatformYouTube": "YouTube",
-  "settingsPlatformBilibili": "bilibili",
-  "settingsPlatformNetease": "Netease Cloud Music",
+  "settingsPlatform": "Serviço de streaming",
+  "settingsPlatformDescription": "Gerir serviços de streaming de terceiros, iniciar sessão em contas",
   "settingsPlatformLogin": "Iniciar sessão",
   "settingsPlatformLogout": "Terminar sessão",
   "settingsPlatformLoggedIn": "Sessão iniciada",

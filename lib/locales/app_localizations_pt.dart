@@ -9,10 +9,31 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get navHome => 'Biblioteca';
+  String get home => 'Biblioteca';
 
   @override
-  String get navSettings => 'Definições';
+  String get search => 'Pesquisar';
+
+  @override
+  String get setting => 'Definições';
+
+  @override
+  String get searchPlaceholder => 'Pesquisar músicas, artistas, álbuns...';
+
+  @override
+  String get searchTabAll => 'Tudo';
+
+  @override
+  String get searchTabLocal => 'Local';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => 'bilibili';
+
+  @override
+  String get platformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsGeneral => 'Geral';
@@ -51,20 +72,11 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get settingsPlatform => 'Plataforma de streaming';
+  String get settingsPlatform => 'Serviço de streaming';
 
   @override
   String get settingsPlatformDescription =>
-      'Gerir plataformas de streaming de terceiros, iniciar sessão em contas';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => 'bilibili';
-
-  @override
-  String get settingsPlatformNetease => 'Netease Cloud Music';
+      'Gerir serviços de streaming de terceiros, iniciar sessão em contas';
 
   @override
   String get settingsPlatformLogin => 'Iniciar sessão';
@@ -100,10 +112,31 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   AppLocalizationsPtBr() : super('pt_BR');
 
   @override
-  String get navHome => 'Biblioteca';
+  String get home => 'Biblioteca';
 
   @override
-  String get navSettings => 'Configurações';
+  String get search => 'Pesquisar';
+
+  @override
+  String get setting => 'Configurações';
+
+  @override
+  String get searchPlaceholder => 'Pesquisar músicas, artistas, álbuns...';
+
+  @override
+  String get searchTabAll => 'Tudo';
+
+  @override
+  String get searchTabLocal => 'Local';
+
+  @override
+  String get platformYouTube => 'YouTube';
+
+  @override
+  String get platformBilibili => 'bilibili';
+
+  @override
+  String get platformNetease => 'Netease Cloud Music';
 
   @override
   String get settingsGeneral => 'Geral';
@@ -142,20 +175,11 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get settingsDesignFluent => 'Fluent UI';
 
   @override
-  String get settingsPlatform => 'Plataforma de streaming';
+  String get settingsPlatform => 'Serviço de streaming';
 
   @override
   String get settingsPlatformDescription =>
-      'Gerenciar plataformas de streaming de terceiros, entrar em contas';
-
-  @override
-  String get settingsPlatformYouTube => 'YouTube';
-
-  @override
-  String get settingsPlatformBilibili => 'bilibili';
-
-  @override
-  String get settingsPlatformNetease => 'Netease Cloud Music';
+      'Gerenciar serviços de streaming de terceiros, entrar em contas';
 
   @override
   String get settingsPlatformLogin => 'Entrar';

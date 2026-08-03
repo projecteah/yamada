@@ -5,11 +5,12 @@ import 'package:go_router/go_router.dart';
 import 'package:yamada/router/app_navigation.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/pages/home_page.dart';
+import 'package:yamada/pages/search_page.dart';
 import 'package:yamada/pages/settings_page.dart';
 import 'package:yamada/pages/settings/general_page.dart';
 import 'package:yamada/pages/settings/appearance_page.dart';
 import 'package:yamada/pages/settings/about_page.dart';
-import 'package:yamada/pages/settings/streaming_page.dart';
+import 'package:yamada/pages/settings/streaming_platforms_page.dart';
 
 class AppRoute {
   final String path;
@@ -47,15 +48,23 @@ final List<AppRoute> appRoutes = [
   AppRoute(
     path: '/',
     builder: (context, state) => const HomePage(),
-    labelOf: (ctx) => AppLocalizations.of(ctx)!.navHome,
+    labelOf: (ctx) => AppLocalizations.of(ctx)!.home,
     icon: Icons.my_library_music_outlined,
     selectedIcon: Icons.my_library_music_rounded,
     fluentIcon: fluent.WindowsIcons.home,
   ),
   AppRoute(
+    path: '/search',
+    builder: (context, state) => const SearchPage(),
+    labelOf: (ctx) => AppLocalizations.of(ctx)!.search,
+    icon: Icons.search_outlined,
+    selectedIcon: Icons.search_rounded,
+    fluentIcon: fluent.WindowsIcons.search,
+  ),
+  AppRoute(
     path: '/settings',
     builder: (context, state) => const SettingsPage(),
-    labelOf: (ctx) => AppLocalizations.of(ctx)!.navSettings,
+    labelOf: (ctx) => AppLocalizations.of(ctx)!.setting,
     icon: Icons.settings_outlined,
     selectedIcon: Icons.settings_rounded,
     fluentIcon: fluent.WindowsIcons.settings,

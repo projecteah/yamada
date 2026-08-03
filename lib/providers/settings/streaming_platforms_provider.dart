@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'package:yamada/providers/shared_preferences_provider.dart';
-import 'package:yamada/models/streaming_platforms.dart';
+import 'package:yamada/models/streaming_platforms_model.dart';
 
 part 'streaming_platforms_provider.g.dart';
 

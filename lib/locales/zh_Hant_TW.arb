@@ -1,8 +1,16 @@
 {
   "@@locale": "zh_Hant_TW",
 
-  "navHome": "音樂庫",
-  "navSettings": "設定",
+  "home": "音樂庫",
+  "search": "搜尋",
+  "setting": "設定",
+  "searchPlaceholder": "搜尋歌曲、藝術家、專輯...",
+  "searchTabAll": "全部",
+  "searchTabLocal": "本機",
+
+  "platformYouTube": "YouTube",
+  "platformBilibili": "嗶哩嗶哩",
+  "platformNetease": "網易雲音樂",
 
   "settingsGeneral": "一般",
   "settingsGeneralDescription": "語言、全域行為",
@@ -18,9 +26,6 @@
   "settingsDesignFluent": "Fluent UI",
   "settingsPlatform": "串流媒體服務",
   "settingsPlatformDescription": "管理第三方串流媒體服務、登入帳號",
-  "settingsPlatformYouTube": "YouTube",
-  "settingsPlatformBilibili": "嗶哩嗶哩",
-  "settingsPlatformNetease": "網易雲音樂",
   "settingsPlatformLogin": "登入",
   "settingsPlatformLogout": "登出",
   "settingsPlatformLoggedIn": "已登入",
