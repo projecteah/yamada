@@ -298,6 +298,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Open Source Licenses'**
   String get settingsLicenses;
+
+  /// No description provided for @settingsRecordSearchHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Record search history'**
+  String get settingsRecordSearchHistory;
+
+  /// No description provided for @settingsRecordSearchHistoryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Save search keywords for quick access'**
+  String get settingsRecordSearchHistoryDescription;
+
+  /// No description provided for @searchHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Search History'**
+  String get searchHistory;
+
+  /// No description provided for @clearSearchHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get clearSearchHistory;
+
+  /// No description provided for @clearSearchHistoryConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear search history?'**
+  String get clearSearchHistoryConfirmTitle;
+
+  /// No description provided for @clearSearchHistoryConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'All search history will be removed.'**
+  String get clearSearchHistoryConfirmMessage;
+
+  /// No description provided for @searchHistoryEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No search history yet'**
+  String get searchHistoryEmpty;
+
+  /// No description provided for @searchNoResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No results found'**
+  String get searchNoResults;
+
+  /// No description provided for @searchError.
+  ///
+  /// In en, this message translates to:
+  /// **'Search failed, please try again'**
+  String get searchError;
 }
 
 class _AppLocalizationsDelegate

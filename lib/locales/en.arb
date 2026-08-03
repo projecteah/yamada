@@ -43,5 +43,14 @@
   "settingsAbout": "About",
   "settingsAboutDescription": "Version info, updates",
   "settingsVersion": "Version",
-  "settingsLicenses": "Open Source Licenses"
+  "settingsLicenses": "Open Source Licenses",
+  "settingsRecordSearchHistory": "Record search history",
+  "settingsRecordSearchHistoryDescription": "Save search keywords for quick access",
+  "searchHistory": "Search History",
+  "clearSearchHistory": "Clear All",
+  "clearSearchHistoryConfirmTitle": "Clear search history?",
+  "clearSearchHistoryConfirmMessage": "All search history will be removed.",
+  "searchHistoryEmpty": "No search history yet",
+  "searchNoResults": "No results found",
+  "searchError": "Search failed, please try again"
 }

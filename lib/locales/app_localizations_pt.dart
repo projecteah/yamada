@@ -105,6 +105,35 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get settingsLicenses => 'Licenças de código aberto';
+
+  @override
+  String get settingsRecordSearchHistory => 'Registar histórico de pesquisa';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Guardar palavras-chave de pesquisa para acesso rápido';
+
+  @override
+  String get searchHistory => 'Histórico de pesquisa';
+
+  @override
+  String get clearSearchHistory => 'Limpar tudo';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => 'Limpar histórico de pesquisa?';
+
+  @override
+  String get clearSearchHistoryConfirmMessage =>
+      'Todo o histórico de pesquisa será removido.';
+
+  @override
+  String get searchHistoryEmpty => 'Ainda não há histórico de pesquisa';
+
+  @override
+  String get searchNoResults => 'Nenhum resultado encontrado';
+
+  @override
+  String get searchError => 'A pesquisa falhou, tente novamente';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -208,4 +237,33 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get settingsLicenses => 'Licenças de código aberto';
+
+  @override
+  String get settingsRecordSearchHistory => 'Registrar histórico de pesquisa';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Salvar palavras-chave de pesquisa para acesso rápido';
+
+  @override
+  String get searchHistory => 'Histórico de pesquisa';
+
+  @override
+  String get clearSearchHistory => 'Limpar tudo';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => 'Limpar histórico de pesquisa?';
+
+  @override
+  String get clearSearchHistoryConfirmMessage =>
+      'Todo o histórico de pesquisa será removido.';
+
+  @override
+  String get searchHistoryEmpty => 'Ainda não há histórico de pesquisa';
+
+  @override
+  String get searchNoResults => 'Nenhum resultado encontrado';
+
+  @override
+  String get searchError => 'A pesquisa falhou, tente novamente';
 }

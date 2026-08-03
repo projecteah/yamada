@@ -34,5 +34,14 @@
   "settingsAbout": "について",
   "settingsAboutDescription": "バージョン情報、アップデート",
   "settingsVersion": "バージョン",
-  "settingsLicenses": "オープンソースライセンス"
+  "settingsLicenses": "オープンソースライセンス",
+  "settingsRecordSearchHistory": "検索履歴を記録",
+  "settingsRecordSearchHistoryDescription": "検索キーワードを保存して素早くアクセス",
+  "searchHistory": "検索履歴",
+  "clearSearchHistory": "すべて消去",
+  "clearSearchHistoryConfirmTitle": "検索履歴を消去しますか？",
+  "clearSearchHistoryConfirmMessage": "すべての検索履歴が削除されます。",
+  "searchHistoryEmpty": "検索履歴はまだありません",
+  "searchNoResults": "結果が見つかりません",
+  "searchError": "検索に失敗しました。再試行してください"
 }

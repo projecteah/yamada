@@ -34,5 +34,14 @@
   "settingsAbout": "關於",
   "settingsAboutDescription": "版本資訊、更新",
   "settingsVersion": "版本",
-  "settingsLicenses": "開放原始碼授權"
+  "settingsLicenses": "開放原始碼授權",
+  "settingsRecordSearchHistory": "記錄搜尋紀錄",
+  "settingsRecordSearchHistoryDescription": "儲存搜尋關鍵字以便快速存取",
+  "searchHistory": "搜尋紀錄",
+  "clearSearchHistory": "全部清除",
+  "clearSearchHistoryConfirmTitle": "清除搜尋紀錄？",
+  "clearSearchHistoryConfirmMessage": "所有搜尋紀錄將被刪除。",
+  "searchHistoryEmpty": "尚無搜尋紀錄",
+  "searchNoResults": "找不到結果",
+  "searchError": "搜尋失敗，請重試"
 }

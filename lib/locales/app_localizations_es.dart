@@ -106,4 +106,33 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get settingsLicenses => 'Licencias de código abierto';
+
+  @override
+  String get settingsRecordSearchHistory => 'Registrar historial de búsqueda';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Guardar palabras clave de búsqueda para acceso rápido';
+
+  @override
+  String get searchHistory => 'Historial de búsqueda';
+
+  @override
+  String get clearSearchHistory => 'Borrar todo';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => '¿Borrar historial de búsqueda?';
+
+  @override
+  String get clearSearchHistoryConfirmMessage =>
+      'Se eliminará todo el historial de búsqueda.';
+
+  @override
+  String get searchHistoryEmpty => 'Aún no hay historial de búsqueda';
+
+  @override
+  String get searchNoResults => 'No se encontraron resultados';
+
+  @override
+  String get searchError => 'La búsqueda falló, inténtalo de nuevo';
 }

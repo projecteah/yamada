@@ -103,6 +103,33 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsLicenses => '开放源代码许可';
+
+  @override
+  String get settingsRecordSearchHistory => '记录搜索历史';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '保存搜索关键词以便快速访问';
+
+  @override
+  String get searchHistory => '搜索历史';
+
+  @override
+  String get clearSearchHistory => '全部清除';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => '清除搜索历史？';
+
+  @override
+  String get clearSearchHistoryConfirmMessage => '所有搜索历史将被删除。';
+
+  @override
+  String get searchHistoryEmpty => '暂无搜索历史';
+
+  @override
+  String get searchNoResults => '未找到结果';
+
+  @override
+  String get searchError => '搜索失败，请重试';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -204,4 +231,31 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get settingsLicenses => '開放原始碼授權';
+
+  @override
+  String get settingsRecordSearchHistory => '記錄搜尋紀錄';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '儲存搜尋關鍵字以便快速存取';
+
+  @override
+  String get searchHistory => '搜尋紀錄';
+
+  @override
+  String get clearSearchHistory => '全部清除';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => '清除搜尋紀錄？';
+
+  @override
+  String get clearSearchHistoryConfirmMessage => '所有搜尋紀錄將被刪除。';
+
+  @override
+  String get searchHistoryEmpty => '尚無搜尋紀錄';
+
+  @override
+  String get searchNoResults => '找不到結果';
+
+  @override
+  String get searchError => '搜尋失敗，請重試';
 }

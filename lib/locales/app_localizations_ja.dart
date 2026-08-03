@@ -103,4 +103,31 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingsLicenses => 'オープンソースライセンス';
+
+  @override
+  String get settingsRecordSearchHistory => '検索履歴を記録';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '検索キーワードを保存して素早くアクセス';
+
+  @override
+  String get searchHistory => '検索履歴';
+
+  @override
+  String get clearSearchHistory => 'すべて消去';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => '検索履歴を消去しますか？';
+
+  @override
+  String get clearSearchHistoryConfirmMessage => 'すべての検索履歴が削除されます。';
+
+  @override
+  String get searchHistoryEmpty => '検索履歴はまだありません';
+
+  @override
+  String get searchNoResults => '結果が見つかりません';
+
+  @override
+  String get searchError => '検索に失敗しました。再試行してください';
 }

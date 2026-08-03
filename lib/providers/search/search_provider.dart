@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'package:yamada/models/streaming_platforms_model.dart';
+import 'package:yamada/providers/search/search_history_provider.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
 import 'package:yamada/providers/sources_provider.dart';
 import 'package:yamada/data/sources/base_source.dart';
@@ -51,7 +52,8 @@ class Search extends _$Search {
     }
 
     _debounce?.cancel();
-    final delay = immediate ? Duration.zero : const Duration(milliseconds: 500);
+    final delay =
+        immediate ? Duration.zero : const Duration(milliseconds: 1500);
     _debounce = Timer(delay, _runSearch);
   }
 
@@ -66,6 +68,7 @@ class Search extends _$Search {
       final tracks = await _fetchForTab(state.activeTab, query);
       if (_disposed) return;
       state = state.copyWith(results: AsyncValue.data(tracks));
+      ref.read(searchHistoryProvider.notifier).add(query);
     } catch (e, st) {
       if (_disposed) return;
       state = state.copyWith(results: AsyncValue.error(e, st));

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yamada/constants.dart';
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/providers/settings/locale_provider.dart';
+import 'package:yamada/providers/search/search_history_provider.dart';
 import 'package:yamada/components/setting_tile.dart';
 
 class GeneralPage extends ConsumerWidget {
@@ -13,6 +14,7 @@ class GeneralPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final locale = ref.watch(localeProvider);
+    final recordHistory = ref.watch(recordSearchHistoryProvider);
 
     return Scaffold(
       appBar: AppBar(title: Text(l10n.settingsGeneral)),
@@ -23,6 +25,16 @@ class GeneralPage extends ConsumerWidget {
             title: l10n.settingsLanguage,
             subtitle: _labelFor(locale, l10n),
             onTap: () => _showLanguageDialog(context, ref, locale, l10n),
+          ),
+          SettingTile(
+            icon: Icons.manage_search_rounded,
+            title: l10n.settingsRecordSearchHistory,
+            subtitle: l10n.settingsRecordSearchHistoryDescription,
+            trailing: Switch(
+              value: recordHistory,
+              onChanged: (v) =>
+                  ref.read(recordSearchHistoryProvider.notifier).set(v),
+            ),
           ),
         ],
       ),

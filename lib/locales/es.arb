@@ -34,5 +34,14 @@
   "settingsAbout": "Acerca de",
   "settingsAboutDescription": "Información de versión, actualizaciones",
   "settingsVersion": "Versión",
-  "settingsLicenses": "Licencias de código abierto"
+  "settingsLicenses": "Licencias de código abierto",
+  "settingsRecordSearchHistory": "Registrar historial de búsqueda",
+  "settingsRecordSearchHistoryDescription": "Guardar palabras clave de búsqueda para acceso rápido",
+  "searchHistory": "Historial de búsqueda",
+  "clearSearchHistory": "Borrar todo",
+  "clearSearchHistoryConfirmTitle": "¿Borrar historial de búsqueda?",
+  "clearSearchHistoryConfirmMessage": "Se eliminará todo el historial de búsqueda.",
+  "searchHistoryEmpty": "Aún no hay historial de búsqueda",
+  "searchNoResults": "No se encontraron resultados",
+  "searchError": "La búsqueda falló, inténtalo de nuevo"
 }

@@ -105,4 +105,33 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsLicenses => 'Open Source Licenses';
+
+  @override
+  String get settingsRecordSearchHistory => 'Record search history';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Save search keywords for quick access';
+
+  @override
+  String get searchHistory => 'Search History';
+
+  @override
+  String get clearSearchHistory => 'Clear All';
+
+  @override
+  String get clearSearchHistoryConfirmTitle => 'Clear search history?';
+
+  @override
+  String get clearSearchHistoryConfirmMessage =>
+      'All search history will be removed.';
+
+  @override
+  String get searchHistoryEmpty => 'No search history yet';
+
+  @override
+  String get searchNoResults => 'No results found';
+
+  @override
+  String get searchError => 'Search failed, please try again';
 }

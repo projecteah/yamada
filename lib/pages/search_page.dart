@@ -6,8 +6,10 @@ import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/data/sources/base_source.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
-import 'package:yamada/providers/search_provider.dart';
+import 'package:yamada/providers/search/search_history_provider.dart';
+import 'package:yamada/providers/search/search_provider.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
+import 'package:yamada/components/empty_state.dart';
 import 'package:yamada/components/track_tile.dart';
 
 class SearchPage extends ConsumerWidget {
@@ -46,6 +48,12 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _pickKeyword(String keyword) {
+    _controller.text = keyword;
+    _controller.selection = TextSelection.collapsed(offset: keyword.length);
+    ref.read(searchProvider.notifier).setQuery(keyword);
   }
 
   @override
@@ -114,9 +122,11 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
           ),
           const SizedBox(height: 16),
           Expanded(
-            child: _SearchResultsView(
+            child: _SearchBody(
               results: search.results,
+              query: search.query,
               activeTab: search.activeTab,
+              onPickKeyword: _pickKeyword,
             ),
           ),
         ],
@@ -125,21 +135,34 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
   }
 }
 
-class _SearchResultsView extends StatelessWidget {
+class _SearchBody extends ConsumerWidget {
   final AsyncValue<List<Track>> results;
+  final String query;
   final SearchTab activeTab;
+  final ValueChanged<String> onPickKeyword;
 
-  const _SearchResultsView({
+  const _SearchBody({
     required this.results,
+    required this.query,
     required this.activeTab,
+    required this.onPickKeyword,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+
     return results.when(
       data: (tracks) {
-        if (tracks.isEmpty) return const Center(child: Text('No results'));
-
+        if (tracks.isEmpty && query.trim().isEmpty) {
+          return _SearchHistoryView(onPick: onPickKeyword);
+        }
+        if (tracks.isEmpty) {
+          return EmptyState(
+            icon: Icons.search_off_rounded,
+            title: l10n.searchNoResults,
+          );
+        }
         final showPlatform = activeTab is SearchTabAll;
         return ListView.builder(
           itemCount: tracks.length,
@@ -150,8 +173,98 @@ class _SearchResultsView extends StatelessWidget {
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, _) => Center(child: Text(e.toString())),
+      error: (e, _) => EmptyState(
+        icon: Icons.error_outline_rounded,
+        title: l10n.searchError,
+        subtitle: e.toString(),
+      ),
     );
+  }
+}
+
+class _SearchHistoryView extends ConsumerWidget {
+  final ValueChanged<String> onPick;
+
+  const _SearchHistoryView({required this.onPick});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+    final history = ref.watch(searchHistoryProvider);
+
+    if (history.isEmpty) {
+      return EmptyState(
+        icon: Icons.history_rounded,
+        title: l10n.searchHistoryEmpty,
+      );
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                l10n.searchHistory,
+                style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
+            ),
+            TextButton(
+              onPressed: () => _confirmClear(context, ref, l10n),
+              child: Text(l10n.clearSearchHistory),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final keyword in history)
+                  InputChip(
+                    label: Text(keyword),
+                    onPressed: () => onPick(keyword),
+                    onDeleted: () => ref
+                        .read(searchHistoryProvider.notifier)
+                        .remove(keyword),
+                  ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Future<void> _confirmClear(
+    BuildContext context,
+    WidgetRef ref,
+    AppLocalizations l10n,
+  ) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(l10n.clearSearchHistoryConfirmTitle),
+        content: Text(l10n.clearSearchHistoryConfirmMessage),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text(MaterialLocalizations.of(context).cancelButtonLabel),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: Text(l10n.clearSearchHistory),
+          ),
+        ],
+      ),
+    );
+    if (ok == true) ref.read(searchHistoryProvider.notifier).clear();
   }
 }
 
