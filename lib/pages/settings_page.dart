@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/components/settings/setting_tile.dart';
+import 'package:yamada/components/setting_tile.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});

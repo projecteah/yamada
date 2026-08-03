@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 import 'package:yamada/locales/app_localizations.dart';
+import 'package:yamada/data/sources/base_source.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
 import 'package:yamada/providers/search_provider.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
+import 'package:yamada/components/track_tile.dart';
 
 class SearchPage extends ConsumerWidget {
   const SearchPage({super.key});
@@ -14,14 +16,11 @@ class SearchPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isFluent = ref.watch(designProvider).isFluent;
-    final l10n = AppLocalizations.of(context)!;
     return isFluent
         ? fluent.ScaffoldPage(
-            header: fluent.PageHeader(title: Text(l10n.search)),
             content: const _SearchContent(),
           )
         : Scaffold(
-            appBar: AppBar(title: Text(l10n.search)),
             body: const _SearchContent(),
           );
   }
@@ -77,14 +76,13 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
                 borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide.none,
               ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide.none,
-              ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide(
-                  color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primary
+                      .withValues(alpha: 0.5),
                   width: 2,
                 ),
               ),
@@ -116,20 +114,43 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
           ),
           const SizedBox(height: 16),
           Expanded(
-            child: Center(
-              child: Text(
-                search.activeTab is SearchTabAll
-                    ? 'All'
-                    : search.activeTab is SearchTabLocal
-                        ? 'Local'
-                        : platformLabel(
-                            (search.activeTab as SearchTabPlatform).platformId,
-                            l10n),
-              ),
+            child: _SearchResultsView(
+              results: search.results,
+              activeTab: search.activeTab,
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class _SearchResultsView extends StatelessWidget {
+  final AsyncValue<List<Track>> results;
+  final SearchTab activeTab;
+
+  const _SearchResultsView({
+    required this.results,
+    required this.activeTab,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return results.when(
+      data: (tracks) {
+        if (tracks.isEmpty) return const Center(child: Text('No results'));
+
+        final showPlatform = activeTab is SearchTabAll;
+        return ListView.builder(
+          itemCount: tracks.length,
+          itemBuilder: (context, index) => TrackTile(
+            track: tracks[index],
+            showPlatform: showPlatform,
+          ),
+        );
+      },
+      loading: () => const Center(child: CircularProgressIndicator()),
+      error: (e, _) => Center(child: Text(e.toString())),
     );
   }
 }

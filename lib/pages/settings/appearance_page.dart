@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
-import 'package:yamada/components/settings/setting_tile.dart';
+import 'package:yamada/components/setting_tile.dart';
 
 class AppearancePage extends ConsumerWidget {
   const AppearancePage({super.key});

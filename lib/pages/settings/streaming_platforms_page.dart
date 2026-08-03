@@ -5,7 +5,7 @@ import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/models/streaming_platforms_model.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
-import 'package:yamada/components/settings/setting_tile.dart';
+import 'package:yamada/components/setting_tile.dart';
 
 class StreamingPage extends ConsumerWidget {
   const StreamingPage({super.key});
