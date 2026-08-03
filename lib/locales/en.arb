@@ -1,20 +1,36 @@
 {
   "@@locale": "en",
 
+  "action": "Action",
+  "detail": "Detail",
+  "clear": "Clear",
+  "copy": "Copy",
+  "copied": "Copied to clipboard",
+
   "home": "Library",
+
   "search": "Search",
-  "setting": "Setting",
   "searchPlaceholder": "Search songs, artists, albums...",
   "searchTabAll": "All",
   "searchTabLocal": "Local",
+  "searchHistory": "Search History",
+  "searchClearHistory": "Clear All",
+  "searchClearHistoryConfirmTitle": "Clear search history?",
+  "searchClearHistoryConfirmMessage": "All search history will be removed.",
+  "searchHistoryEmpty": "No search history yet",
+  "searchNoResults": "No results found",
+  "searchError": "Search failed, please try again",
 
   "platformYouTube": "YouTube",
   "platformBilibili": "bilibili",
   "platformNetease": "Netease Cloud Music",
 
+  "setting": "Setting",
   "settingsGeneral": "General",
   "settingsGeneralDescription": "Language, global behavior",
   "settingsLanguage": "Language",
+  "settingsRecordSearchHistory": "Record search history",
+  "settingsRecordSearchHistoryDescription": "Save search keywords for quick access",
   "settingsAppearance": "Appearance",
   "settingsAppearanceDescription": "Theme, dynamic colors",
   "settingsThemeMode": "Theme",
@@ -22,17 +38,8 @@
   "settingsThemeLight": "Light",
   "settingsThemeDark": "Dark",
   "settingsDesign": "Design",
-  "@settingsDesign": {
-    "description": "Label for the design language setting (Material or Fluent)."
-  },
   "settingsDesignMaterial": "Material",
-  "@settingsDesignMaterial": {
-    "description": "Google's Material Design."
-  },
   "settingsDesignFluent": "Fluent UI",
-  "@settingsDesignFluent": {
-    "description": "Microsoft's Fluent UI design system."
-  },
   "settingsPlatform": "Streaming Platform",
   "settingsPlatformDescription": "Manage third-party streaming platforms, sign in accounts",
   "settingsPlatformLogin": "Login",
@@ -40,17 +47,17 @@
   "settingsPlatformLoggedIn": "Logged in",
   "settingsPlatformNotLoggedIn": "Not logged in",
   "settingsPlatformHint": "Long press the handle to reorder, tap a tile to sign in or out.",
+  "settingsAdvanced": "Advanced",
+  "settingsAdvancedDescription": "Experimental features, logs, debugging",
   "settingsAbout": "About",
   "settingsAboutDescription": "Version info, updates",
   "settingsVersion": "Version",
   "settingsLicenses": "Open Source Licenses",
-  "settingsRecordSearchHistory": "Record search history",
-  "settingsRecordSearchHistoryDescription": "Save search keywords for quick access",
-  "searchHistory": "Search History",
-  "clearSearchHistory": "Clear All",
-  "clearSearchHistoryConfirmTitle": "Clear search history?",
-  "clearSearchHistoryConfirmMessage": "All search history will be removed.",
-  "searchHistoryEmpty": "No search history yet",
-  "searchNoResults": "No results found",
-  "searchError": "Search failed, please try again"
+
+  "debugBilibili": "Bilibili API Debug",
+  "debugStreamDash": "DASH audio/video separated",
+  "debugStreamDurl": "durl muxed stream",
+  "debugRun": "Run",
+  "debugResult": "Result",
+  "debugResponseEmpty": "No response data"
 }

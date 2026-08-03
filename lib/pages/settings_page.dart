@@ -35,6 +35,12 @@ class SettingsPage extends StatelessWidget {
             onTap: () => context.go('/settings/streaming'),
           ),
           SettingTile(
+            icon: Icons.science_rounded,
+            title: l10n.settingsAdvanced,
+            subtitle: l10n.settingsAdvancedDescription,
+            onTap: () => context.go('/settings/advanced'),
+          ),
+          SettingTile(
             icon: Icons.info_rounded,
             title: l10n.settingsAbout,
             subtitle: l10n.settingsAboutDescription,

@@ -10,6 +10,8 @@ import 'package:yamada/pages/settings_page.dart';
 import 'package:yamada/pages/settings/general_page.dart';
 import 'package:yamada/pages/settings/appearance_page.dart';
 import 'package:yamada/pages/settings/about_page.dart';
+import 'package:yamada/pages/settings/advanced_page.dart';
+import 'package:yamada/pages/settings/debug_bilibili_page.dart';
 import 'package:yamada/pages/settings/streaming_platforms_page.dart';
 
 class AppRoute {
@@ -36,11 +38,13 @@ class AppSubRoute {
   final String path;
   final GoRouterWidgetBuilder builder;
   final String Function(BuildContext) labelOf;
+  final List<AppSubRoute> children;
 
   const AppSubRoute({
     required this.path,
     required this.builder,
     required this.labelOf,
+    this.children = const [],
   });
 }
 
@@ -89,6 +93,18 @@ final List<AppRoute> appRoutes = [
         builder: (context, state) => const AboutPage(),
         labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsAbout,
       ),
+      AppSubRoute(
+        path: 'advanced',
+        builder: (context, state) => const AdvancedPage(),
+        labelOf: (ctx) => AppLocalizations.of(ctx)!.settingsAdvanced,
+        children: [
+          AppSubRoute(
+            path: 'debug-bilibili',
+            builder: (context, state) => const DebugBilibiliPage(),
+            labelOf: (ctx) => AppLocalizations.of(ctx)!.debugBilibili,
+          ),
+        ],
+      ),
     ],
   ),
 ];
@@ -114,6 +130,13 @@ final router = GoRouter(
                 GoRoute(
                   path: sub.path,
                   builder: sub.builder,
+                  routes: [
+                    for (final sub2 in sub.children)
+                      GoRoute(
+                        path: sub2.path,
+                        builder: sub2.builder,
+                      ),
+                  ],
                 ),
             ],
           ),

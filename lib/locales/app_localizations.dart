@@ -107,6 +107,36 @@ abstract class AppLocalizations {
         languageCode: 'zh', countryCode: 'TW', scriptCode: 'Hant')
   ];
 
+  /// No description provided for @action.
+  ///
+  /// In en, this message translates to:
+  /// **'Action'**
+  String get action;
+
+  /// No description provided for @detail.
+  ///
+  /// In en, this message translates to:
+  /// **'Detail'**
+  String get detail;
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// No description provided for @copy.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get copy;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied to clipboard'**
+  String get copied;
+
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
@@ -118,12 +148,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Search'**
   String get search;
-
-  /// No description provided for @setting.
-  ///
-  /// In en, this message translates to:
-  /// **'Setting'**
-  String get setting;
 
   /// No description provided for @searchPlaceholder.
   ///
@@ -143,6 +167,48 @@ abstract class AppLocalizations {
   /// **'Local'**
   String get searchTabLocal;
 
+  /// No description provided for @searchHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Search History'**
+  String get searchHistory;
+
+  /// No description provided for @searchClearHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get searchClearHistory;
+
+  /// No description provided for @searchClearHistoryConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear search history?'**
+  String get searchClearHistoryConfirmTitle;
+
+  /// No description provided for @searchClearHistoryConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'All search history will be removed.'**
+  String get searchClearHistoryConfirmMessage;
+
+  /// No description provided for @searchHistoryEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No search history yet'**
+  String get searchHistoryEmpty;
+
+  /// No description provided for @searchNoResults.
+  ///
+  /// In en, this message translates to:
+  /// **'No results found'**
+  String get searchNoResults;
+
+  /// No description provided for @searchError.
+  ///
+  /// In en, this message translates to:
+  /// **'Search failed, please try again'**
+  String get searchError;
+
   /// No description provided for @platformYouTube.
   ///
   /// In en, this message translates to:
@@ -161,6 +227,12 @@ abstract class AppLocalizations {
   /// **'Netease Cloud Music'**
   String get platformNetease;
 
+  /// No description provided for @setting.
+  ///
+  /// In en, this message translates to:
+  /// **'Setting'**
+  String get setting;
+
   /// No description provided for @settingsGeneral.
   ///
   /// In en, this message translates to:
@@ -178,6 +250,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Language'**
   String get settingsLanguage;
+
+  /// No description provided for @settingsRecordSearchHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Record search history'**
+  String get settingsRecordSearchHistory;
+
+  /// No description provided for @settingsRecordSearchHistoryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Save search keywords for quick access'**
+  String get settingsRecordSearchHistoryDescription;
 
   /// No description provided for @settingsAppearance.
   ///
@@ -215,19 +299,19 @@ abstract class AppLocalizations {
   /// **'Dark'**
   String get settingsThemeDark;
 
-  /// Label for the design language setting (Material or Fluent).
+  /// No description provided for @settingsDesign.
   ///
   /// In en, this message translates to:
   /// **'Design'**
   String get settingsDesign;
 
-  /// Google's Material Design.
+  /// No description provided for @settingsDesignMaterial.
   ///
   /// In en, this message translates to:
   /// **'Material'**
   String get settingsDesignMaterial;
 
-  /// Microsoft's Fluent UI design system.
+  /// No description provided for @settingsDesignFluent.
   ///
   /// In en, this message translates to:
   /// **'Fluent UI'**
@@ -275,6 +359,18 @@ abstract class AppLocalizations {
   /// **'Long press the handle to reorder, tap a tile to sign in or out.'**
   String get settingsPlatformHint;
 
+  /// No description provided for @settingsAdvanced.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced'**
+  String get settingsAdvanced;
+
+  /// No description provided for @settingsAdvancedDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Experimental features, logs, debugging'**
+  String get settingsAdvancedDescription;
+
   /// No description provided for @settingsAbout.
   ///
   /// In en, this message translates to:
@@ -299,59 +395,41 @@ abstract class AppLocalizations {
   /// **'Open Source Licenses'**
   String get settingsLicenses;
 
-  /// No description provided for @settingsRecordSearchHistory.
+  /// No description provided for @debugBilibili.
   ///
   /// In en, this message translates to:
-  /// **'Record search history'**
-  String get settingsRecordSearchHistory;
+  /// **'Bilibili API Debug'**
+  String get debugBilibili;
 
-  /// No description provided for @settingsRecordSearchHistoryDescription.
+  /// No description provided for @debugStreamDash.
   ///
   /// In en, this message translates to:
-  /// **'Save search keywords for quick access'**
-  String get settingsRecordSearchHistoryDescription;
+  /// **'DASH audio/video separated'**
+  String get debugStreamDash;
 
-  /// No description provided for @searchHistory.
+  /// No description provided for @debugStreamDurl.
   ///
   /// In en, this message translates to:
-  /// **'Search History'**
-  String get searchHistory;
+  /// **'durl muxed stream'**
+  String get debugStreamDurl;
 
-  /// No description provided for @clearSearchHistory.
+  /// No description provided for @debugRun.
   ///
   /// In en, this message translates to:
-  /// **'Clear All'**
-  String get clearSearchHistory;
+  /// **'Run'**
+  String get debugRun;
 
-  /// No description provided for @clearSearchHistoryConfirmTitle.
+  /// No description provided for @debugResult.
   ///
   /// In en, this message translates to:
-  /// **'Clear search history?'**
-  String get clearSearchHistoryConfirmTitle;
+  /// **'Result'**
+  String get debugResult;
 
-  /// No description provided for @clearSearchHistoryConfirmMessage.
+  /// No description provided for @debugResponseEmpty.
   ///
   /// In en, this message translates to:
-  /// **'All search history will be removed.'**
-  String get clearSearchHistoryConfirmMessage;
-
-  /// No description provided for @searchHistoryEmpty.
-  ///
-  /// In en, this message translates to:
-  /// **'No search history yet'**
-  String get searchHistoryEmpty;
-
-  /// No description provided for @searchNoResults.
-  ///
-  /// In en, this message translates to:
-  /// **'No results found'**
-  String get searchNoResults;
-
-  /// No description provided for @searchError.
-  ///
-  /// In en, this message translates to:
-  /// **'Search failed, please try again'**
-  String get searchError;
+  /// **'No response data'**
+  String get debugResponseEmpty;
 }
 
 class _AppLocalizationsDelegate

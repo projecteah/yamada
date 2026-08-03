@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/data/sources/base_source.dart';
+import 'package:yamada/models/search_model.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
 import 'package:yamada/utils/format_util.dart';
 

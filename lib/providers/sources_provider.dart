@@ -14,3 +14,17 @@ final searchSourcesProvider =
     StreamingPlatformId.bilibili: ref.watch(bilibiliSourceProvider),
   };
 });
+
+final trackDetailSourcesProvider =
+    Provider<Map<StreamingPlatformId, TrackDetailSource>>((ref) {
+  return {
+    StreamingPlatformId.bilibili: ref.watch(bilibiliSourceProvider),
+  };
+});
+
+final audioStreamSourcesProvider =
+    Provider<Map<StreamingPlatformId, AudioStreamSource>>((ref) {
+  return {
+    StreamingPlatformId.bilibili: ref.watch(bilibiliSourceProvider),
+  };
+});

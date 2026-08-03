@@ -1,16 +1,22 @@
 {
   "@@locale": "zh",
 
+  "action": "操作",
+  "detail": "详情",
+  "clear": "清空",
+  "copy": "复制",
+  "copied": "已复制到剪贴板",
+
   "home": "音乐库",
 
   "search": "搜索",
-  "searchPlaceholder": "搜索歌曲、艺术家、专辑...",
+  "searchPlaceholder": "搜索音乐、艺术家、专辑...",
   "searchTabAll": "全部",
   "searchTabLocal": "本地",
   "searchHistory": "搜索历史",
-  "clearSearchHistory": "全部清除",
-  "clearSearchHistoryConfirmTitle": "清除搜索历史？",
-  "clearSearchHistoryConfirmMessage": "所有搜索历史将被删除。",
+  "searchClearHistory": "全部清除",
+  "searchClearHistoryConfirmTitle": "清除搜索历史？",
+  "searchClearHistoryConfirmMessage": "所有搜索历史将被删除。",
   "searchHistoryEmpty": "暂无搜索历史",
   "searchNoResults": "未找到结果",
   "searchError": "搜索失败，请重试",
@@ -41,8 +47,17 @@
   "settingsPlatformLoggedIn": "已登录",
   "settingsPlatformNotLoggedIn": "未登录",
   "settingsPlatformHint": "长按拖拽手柄排序，启用后点击卡片可登录或退出。",
+  "settingsAdvanced": "高级",
+  "settingsAdvancedDescription": "实验性功能、日志、调试",
   "settingsAbout": "关于",
   "settingsAboutDescription": "版本信息、更新",
   "settingsVersion": "版本",
-  "settingsLicenses": "开放源代码许可"
+  "settingsLicenses": "开放源代码许可",
+
+  "debugBilibili": "哔哩哔哩接口调试",
+  "debugStreamDash": "DASH 音视频分离",
+  "debugStreamDurl": "durl 混合流",
+  "debugRun": "执行",
+  "debugResult": "返回数据",
+  "debugResponseEmpty": "无返回数据"
 }

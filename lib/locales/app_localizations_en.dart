@@ -9,13 +9,25 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get action => 'Action';
+
+  @override
+  String get detail => 'Detail';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get copy => 'Copy';
+
+  @override
+  String get copied => 'Copied to clipboard';
+
+  @override
   String get home => 'Library';
 
   @override
   String get search => 'Search';
-
-  @override
-  String get setting => 'Setting';
 
   @override
   String get searchPlaceholder => 'Search songs, artists, albums...';
@@ -27,6 +39,28 @@ class AppLocalizationsEn extends AppLocalizations {
   String get searchTabLocal => 'Local';
 
   @override
+  String get searchHistory => 'Search History';
+
+  @override
+  String get searchClearHistory => 'Clear All';
+
+  @override
+  String get searchClearHistoryConfirmTitle => 'Clear search history?';
+
+  @override
+  String get searchClearHistoryConfirmMessage =>
+      'All search history will be removed.';
+
+  @override
+  String get searchHistoryEmpty => 'No search history yet';
+
+  @override
+  String get searchNoResults => 'No results found';
+
+  @override
+  String get searchError => 'Search failed, please try again';
+
+  @override
   String get platformYouTube => 'YouTube';
 
   @override
@@ -36,6 +70,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get platformNetease => 'Netease Cloud Music';
 
   @override
+  String get setting => 'Setting';
+
+  @override
   String get settingsGeneral => 'General';
 
   @override
@@ -43,6 +80,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsLanguage => 'Language';
+
+  @override
+  String get settingsRecordSearchHistory => 'Record search history';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Save search keywords for quick access';
 
   @override
   String get settingsAppearance => 'Appearance';
@@ -95,6 +139,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'Long press the handle to reorder, tap a tile to sign in or out.';
 
   @override
+  String get settingsAdvanced => 'Advanced';
+
+  @override
+  String get settingsAdvancedDescription =>
+      'Experimental features, logs, debugging';
+
+  @override
   String get settingsAbout => 'About';
 
   @override
@@ -107,31 +158,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsLicenses => 'Open Source Licenses';
 
   @override
-  String get settingsRecordSearchHistory => 'Record search history';
+  String get debugBilibili => 'Bilibili API Debug';
 
   @override
-  String get settingsRecordSearchHistoryDescription =>
-      'Save search keywords for quick access';
+  String get debugStreamDash => 'DASH audio/video separated';
 
   @override
-  String get searchHistory => 'Search History';
+  String get debugStreamDurl => 'durl muxed stream';
 
   @override
-  String get clearSearchHistory => 'Clear All';
+  String get debugRun => 'Run';
 
   @override
-  String get clearSearchHistoryConfirmTitle => 'Clear search history?';
+  String get debugResult => 'Result';
 
   @override
-  String get clearSearchHistoryConfirmMessage =>
-      'All search history will be removed.';
-
-  @override
-  String get searchHistoryEmpty => 'No search history yet';
-
-  @override
-  String get searchNoResults => 'No results found';
-
-  @override
-  String get searchError => 'Search failed, please try again';
+  String get debugResponseEmpty => 'No response data';
 }

@@ -1,45 +1,14 @@
-import 'package:yamada/models/streaming_platforms_model.dart';
+import 'package:yamada/models/audio_stream_model.dart';
+import 'package:yamada/models/search_model.dart';
+import 'package:yamada/models/track_detail_model.dart';
 
-enum SearchOrder { relevance, playCount, publishDate }
-
-class Track {
-  final String sourceId;
-  final StreamingPlatformId sourceType;
-  final String title;
-  final String? artist;
-  final int? durationMs;
-  final String? thumbnailUrl;
-  final int? viewCount;
-
-  const Track({
-    required this.sourceId,
-    required this.sourceType,
-    required this.title,
-    this.artist,
-    this.durationMs,
-    this.thumbnailUrl,
-    this.viewCount,
-  });
+abstract class Source {
+  String get name;
 }
 
-class SearchResult {
-  final List<Track> tracks;
-  final int totalCount;
-  final int page;
-  final int pageSize;
-  final bool hasMore;
-
-  const SearchResult({
-    required this.tracks,
-    required this.totalCount,
-    required this.page,
-    required this.pageSize,
-    required this.hasMore,
-  });
-}
-
-abstract class SearchSource {
-  StreamingPlatformId get sourceType;
+abstract class SearchSource implements Source {
+  @override
+  String get name;
 
   Future<SearchResult> search(
     String query, {
@@ -47,4 +16,26 @@ abstract class SearchSource {
     int pageSize = 20,
     SearchOrder order = SearchOrder.relevance,
   });
+}
+
+abstract class TrackDetailSource implements Source {
+  Future<TrackDetail> getTrackDetail(String id, {int? cid});
+}
+
+abstract class AudioStreamSource implements Source {
+  Future<AudioStream> getAudioStream(
+    String id, {
+    int? cid,
+    AudioStreamFormat format = AudioStreamFormat.dash,
+  });
+}
+
+class SourceException implements Exception {
+  final int code;
+  final String message;
+
+  const SourceException({required this.code, required this.message});
+
+  @override
+  String toString() => 'SourceException($code): $message';
 }

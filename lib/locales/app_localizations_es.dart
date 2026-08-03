@@ -9,13 +9,25 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String get action => 'Acción';
+
+  @override
+  String get detail => 'Detalle';
+
+  @override
+  String get clear => 'Borrar';
+
+  @override
+  String get copy => 'Copiar';
+
+  @override
+  String get copied => 'Copiado al portapapeles';
+
+  @override
   String get home => 'Biblioteca';
 
   @override
   String get search => 'Buscar';
-
-  @override
-  String get setting => 'Ajustes';
 
   @override
   String get searchPlaceholder => 'Buscar canciones, artistas, álbumes...';
@@ -27,6 +39,28 @@ class AppLocalizationsEs extends AppLocalizations {
   String get searchTabLocal => 'Local';
 
   @override
+  String get searchHistory => 'Historial de búsqueda';
+
+  @override
+  String get searchClearHistory => 'Borrar todo';
+
+  @override
+  String get searchClearHistoryConfirmTitle => '¿Borrar historial de búsqueda?';
+
+  @override
+  String get searchClearHistoryConfirmMessage =>
+      'Se eliminará todo el historial de búsqueda.';
+
+  @override
+  String get searchHistoryEmpty => 'Aún no hay historial de búsqueda';
+
+  @override
+  String get searchNoResults => 'No se encontraron resultados';
+
+  @override
+  String get searchError => 'La búsqueda falló, inténtalo de nuevo';
+
+  @override
   String get platformYouTube => 'YouTube';
 
   @override
@@ -36,6 +70,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get platformNetease => 'Netease Cloud Music';
 
   @override
+  String get setting => 'Ajustes';
+
+  @override
   String get settingsGeneral => 'General';
 
   @override
@@ -43,6 +80,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get settingsLanguage => 'Idioma';
+
+  @override
+  String get settingsRecordSearchHistory => 'Registrar historial de búsqueda';
+
+  @override
+  String get settingsRecordSearchHistoryDescription =>
+      'Guardar palabras clave de búsqueda para acceso rápido';
 
   @override
   String get settingsAppearance => 'Apariencia';
@@ -95,6 +139,13 @@ class AppLocalizationsEs extends AppLocalizations {
       'Mantén presionado el asa para reordenar, toca una tarjeta para iniciar o cerrar sesión.';
 
   @override
+  String get settingsAdvanced => 'Avanzado';
+
+  @override
+  String get settingsAdvancedDescription =>
+      'Funciones experimentales, registros, depuración';
+
+  @override
   String get settingsAbout => 'Acerca de';
 
   @override
@@ -108,31 +159,20 @@ class AppLocalizationsEs extends AppLocalizations {
   String get settingsLicenses => 'Licencias de código abierto';
 
   @override
-  String get settingsRecordSearchHistory => 'Registrar historial de búsqueda';
+  String get debugBilibili => 'Depuración de la API de Bilibili';
 
   @override
-  String get settingsRecordSearchHistoryDescription =>
-      'Guardar palabras clave de búsqueda para acceso rápido';
+  String get debugStreamDash => 'DASH audio/vídeo separados';
 
   @override
-  String get searchHistory => 'Historial de búsqueda';
+  String get debugStreamDurl => 'durl stream mezclado';
 
   @override
-  String get clearSearchHistory => 'Borrar todo';
+  String get debugRun => 'Ejecutar';
 
   @override
-  String get clearSearchHistoryConfirmTitle => '¿Borrar historial de búsqueda?';
+  String get debugResult => 'Resultado';
 
   @override
-  String get clearSearchHistoryConfirmMessage =>
-      'Se eliminará todo el historial de búsqueda.';
-
-  @override
-  String get searchHistoryEmpty => 'Aún no hay historial de búsqueda';
-
-  @override
-  String get searchNoResults => 'No se encontraron resultados';
-
-  @override
-  String get searchError => 'La búsqueda falló, inténtalo de nuevo';
+  String get debugResponseEmpty => 'Sin datos de respuesta';
 }

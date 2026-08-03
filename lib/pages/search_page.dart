@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fluent_ui/fluent_ui.dart' as fluent;
 
 import 'package:yamada/locales/app_localizations.dart';
-import 'package:yamada/data/sources/base_source.dart';
+import 'package:yamada/models/search_model.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
 import 'package:yamada/providers/search/search_history_provider.dart';
@@ -215,7 +215,7 @@ class _SearchHistoryView extends ConsumerWidget {
             ),
             TextButton(
               onPressed: () => _confirmClear(context, ref, l10n),
-              child: Text(l10n.clearSearchHistory),
+              child: Text(l10n.searchClearHistory),
             ),
           ],
         ),
@@ -250,8 +250,8 @@ class _SearchHistoryView extends ConsumerWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(l10n.clearSearchHistoryConfirmTitle),
-        content: Text(l10n.clearSearchHistoryConfirmMessage),
+        title: Text(l10n.searchClearHistoryConfirmTitle),
+        content: Text(l10n.searchClearHistoryConfirmMessage),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(false),
@@ -259,7 +259,7 @@ class _SearchHistoryView extends ConsumerWidget {
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(true),
-            child: Text(l10n.clearSearchHistory),
+            child: Text(l10n.searchClearHistory),
           ),
         ],
       ),

@@ -9,13 +9,25 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
+  String get action => 'アクション';
+
+  @override
+  String get detail => '詳細';
+
+  @override
+  String get clear => 'クリア';
+
+  @override
+  String get copy => 'コピー';
+
+  @override
+  String get copied => 'クリップボードにコピーしました';
+
+  @override
   String get home => 'ライブラリ';
 
   @override
   String get search => '検索';
-
-  @override
-  String get setting => '設定';
 
   @override
   String get searchPlaceholder => '曲、アーティスト、アルバムを検索...';
@@ -27,6 +39,27 @@ class AppLocalizationsJa extends AppLocalizations {
   String get searchTabLocal => 'ローカル';
 
   @override
+  String get searchHistory => '検索履歴';
+
+  @override
+  String get searchClearHistory => 'すべて消去';
+
+  @override
+  String get searchClearHistoryConfirmTitle => '検索履歴を消去しますか？';
+
+  @override
+  String get searchClearHistoryConfirmMessage => 'すべての検索履歴が削除されます。';
+
+  @override
+  String get searchHistoryEmpty => '検索履歴はまだありません';
+
+  @override
+  String get searchNoResults => '結果が見つかりません';
+
+  @override
+  String get searchError => '検索に失敗しました。再試行してください';
+
+  @override
   String get platformYouTube => 'YouTube';
 
   @override
@@ -36,6 +69,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get platformNetease => 'Netease Cloud Music';
 
   @override
+  String get setting => '設定';
+
+  @override
   String get settingsGeneral => '一般';
 
   @override
@@ -43,6 +79,12 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get settingsLanguage => '言語';
+
+  @override
+  String get settingsRecordSearchHistory => '検索履歴を記録';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '検索キーワードを保存して素早くアクセス';
 
   @override
   String get settingsAppearance => '外観';
@@ -93,6 +135,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsPlatformHint => 'ドラッグで並べ替え、カードをタップしてログインまたはログアウト。';
 
   @override
+  String get settingsAdvanced => '詳細設定';
+
+  @override
+  String get settingsAdvancedDescription => '実験的機能、ログ、デバッグ';
+
+  @override
   String get settingsAbout => 'について';
 
   @override
@@ -105,29 +153,20 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsLicenses => 'オープンソースライセンス';
 
   @override
-  String get settingsRecordSearchHistory => '検索履歴を記録';
+  String get debugBilibili => 'Bilibili API デバッグ';
 
   @override
-  String get settingsRecordSearchHistoryDescription => '検索キーワードを保存して素早くアクセス';
+  String get debugStreamDash => 'DASH 音声/動画分離';
 
   @override
-  String get searchHistory => '検索履歴';
+  String get debugStreamDurl => 'durl ミュックスストリーム';
 
   @override
-  String get clearSearchHistory => 'すべて消去';
+  String get debugRun => '実行';
 
   @override
-  String get clearSearchHistoryConfirmTitle => '検索履歴を消去しますか？';
+  String get debugResult => '結果';
 
   @override
-  String get clearSearchHistoryConfirmMessage => 'すべての検索履歴が削除されます。';
-
-  @override
-  String get searchHistoryEmpty => '検索履歴はまだありません';
-
-  @override
-  String get searchNoResults => '結果が見つかりません';
-
-  @override
-  String get searchError => '検索に失敗しました。再試行してください';
+  String get debugResponseEmpty => 'レスポンスがありません';
 }

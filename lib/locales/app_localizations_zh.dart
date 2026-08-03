@@ -9,22 +9,55 @@ class AppLocalizationsZh extends AppLocalizations {
   AppLocalizationsZh([String locale = 'zh']) : super(locale);
 
   @override
+  String get action => '操作';
+
+  @override
+  String get detail => '详情';
+
+  @override
+  String get clear => '清空';
+
+  @override
+  String get copy => '复制';
+
+  @override
+  String get copied => '已复制到剪贴板';
+
+  @override
   String get home => '音乐库';
 
   @override
   String get search => '搜索';
 
   @override
-  String get setting => '设置';
-
-  @override
-  String get searchPlaceholder => '搜索歌曲、艺术家、专辑...';
+  String get searchPlaceholder => '搜索音乐、艺术家、专辑...';
 
   @override
   String get searchTabAll => '全部';
 
   @override
   String get searchTabLocal => '本地';
+
+  @override
+  String get searchHistory => '搜索历史';
+
+  @override
+  String get searchClearHistory => '全部清除';
+
+  @override
+  String get searchClearHistoryConfirmTitle => '清除搜索历史？';
+
+  @override
+  String get searchClearHistoryConfirmMessage => '所有搜索历史将被删除。';
+
+  @override
+  String get searchHistoryEmpty => '暂无搜索历史';
+
+  @override
+  String get searchNoResults => '未找到结果';
+
+  @override
+  String get searchError => '搜索失败，请重试';
 
   @override
   String get platformYouTube => 'YouTube';
@@ -36,6 +69,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get platformNetease => '网易云音乐';
 
   @override
+  String get setting => '设置';
+
+  @override
   String get settingsGeneral => '通用';
 
   @override
@@ -43,6 +79,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsLanguage => '语言';
+
+  @override
+  String get settingsRecordSearchHistory => '记录搜索历史';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '保存搜索关键词以便快速访问';
 
   @override
   String get settingsAppearance => '外观';
@@ -93,6 +135,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsPlatformHint => '长按拖拽手柄排序，启用后点击卡片可登录或退出。';
 
   @override
+  String get settingsAdvanced => '高级';
+
+  @override
+  String get settingsAdvancedDescription => '实验性功能、日志、调试';
+
+  @override
   String get settingsAbout => '关于';
 
   @override
@@ -105,31 +153,22 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsLicenses => '开放源代码许可';
 
   @override
-  String get settingsRecordSearchHistory => '记录搜索历史';
+  String get debugBilibili => '哔哩哔哩接口调试';
 
   @override
-  String get settingsRecordSearchHistoryDescription => '保存搜索关键词以便快速访问';
+  String get debugStreamDash => 'DASH 音视频分离';
 
   @override
-  String get searchHistory => '搜索历史';
+  String get debugStreamDurl => 'durl 混合流';
 
   @override
-  String get clearSearchHistory => '全部清除';
+  String get debugRun => '执行';
 
   @override
-  String get clearSearchHistoryConfirmTitle => '清除搜索历史？';
+  String get debugResult => '返回数据';
 
   @override
-  String get clearSearchHistoryConfirmMessage => '所有搜索历史将被删除。';
-
-  @override
-  String get searchHistoryEmpty => '暂无搜索历史';
-
-  @override
-  String get searchNoResults => '未找到结果';
-
-  @override
-  String get searchError => '搜索失败，请重试';
+  String get debugResponseEmpty => '无返回数据';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -137,13 +176,25 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   AppLocalizationsZhHantTw() : super('zh_Hant_TW');
 
   @override
+  String get action => '操作';
+
+  @override
+  String get detail => '詳情';
+
+  @override
+  String get clear => '清空';
+
+  @override
+  String get copy => '複製';
+
+  @override
+  String get copied => '已複製到剪貼簿';
+
+  @override
   String get home => '音樂庫';
 
   @override
   String get search => '搜尋';
-
-  @override
-  String get setting => '設定';
 
   @override
   String get searchPlaceholder => '搜尋歌曲、藝術家、專輯...';
@@ -155,6 +206,27 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   String get searchTabLocal => '本機';
 
   @override
+  String get searchHistory => '搜尋紀錄';
+
+  @override
+  String get searchClearHistory => '全部清除';
+
+  @override
+  String get searchClearHistoryConfirmTitle => '清除搜尋紀錄？';
+
+  @override
+  String get searchClearHistoryConfirmMessage => '所有搜尋紀錄將被刪除。';
+
+  @override
+  String get searchHistoryEmpty => '尚無搜尋紀錄';
+
+  @override
+  String get searchNoResults => '找不到結果';
+
+  @override
+  String get searchError => '搜尋失敗，請重試';
+
+  @override
   String get platformYouTube => 'YouTube';
 
   @override
@@ -164,6 +236,9 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   String get platformNetease => '網易雲音樂';
 
   @override
+  String get setting => '設定';
+
+  @override
   String get settingsGeneral => '一般';
 
   @override
@@ -171,6 +246,12 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get settingsLanguage => '語言';
+
+  @override
+  String get settingsRecordSearchHistory => '記錄搜尋紀錄';
+
+  @override
+  String get settingsRecordSearchHistoryDescription => '儲存搜尋關鍵字以便快速存取';
 
   @override
   String get settingsAppearance => '外觀';
@@ -221,6 +302,12 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   String get settingsPlatformHint => '拖曳手把排序，點擊卡片可登入或登出。';
 
   @override
+  String get settingsAdvanced => '進階';
+
+  @override
+  String get settingsAdvancedDescription => '實驗性功能、日誌、除錯';
+
+  @override
   String get settingsAbout => '關於';
 
   @override
@@ -233,29 +320,20 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   String get settingsLicenses => '開放原始碼授權';
 
   @override
-  String get settingsRecordSearchHistory => '記錄搜尋紀錄';
+  String get debugBilibili => '嗶哩嗶哩介面除錯';
 
   @override
-  String get settingsRecordSearchHistoryDescription => '儲存搜尋關鍵字以便快速存取';
+  String get debugStreamDash => 'DASH 音視訊分離';
 
   @override
-  String get searchHistory => '搜尋紀錄';
+  String get debugStreamDurl => 'durl 混合串流';
 
   @override
-  String get clearSearchHistory => '全部清除';
+  String get debugRun => '執行';
 
   @override
-  String get clearSearchHistoryConfirmTitle => '清除搜尋紀錄？';
+  String get debugResult => '回傳資料';
 
   @override
-  String get clearSearchHistoryConfirmMessage => '所有搜尋紀錄將被刪除。';
-
-  @override
-  String get searchHistoryEmpty => '尚無搜尋紀錄';
-
-  @override
-  String get searchNoResults => '找不到結果';
-
-  @override
-  String get searchError => '搜尋失敗，請重試';
+  String get debugResponseEmpty => '無回傳資料';
 }

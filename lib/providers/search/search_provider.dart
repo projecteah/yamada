@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import 'package:yamada/models/search_model.dart';
 import 'package:yamada/models/streaming_platforms_model.dart';
 import 'package:yamada/providers/search/search_history_provider.dart';
 import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
 import 'package:yamada/providers/sources_provider.dart';
-import 'package:yamada/data/sources/base_source.dart';
 
 part 'search_provider.g.dart';
 
