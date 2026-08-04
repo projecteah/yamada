@@ -174,4 +174,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get debugResponseEmpty => 'No response data';
+
+  @override
+  String get playerPlay => 'Play';
+
+  @override
+  String get playerPause => 'Pause';
+
+  @override
+  String get playerPlayNow => 'Play now';
+
+  @override
+  String get playerAddToQueue => 'Add to queue';
 }

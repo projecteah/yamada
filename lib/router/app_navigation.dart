@@ -6,6 +6,7 @@ import 'package:fluent_ui/fluent_ui.dart' as fluent;
 import 'package:window_manager/window_manager.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:yamada/components/now_playing_bar.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/router/router.dart';
 
@@ -63,7 +64,14 @@ class AppNavigation extends ConsumerWidget {
                       ),
                   ],
                 ),
-                Expanded(child: child),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Expanded(child: child),
+                      const NowPlayingBar(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -74,7 +82,12 @@ class AppNavigation extends ConsumerWidget {
 
   Widget _buildMaterialMobile(BuildContext context, int selected) {
     return Scaffold(
-      body: child,
+      body: Column(
+        children: [
+          Expanded(child: child),
+          const NowPlayingBar(),
+        ],
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: selected,
         onDestinationSelected: (i) => context.go(appRoutes[i].path),

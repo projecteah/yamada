@@ -177,11 +177,13 @@ class BilibiliSource
         .toList();
 
     return TrackDetail(
+      sourceType: StreamingPlatformId.bilibili,
+      sourceId: id,
       title: data['title'] as String? ?? '',
       description: data['desc'] as String? ?? '',
       coverUrl: _fixImageUrl(data['pic'] as String?),
       artist: owner['name'] as String?,
-      durationSeconds: data['duration'] as int? ?? 0,
+      durationMs: (data['duration'] as int? ?? 0) * 1000,
       cid: data['cid'] as int?,
       pages: pages,
     );

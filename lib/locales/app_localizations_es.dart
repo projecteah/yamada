@@ -175,4 +175,16 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get debugResponseEmpty => 'Sin datos de respuesta';
+
+  @override
+  String get playerPlay => 'Reproducir';
+
+  @override
+  String get playerPause => 'Pausar';
+
+  @override
+  String get playerPlayNow => 'Reproducir ahora';
+
+  @override
+  String get playerAddToQueue => 'Añadir a la cola';
 }

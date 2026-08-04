@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/models/search_model.dart';
+import 'package:yamada/models/track_detail_model.dart';
+import 'package:yamada/providers/audio/audio_player_provider.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
 import 'package:yamada/utils/format_util.dart';
 
-class TrackTile extends StatelessWidget {
+class TrackTile extends ConsumerWidget {
   final Track track;
   final bool showPlatform;
 
@@ -16,7 +19,7 @@ class TrackTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
 
@@ -61,6 +64,33 @@ class TrackTile extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.play_arrow_rounded),
+            tooltip: l10n.playerPlayNow,
+            onPressed: () {
+              ref
+                  .read(audioPlayerProvider.notifier)
+                  .playTrack(TrackDetail.fromTrack(track));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.playlist_add_rounded),
+            tooltip: l10n.playerAddToQueue,
+            onPressed: () {
+              ref
+                  .read(audioPlayerProvider.notifier)
+                  .addToQueue(TrackDetail.fromTrack(track));
+              if (!context.mounted) return;
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(l10n.playerAddToQueue)),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

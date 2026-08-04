@@ -169,6 +169,18 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get debugResponseEmpty => '无返回数据';
+
+  @override
+  String get playerPlay => '播放';
+
+  @override
+  String get playerPause => '暂停';
+
+  @override
+  String get playerPlayNow => '立即播放';
+
+  @override
+  String get playerAddToQueue => '加入队列';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -336,4 +348,16 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get debugResponseEmpty => '無回傳資料';
+
+  @override
+  String get playerPlay => '播放';
+
+  @override
+  String get playerPause => '暫停';
+
+  @override
+  String get playerPlayNow => '立即播放';
+
+  @override
+  String get playerAddToQueue => '加入佇列';
 }

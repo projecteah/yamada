@@ -59,5 +59,10 @@
   "debugStreamDurl": "durl 混合串流",
   "debugRun": "執行",
   "debugResult": "回傳資料",
-  "debugResponseEmpty": "無回傳資料"
+  "debugResponseEmpty": "無回傳資料",
+
+  "playerPlay": "播放",
+  "playerPause": "暫停",
+  "playerPlayNow": "立即播放",
+  "playerAddToQueue": "加入佇列"
 }

@@ -59,5 +59,10 @@
   "debugStreamDurl": "durl muxed stream",
   "debugRun": "Run",
   "debugResult": "Result",
-  "debugResponseEmpty": "No response data"
+  "debugResponseEmpty": "No response data",
+
+  "playerPlay": "Play",
+  "playerPause": "Pause",
+  "playerPlayNow": "Play now",
+  "playerAddToQueue": "Add to queue"
 }

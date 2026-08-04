@@ -59,5 +59,10 @@
   "debugStreamDurl": "durl stream misturado",
   "debugRun": "Executar",
   "debugResult": "Resultado",
-  "debugResponseEmpty": "Sem dados de resposta"
+  "debugResponseEmpty": "Sem dados de resposta",
+
+  "playerPlay": "Reproduzir",
+  "playerPause": "Pausar",
+  "playerPlayNow": "Reproduzir agora",
+  "playerAddToQueue": "Adicionar à fila"
 }

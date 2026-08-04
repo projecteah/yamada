@@ -430,6 +430,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No response data'**
   String get debugResponseEmpty;
+
+  /// No description provided for @playerPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'Play'**
+  String get playerPlay;
+
+  /// No description provided for @playerPause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get playerPause;
+
+  /// No description provided for @playerPlayNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Play now'**
+  String get playerPlayNow;
+
+  /// No description provided for @playerAddToQueue.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to queue'**
+  String get playerAddToQueue;
 }
 
 class _AppLocalizationsDelegate

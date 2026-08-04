@@ -59,5 +59,10 @@
   "debugStreamDurl": "durl 混合流",
   "debugRun": "执行",
   "debugResult": "返回数据",
-  "debugResponseEmpty": "无返回数据"
+  "debugResponseEmpty": "无返回数据",
+
+  "playerPlay": "播放",
+  "playerPause": "暂停",
+  "playerPlayNow": "立即播放",
+  "playerAddToQueue": "加入队列"
 }

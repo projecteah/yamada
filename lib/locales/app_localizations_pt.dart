@@ -174,6 +174,18 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get debugResponseEmpty => 'Sem dados de resposta';
+
+  @override
+  String get playerPlay => 'Reproduzir';
+
+  @override
+  String get playerPause => 'Pausar';
+
+  @override
+  String get playerPlayNow => 'Reproduzir agora';
+
+  @override
+  String get playerAddToQueue => 'Adicionar à fila';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -346,4 +358,16 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get debugResponseEmpty => 'Sem dados de resposta';
+
+  @override
+  String get playerPlay => 'Reproduzir';
+
+  @override
+  String get playerPause => 'Pausar';
+
+  @override
+  String get playerPlayNow => 'Reproduzir agora';
+
+  @override
+  String get playerAddToQueue => 'Adicionar à fila';
 }

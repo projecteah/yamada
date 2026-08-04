@@ -169,4 +169,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get debugResponseEmpty => 'レスポンスがありません';
+
+  @override
+  String get playerPlay => '再生';
+
+  @override
+  String get playerPause => '一時停止';
+
+  @override
+  String get playerPlayNow => '今すぐ再生';
+
+  @override
+  String get playerAddToQueue => 'キューに追加';
 }

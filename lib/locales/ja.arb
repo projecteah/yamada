@@ -59,5 +59,10 @@
   "debugStreamDurl": "durl ミュックスストリーム",
   "debugRun": "実行",
   "debugResult": "結果",
-  "debugResponseEmpty": "レスポンスがありません"
+  "debugResponseEmpty": "レスポンスがありません",
+
+  "playerPlay": "再生",
+  "playerPause": "一時停止",
+  "playerPlayNow": "今すぐ再生",
+  "playerAddToQueue": "キューに追加"
 }
