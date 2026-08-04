@@ -9,20 +9,22 @@ import 'package:yamada/providers/settings/streaming_platforms_provider.dart';
 import 'package:yamada/providers/search/search_history_provider.dart';
 import 'package:yamada/providers/search/search_provider.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
+import 'package:yamada/components/audio/track_tile.dart';
 import 'package:yamada/components/empty_state.dart';
-import 'package:yamada/components/track_tile.dart';
 
 class SearchPage extends ConsumerWidget {
   const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final isFluent = ref.watch(designProvider).isFluent;
     return isFluent
         ? fluent.ScaffoldPage(
             content: const _SearchContent(),
           )
         : Scaffold(
+            appBar: AppBar(title: Text(l10n.search)),
             body: const _SearchContent(),
           );
   }
@@ -71,56 +73,62 @@ class _SearchContentState extends ConsumerState<_SearchContent> {
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.only(top: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextField(
-            controller: _controller,
-            decoration: InputDecoration(
-              hintText: l10n.searchPlaceholder,
-              prefixIcon: const Icon(Icons.search),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide.none,
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                  color: Theme.of(context)
-                      .colorScheme
-                      .primary
-                      .withValues(alpha: 0.5),
-                  width: 2,
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: TextField(
+              controller: _controller,
+              decoration: InputDecoration(
+                hintText: l10n.searchPlaceholder,
+                prefixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(
+                    color: Theme.of(context)
+                        .colorScheme
+                        .primary
+                        .withValues(alpha: 0.5),
+                    width: 2,
+                  ),
+                ),
+                filled: true,
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
                 ),
               ),
-              filled: true,
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12,
-              ),
+              onChanged: (v) => ref.read(searchProvider.notifier).setQuery(v),
             ),
-            onChanged: (v) => ref.read(searchProvider.notifier).setQuery(v),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                for (final tab in tabs)
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: FilterChip(
-                      label: Text(tab.label),
-                      selected: tab.tab == search.activeTab,
-                      onSelected: (_) =>
-                          ref.read(searchProvider.notifier).setTab(tab.tab),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Row(
+                children: [
+                  for (final tab in tabs)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: FilterChip(
+                        label: Text(tab.label),
+                        selected: tab.tab == search.activeTab,
+                        onSelected: (_) =>
+                            ref.read(searchProvider.notifier).setTab(tab.tab),
+                      ),
                     ),
-                  ),
-              ],
+                ],
+              ),
             ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
           Expanded(
             child: _SearchBody(
               results: search.results,
@@ -199,46 +207,47 @@ class _SearchHistoryView extends ConsumerWidget {
       );
     }
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Text(
-                l10n.searchHistory,
-                style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.w600,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16, right: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  l10n.searchHistory,
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: Theme.of(context).colorScheme.secondary),
+                ),
+              ),
+              TextButton(
+                onPressed: () => _confirmClear(context, ref, l10n),
+                child: Text(l10n.searchClearHistory),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final keyword in history)
+                    InputChip(
+                      label: Text(keyword),
+                      onPressed: () => onPick(keyword),
+                      onDeleted: () => ref
+                          .read(searchHistoryProvider.notifier)
+                          .remove(keyword),
                     ),
+                ],
               ),
             ),
-            TextButton(
-              onPressed: () => _confirmClear(context, ref, l10n),
-              child: Text(l10n.searchClearHistory),
-            ),
-          ],
-        ),
-        const SizedBox(height: 8),
-        Expanded(
-          child: SingleChildScrollView(
-            child: Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final keyword in history)
-                  InputChip(
-                    label: Text(keyword),
-                    onPressed: () => onPick(keyword),
-                    onDeleted: () => ref
-                        .read(searchHistoryProvider.notifier)
-                        .remove(keyword),
-                  ),
-              ],
-            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

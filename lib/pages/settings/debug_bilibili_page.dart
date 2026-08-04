@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -23,7 +21,7 @@ class _DebugBilibiliPageState extends ConsumerState<DebugBilibiliPage> {
   _Op _op = _Op.detail;
 
   bool _loading = false;
-  String? _resultJson;
+  String? _resultText;
   String? _error;
 
   @override
@@ -41,7 +39,7 @@ class _DebugBilibiliPageState extends ConsumerState<DebugBilibiliPage> {
     setState(() {
       _loading = true;
       _error = null;
-      _resultJson = null;
+      _resultText = null;
     });
 
     try {
@@ -49,32 +47,28 @@ class _DebugBilibiliPageState extends ConsumerState<DebugBilibiliPage> {
       final Object? payload;
       switch (_op) {
         case _Op.search:
-          final r = await source.search(input);
-          payload = r.toJson();
+          payload = await source.search(input);
           break;
         case _Op.detail:
-          final d = await source.getTrackDetail(input, cid: cid);
-          payload = d.toJson();
+          payload = await source.getTrackDetail(input, cid: cid);
           break;
         case _Op.streamDash:
-          final s = await source.getAudioStream(
+          payload = await source.getAudioStream(
             input,
             cid: cid,
             format: AudioStreamFormat.dash,
           );
-          payload = s.rawJson;
           break;
         case _Op.streamDurl:
-          final s = await source.getAudioStream(
+          payload = await source.getAudioStream(
             input,
             cid: cid,
             format: AudioStreamFormat.durl,
           );
-          payload = s.rawJson;
           break;
       }
       setState(() {
-        _resultJson = const JsonEncoder.withIndent('  ').convert(payload);
+        _resultText = payload.toString();
       });
     } catch (e) {
       setState(() => _error = e.toString());
@@ -142,10 +136,10 @@ class _DebugBilibiliPageState extends ConsumerState<DebugBilibiliPage> {
           const SizedBox(height: 16),
           CodeCard(
             loading: _loading,
-            text: _resultJson,
+            text: _resultText,
             error: _error,
             onClear: () => setState(() {
-              _resultJson = null;
+              _resultText = null;
               _error = null;
             }),
           ),

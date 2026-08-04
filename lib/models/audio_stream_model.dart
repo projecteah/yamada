@@ -7,7 +7,6 @@ class AudioStream {
   final int bandwidth;
   final String? codec;
   final List<String> backupUrls;
-  final Map<String, dynamic> rawJson;
 
   const AudioStream({
     required this.cid,
@@ -16,6 +15,5 @@ class AudioStream {
     required this.bandwidth,
     this.codec,
     this.backupUrls = const [],
-    required this.rawJson,
   });
 }

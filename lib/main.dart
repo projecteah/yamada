@@ -17,7 +17,7 @@ Future<void> main() async {
     WindowOptions windowOptions = const WindowOptions(
       title: "Yamada",
       size: Size(1200, 800),
-      minimumSize: Size(1000, 600),
+      minimumSize: Size(400, 600),
       center: true,
       skipTaskbar: false,
       windowButtonVisibility: false,

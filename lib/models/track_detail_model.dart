@@ -13,13 +13,6 @@ class TrackPage {
     required this.part,
     required this.duration,
   });
-
-  Map<String, dynamic> toJson() => {
-        'cid': cid,
-        'page': page,
-        'part': part,
-        'duration': duration,
-      };
 }
 
 class TrackDetail {
@@ -53,16 +46,4 @@ class TrackDetail {
         coverUrl: track.thumbnailUrl,
         durationMs: track.durationMs,
       );
-
-  Map<String, dynamic> toJson() => {
-        'sourceType': sourceType.name,
-        'sourceId': sourceId,
-        'title': title,
-        if (description != null) 'description': description,
-        if (coverUrl != null) 'coverUrl': coverUrl,
-        if (artist != null) 'artist': artist,
-        if (durationMs != null) 'durationMs': durationMs,
-        if (cid != null) 'cid': cid,
-        'pages': pages.map((p) => p.toJson()).toList(),
-      };
 }

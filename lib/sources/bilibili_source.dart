@@ -4,7 +4,7 @@ import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 
-import 'package:yamada/data/sources/base_source.dart';
+import 'package:yamada/sources/base_source.dart';
 import 'package:yamada/models/audio_stream_model.dart';
 import 'package:yamada/models/search_model.dart';
 import 'package:yamada/models/streaming_platforms_model.dart';
@@ -230,7 +230,6 @@ class BilibiliSource
                 ?.whereType<String>()
                 .toList() ??
             const [],
-        rawJson: response.data!,
       );
     }
 
@@ -245,7 +244,6 @@ class BilibiliSource
       format: format,
       url: first['url'] as String,
       bandwidth: 0,
-      rawJson: response.data!,
     );
   }
 }

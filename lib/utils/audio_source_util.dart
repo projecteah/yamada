@@ -1,6 +1,6 @@
 import 'package:just_audio/just_audio.dart';
 
-import 'package:yamada/data/sources/base_source.dart';
+import 'package:yamada/sources/base_source.dart';
 import 'package:yamada/models/audio_stream_model.dart';
 import 'package:yamada/models/streaming_platforms_model.dart';
 import 'package:yamada/models/track_detail_model.dart';

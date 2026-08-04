@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:yamada/models/streaming_platforms_model.dart';
-import 'package:yamada/data/sources/base_source.dart';
-import 'package:yamada/data/sources/bilibili_source.dart';
+import 'package:yamada/sources/base_source.dart';
+import 'package:yamada/sources/bilibili_source.dart';
 
 final bilibiliSourceProvider = Provider<BilibiliSource>(
   (ref) => BilibiliSource(),

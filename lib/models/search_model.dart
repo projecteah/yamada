@@ -20,16 +20,6 @@ class Track {
     this.thumbnailUrl,
     this.viewCount,
   });
-
-  Map<String, dynamic> toJson() => {
-        'sourceId': sourceId,
-        'sourceType': sourceType.name,
-        'title': title,
-        if (artist != null) 'artist': artist,
-        if (durationMs != null) 'durationMs': durationMs,
-        if (thumbnailUrl != null) 'thumbnailUrl': thumbnailUrl,
-        if (viewCount != null) 'viewCount': viewCount,
-      };
 }
 
 class SearchResult {
@@ -46,12 +36,4 @@ class SearchResult {
     required this.pageSize,
     required this.hasMore,
   });
-
-  Map<String, dynamic> toJson() => {
-        'totalCount': totalCount,
-        'page': page,
-        'pageSize': pageSize,
-        'hasMore': hasMore,
-        'tracks': tracks.map((t) => t.toJson()).toList(),
-      };
 }

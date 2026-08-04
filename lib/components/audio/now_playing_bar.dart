@@ -135,9 +135,7 @@ class _NowPlayingContent extends ConsumerWidget {
                     ),
                   )
                 : Icon(
-                    isPlaying
-                        ? Icons.pause_rounded
-                        : Icons.play_arrow_rounded,
+                    isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
                   ),
             tooltip: isPlaying ? l10n.playerPause : l10n.playerPlay,
             onPressed: isBuffering

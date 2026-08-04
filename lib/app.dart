@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:yamada/locales/app_localizations.dart';
 import 'package:yamada/constants.dart';
-import 'package:yamada/router/router.dart';
+import 'package:yamada/pages/_router.dart';
 import 'package:yamada/providers/settings/appearance_provider.dart';
 import 'package:yamada/providers/settings/locale_provider.dart';
 
@@ -31,16 +31,27 @@ class App extends ConsumerWidget {
   }
 
   Widget _buildMaterialApp(ThemeMode themeMode, Locale? locale) {
+    final lightColorScheme = ColorScheme.fromSeed(seedColor: Colors.blueAccent);
+    final darkColorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.blueAccent,
+      brightness: Brightness.dark,
+    );
+
     return MaterialApp.router(
       title: appName,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: lightColorScheme,
+        appBarTheme: AppBarTheme(
+          backgroundColor: lightColorScheme.surface,
+          surfaceTintColor: Colors.transparent,
+        ),
       ),
       darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blueAccent,
-          brightness: Brightness.dark,
+        colorScheme: darkColorScheme,
+        appBarTheme: AppBarTheme(
+          backgroundColor: darkColorScheme.surface,
+          surfaceTintColor: Colors.transparent,
         ),
       ),
       themeMode: themeMode,
