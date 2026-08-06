@@ -211,4 +211,75 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get playerRepeatOne => 'Repetir uno';
+
+  @override
+  String get libraryTabLocal => 'Local';
+
+  @override
+  String get libraryViewGrid => 'Grid view';
+
+  @override
+  String get libraryViewList => 'List view';
+
+  @override
+  String get libraryCreatePlaylist => 'Create playlist';
+
+  @override
+  String get libraryPlaylistName => 'Playlist name';
+
+  @override
+  String get libraryPlaylistDescription => 'Description (optional)';
+
+  @override
+  String get libraryPlaylistEmpty => 'No playlists yet';
+
+  @override
+  String get libraryPlaylistEmptyHint =>
+      'Create a playlist to start collecting tracks';
+
+  @override
+  String get libraryPlaylistDetailEmpty => 'No tracks in this playlist';
+
+  @override
+  String get libraryPlaylistDetailEmptyHint => 'Add tracks from search results';
+
+  @override
+  String get libraryAddToPlaylist => 'Add to playlist';
+
+  @override
+  String get libraryCreateNewPlaylist => 'Create new playlist';
+
+  @override
+  String get libraryAddedToPlaylist => 'Added to playlist';
+
+  @override
+  String get libraryTrackAlreadyInPlaylist => 'Already in this playlist';
+
+  @override
+  String libraryPlaylistTracksCount(Object count) {
+    return '$count tracks';
+  }
+
+  @override
+  String get libraryPlaylistRename => 'Rename';
+
+  @override
+  String get libraryPlaylistDelete => 'Delete';
+
+  @override
+  String get libraryPlaylistDeleteConfirmTitle => 'Delete playlist?';
+
+  @override
+  String get libraryPlaylistDeleteConfirmMessage =>
+      'This playlist and all its tracks will be removed.';
+
+  @override
+  String get libraryRemoveFromPlaylist => 'Remove from playlist';
+
+  @override
+  String get libraryStreamingComingSoon => 'Coming soon';
+
+  @override
+  String get libraryStreamingComingSoonHint =>
+      'Streaming platform integration is not yet available.';
 }

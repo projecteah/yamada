@@ -7,6 +7,7 @@ import 'package:yamada/models/track_detail_model.dart';
 import 'package:yamada/providers/audio/audio_player_provider.dart';
 import 'package:yamada/utils/streaming_platforms_util.dart';
 import 'package:yamada/utils/format_util.dart';
+import 'package:yamada/components/library/add_to_playlist_sheet.dart';
 
 class TrackTile extends ConsumerWidget {
   final Track track;
@@ -88,6 +89,14 @@ class TrackTile extends ConsumerWidget {
                 SnackBar(content: Text(l10n.playerAddToQueue)),
               );
             },
+          ),
+          IconButton(
+            icon: const Icon(Icons.library_add_rounded),
+            tooltip: l10n.libraryAddToPlaylist,
+            onPressed: () => AddToPlaylistSheet.show(
+              context,
+              TrackDetail.fromTrack(track),
+            ),
           ),
         ],
       ),

@@ -24,7 +24,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get copied => '已复制到剪贴板';
 
   @override
-  String get home => '音乐库';
+  String get home => '媒体库';
 
   @override
   String get search => '搜索';
@@ -205,6 +205,74 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get playerRepeatOne => '单曲循环';
+
+  @override
+  String get libraryTabLocal => '本地';
+
+  @override
+  String get libraryViewGrid => '网格视图';
+
+  @override
+  String get libraryViewList => '列表视图';
+
+  @override
+  String get libraryCreatePlaylist => '创建歌单';
+
+  @override
+  String get libraryPlaylistName => '歌单名称';
+
+  @override
+  String get libraryPlaylistDescription => '描述（可选）';
+
+  @override
+  String get libraryPlaylistEmpty => '暂无歌单';
+
+  @override
+  String get libraryPlaylistEmptyHint => '创建一个歌单来开始收藏曲目';
+
+  @override
+  String get libraryPlaylistDetailEmpty => '此歌单中暂无曲目';
+
+  @override
+  String get libraryPlaylistDetailEmptyHint => '从搜索结果中添加曲目';
+
+  @override
+  String get libraryAddToPlaylist => '添加到歌单';
+
+  @override
+  String get libraryCreateNewPlaylist => '创建新歌单';
+
+  @override
+  String get libraryAddedToPlaylist => '已添加到歌单';
+
+  @override
+  String get libraryTrackAlreadyInPlaylist => '曲目已在歌单中';
+
+  @override
+  String libraryPlaylistTracksCount(Object count) {
+    return '$count 首';
+  }
+
+  @override
+  String get libraryPlaylistRename => '重命名';
+
+  @override
+  String get libraryPlaylistDelete => '删除';
+
+  @override
+  String get libraryPlaylistDeleteConfirmTitle => '删除歌单？';
+
+  @override
+  String get libraryPlaylistDeleteConfirmMessage => '此歌单及其所有曲目将被删除。';
+
+  @override
+  String get libraryRemoveFromPlaylist => '从歌单中移除';
+
+  @override
+  String get libraryStreamingComingSoon => '即将推出';
+
+  @override
+  String get libraryStreamingComingSoonHint => '流媒体平台集成尚未提供。';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -227,7 +295,7 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
   String get copied => '已複製到剪貼簿';
 
   @override
-  String get home => '音樂庫';
+  String get home => '媒體庫';
 
   @override
   String get search => '搜尋';
@@ -408,4 +476,72 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get playerRepeatOne => '單曲循環';
+
+  @override
+  String get libraryTabLocal => '本機';
+
+  @override
+  String get libraryViewGrid => '網格檢視';
+
+  @override
+  String get libraryViewList => '列表檢視';
+
+  @override
+  String get libraryCreatePlaylist => '建立播放清單';
+
+  @override
+  String get libraryPlaylistName => '播放清單名稱';
+
+  @override
+  String get libraryPlaylistDescription => '描述（可選）';
+
+  @override
+  String get libraryPlaylistEmpty => '尚無播放清單';
+
+  @override
+  String get libraryPlaylistEmptyHint => '建立播放清單來開始收藏曲目';
+
+  @override
+  String get libraryPlaylistDetailEmpty => '此播放清單中尚無曲目';
+
+  @override
+  String get libraryPlaylistDetailEmptyHint => '從搜尋結果中新增曲目';
+
+  @override
+  String get libraryAddToPlaylist => '新增至播放清單';
+
+  @override
+  String get libraryCreateNewPlaylist => '建立新播放清單';
+
+  @override
+  String get libraryAddedToPlaylist => '已新增至播放清單';
+
+  @override
+  String get libraryTrackAlreadyInPlaylist => '曲目已在播放清單中';
+
+  @override
+  String libraryPlaylistTracksCount(Object count) {
+    return '$count 首';
+  }
+
+  @override
+  String get libraryPlaylistRename => '重新命名';
+
+  @override
+  String get libraryPlaylistDelete => '刪除';
+
+  @override
+  String get libraryPlaylistDeleteConfirmTitle => '刪除播放清單？';
+
+  @override
+  String get libraryPlaylistDeleteConfirmMessage => '此播放清單及其所有曲目將被刪除。';
+
+  @override
+  String get libraryRemoveFromPlaylist => '從播放清單中移除';
+
+  @override
+  String get libraryStreamingComingSoon => '即將推出';
+
+  @override
+  String get libraryStreamingComingSoonHint => '串流媒體平台整合尚未提供。';
 }

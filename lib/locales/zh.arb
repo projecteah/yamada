@@ -7,7 +7,7 @@
   "copy": "复制",
   "copied": "已复制到剪贴板",
 
-  "home": "音乐库",
+  "home": "媒体库",
 
   "search": "搜索",
   "searchPlaceholder": "搜索音乐、艺术家、专辑...",
@@ -72,5 +72,28 @@
   "playerShuffleOff": "关闭随机",
   "playerRepeatOff": "关闭循环",
   "playerRepeatAll": "列表循环",
-  "playerRepeatOne": "单曲循环"
+  "playerRepeatOne": "单曲循环",
+
+  "libraryTabLocal": "本地",
+  "libraryViewGrid": "网格视图",
+  "libraryViewList": "列表视图",
+  "libraryCreatePlaylist": "创建歌单",
+  "libraryPlaylistName": "歌单名称",
+  "libraryPlaylistDescription": "描述（可选）",
+  "libraryPlaylistEmpty": "暂无歌单",
+  "libraryPlaylistEmptyHint": "创建一个歌单来开始收藏曲目",
+  "libraryPlaylistDetailEmpty": "此歌单中暂无曲目",
+  "libraryPlaylistDetailEmptyHint": "从搜索结果中添加曲目",
+  "libraryAddToPlaylist": "添加到歌单",
+  "libraryCreateNewPlaylist": "创建新歌单",
+  "libraryAddedToPlaylist": "已添加到歌单",
+  "libraryTrackAlreadyInPlaylist": "曲目已在歌单中",
+  "libraryPlaylistTracksCount": "{count} 首",
+  "libraryPlaylistRename": "重命名",
+  "libraryPlaylistDelete": "删除",
+  "libraryPlaylistDeleteConfirmTitle": "删除歌单？",
+  "libraryPlaylistDeleteConfirmMessage": "此歌单及其所有曲目将被删除。",
+  "libraryRemoveFromPlaylist": "从歌单中移除",
+  "libraryStreamingComingSoon": "即将推出",
+  "libraryStreamingComingSoonHint": "流媒体平台集成尚未提供。"
 }

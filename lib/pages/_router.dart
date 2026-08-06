@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:yamada/components/global/app_scaffold.dart';
 import 'package:yamada/pages/home_page.dart';
+import 'package:yamada/pages/playlist_detail_page.dart';
 import 'package:yamada/pages/search_page.dart';
 import 'package:yamada/pages/settings_page.dart';
 import 'package:yamada/pages/settings/general_page.dart';
@@ -27,6 +28,13 @@ final router = GoRouter(
         GoRoute(
           path: '/',
           builder: (context, state) => const HomePage(),
+        ),
+        GoRoute(
+          path: '/playlist/:id',
+          builder: (context, state) {
+            final id = int.tryParse(state.pathParameters['id'] ?? '') ?? 0;
+            return PlaylistDetailPage(playlistId: id);
+          },
         ),
         GoRoute(
           path: '/search',

@@ -502,6 +502,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Repeat one'**
   String get playerRepeatOne;
+
+  /// No description provided for @libraryTabLocal.
+  ///
+  /// In en, this message translates to:
+  /// **'Local'**
+  String get libraryTabLocal;
+
+  /// No description provided for @libraryViewGrid.
+  ///
+  /// In en, this message translates to:
+  /// **'Grid view'**
+  String get libraryViewGrid;
+
+  /// No description provided for @libraryViewList.
+  ///
+  /// In en, this message translates to:
+  /// **'List view'**
+  String get libraryViewList;
+
+  /// No description provided for @libraryCreatePlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Create playlist'**
+  String get libraryCreatePlaylist;
+
+  /// No description provided for @libraryPlaylistName.
+  ///
+  /// In en, this message translates to:
+  /// **'Playlist name'**
+  String get libraryPlaylistName;
+
+  /// No description provided for @libraryPlaylistDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Description (optional)'**
+  String get libraryPlaylistDescription;
+
+  /// No description provided for @libraryPlaylistEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No playlists yet'**
+  String get libraryPlaylistEmpty;
+
+  /// No description provided for @libraryPlaylistEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a playlist to start collecting tracks'**
+  String get libraryPlaylistEmptyHint;
+
+  /// No description provided for @libraryPlaylistDetailEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No tracks in this playlist'**
+  String get libraryPlaylistDetailEmpty;
+
+  /// No description provided for @libraryPlaylistDetailEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Add tracks from search results'**
+  String get libraryPlaylistDetailEmptyHint;
+
+  /// No description provided for @libraryAddToPlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to playlist'**
+  String get libraryAddToPlaylist;
+
+  /// No description provided for @libraryCreateNewPlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Create new playlist'**
+  String get libraryCreateNewPlaylist;
+
+  /// No description provided for @libraryAddedToPlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Added to playlist'**
+  String get libraryAddedToPlaylist;
+
+  /// No description provided for @libraryTrackAlreadyInPlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Already in this playlist'**
+  String get libraryTrackAlreadyInPlaylist;
+
+  /// No description provided for @libraryPlaylistTracksCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} tracks'**
+  String libraryPlaylistTracksCount(Object count);
+
+  /// No description provided for @libraryPlaylistRename.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename'**
+  String get libraryPlaylistRename;
+
+  /// No description provided for @libraryPlaylistDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get libraryPlaylistDelete;
+
+  /// No description provided for @libraryPlaylistDeleteConfirmTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete playlist?'**
+  String get libraryPlaylistDeleteConfirmTitle;
+
+  /// No description provided for @libraryPlaylistDeleteConfirmMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This playlist and all its tracks will be removed.'**
+  String get libraryPlaylistDeleteConfirmMessage;
+
+  /// No description provided for @libraryRemoveFromPlaylist.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from playlist'**
+  String get libraryRemoveFromPlaylist;
+
+  /// No description provided for @libraryStreamingComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Coming soon'**
+  String get libraryStreamingComingSoon;
+
+  /// No description provided for @libraryStreamingComingSoonHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Streaming platform integration is not yet available.'**
+  String get libraryStreamingComingSoonHint;
 }
 
 class _AppLocalizationsDelegate

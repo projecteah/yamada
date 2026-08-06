@@ -7,7 +7,7 @@
   "copy": "複製",
   "copied": "已複製到剪貼簿",
 
-  "home": "音樂庫",
+  "home": "媒體庫",
 
   "search": "搜尋",
   "searchPlaceholder": "搜尋歌曲、藝術家、專輯...",
@@ -72,5 +72,28 @@
   "playerShuffleOff": "關閉隨機",
   "playerRepeatOff": "關閉循環",
   "playerRepeatAll": "列表循環",
-  "playerRepeatOne": "單曲循環"
+  "playerRepeatOne": "單曲循環",
+
+  "libraryTabLocal": "本機",
+  "libraryViewGrid": "網格檢視",
+  "libraryViewList": "列表檢視",
+  "libraryCreatePlaylist": "建立播放清單",
+  "libraryPlaylistName": "播放清單名稱",
+  "libraryPlaylistDescription": "描述（可選）",
+  "libraryPlaylistEmpty": "尚無播放清單",
+  "libraryPlaylistEmptyHint": "建立播放清單來開始收藏曲目",
+  "libraryPlaylistDetailEmpty": "此播放清單中尚無曲目",
+  "libraryPlaylistDetailEmptyHint": "從搜尋結果中新增曲目",
+  "libraryAddToPlaylist": "新增至播放清單",
+  "libraryCreateNewPlaylist": "建立新播放清單",
+  "libraryAddedToPlaylist": "已新增至播放清單",
+  "libraryTrackAlreadyInPlaylist": "曲目已在播放清單中",
+  "libraryPlaylistTracksCount": "{count} 首",
+  "libraryPlaylistRename": "重新命名",
+  "libraryPlaylistDelete": "刪除",
+  "libraryPlaylistDeleteConfirmTitle": "刪除播放清單？",
+  "libraryPlaylistDeleteConfirmMessage": "此播放清單及其所有曲目將被刪除。",
+  "libraryRemoveFromPlaylist": "從播放清單中移除",
+  "libraryStreamingComingSoon": "即將推出",
+  "libraryStreamingComingSoonHint": "串流媒體平台整合尚未提供。"
 }
