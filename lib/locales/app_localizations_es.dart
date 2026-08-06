@@ -187,4 +187,28 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get playerAddToQueue => 'Añadir a la cola';
+
+  @override
+  String get playerNext => 'Siguiente';
+
+  @override
+  String get playerPrevious => 'Anterior';
+
+  @override
+  String get playerShuffle => 'Aleatorio';
+
+  @override
+  String get playerShuffleOn => 'Aleatorio activado';
+
+  @override
+  String get playerShuffleOff => 'Aleatorio desactivado';
+
+  @override
+  String get playerRepeatOff => 'Repetir desactivado';
+
+  @override
+  String get playerRepeatAll => 'Repetir todo';
+
+  @override
+  String get playerRepeatOne => 'Repetir uno';
 }

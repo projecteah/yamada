@@ -64,5 +64,13 @@
   "playerPlay": "Play",
   "playerPause": "Pause",
   "playerPlayNow": "Play now",
-  "playerAddToQueue": "Add to queue"
+  "playerAddToQueue": "Add to queue",
+  "playerNext": "Next",
+  "playerPrevious": "Previous",
+  "playerShuffle": "Shuffle",
+  "playerShuffleOn": "Shuffle on",
+  "playerShuffleOff": "Shuffle off",
+  "playerRepeatOff": "Repeat off",
+  "playerRepeatAll": "Repeat all",
+  "playerRepeatOne": "Repeat one"
 }

@@ -181,4 +181,28 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get playerAddToQueue => 'キューに追加';
+
+  @override
+  String get playerNext => '次の曲';
+
+  @override
+  String get playerPrevious => '前の曲';
+
+  @override
+  String get playerShuffle => 'シャッフル';
+
+  @override
+  String get playerShuffleOn => 'シャッフルオン';
+
+  @override
+  String get playerShuffleOff => 'シャッフルオフ';
+
+  @override
+  String get playerRepeatOff => 'リピートオフ';
+
+  @override
+  String get playerRepeatAll => '全曲リピート';
+
+  @override
+  String get playerRepeatOne => '1曲リピート';
 }

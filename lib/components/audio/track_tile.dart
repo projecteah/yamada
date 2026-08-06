@@ -72,7 +72,7 @@ class TrackTile extends ConsumerWidget {
             tooltip: l10n.playerPlayNow,
             onPressed: () {
               ref
-                  .read(audioPlayerProvider.notifier)
+                  .read(audioPlayerProvider)
                   .playTrack(TrackDetail.fromTrack(track));
             },
           ),
@@ -81,7 +81,7 @@ class TrackTile extends ConsumerWidget {
             tooltip: l10n.playerAddToQueue,
             onPressed: () {
               ref
-                  .read(audioPlayerProvider.notifier)
+                  .read(audioPlayerProvider)
                   .addToQueue(TrackDetail.fromTrack(track));
               if (!context.mounted) return;
               ScaffoldMessenger.of(context).showSnackBar(

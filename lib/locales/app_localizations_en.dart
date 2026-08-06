@@ -186,4 +186,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get playerAddToQueue => 'Add to queue';
+
+  @override
+  String get playerNext => 'Next';
+
+  @override
+  String get playerPrevious => 'Previous';
+
+  @override
+  String get playerShuffle => 'Shuffle';
+
+  @override
+  String get playerShuffleOn => 'Shuffle on';
+
+  @override
+  String get playerShuffleOff => 'Shuffle off';
+
+  @override
+  String get playerRepeatOff => 'Repeat off';
+
+  @override
+  String get playerRepeatAll => 'Repeat all';
+
+  @override
+  String get playerRepeatOne => 'Repeat one';
 }

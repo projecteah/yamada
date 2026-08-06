@@ -186,6 +186,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get playerAddToQueue => 'Adicionar à fila';
+
+  @override
+  String get playerNext => 'Próxima';
+
+  @override
+  String get playerPrevious => 'Anterior';
+
+  @override
+  String get playerShuffle => 'Aleatório';
+
+  @override
+  String get playerShuffleOn => 'Aleatório ativado';
+
+  @override
+  String get playerShuffleOff => 'Aleatório desativado';
+
+  @override
+  String get playerRepeatOff => 'Repetir desativado';
+
+  @override
+  String get playerRepeatAll => 'Repetir tudo';
+
+  @override
+  String get playerRepeatOne => 'Repetir uma';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -370,4 +394,28 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get playerAddToQueue => 'Adicionar à fila';
+
+  @override
+  String get playerNext => 'Próxima';
+
+  @override
+  String get playerPrevious => 'Anterior';
+
+  @override
+  String get playerShuffle => 'Aleatório';
+
+  @override
+  String get playerShuffleOn => 'Aleatório ativado';
+
+  @override
+  String get playerShuffleOff => 'Aleatório desativado';
+
+  @override
+  String get playerRepeatOff => 'Repetir desativado';
+
+  @override
+  String get playerRepeatAll => 'Repetir tudo';
+
+  @override
+  String get playerRepeatOne => 'Repetir uma';
 }

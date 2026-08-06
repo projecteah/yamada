@@ -181,6 +181,30 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get playerAddToQueue => '加入队列';
+
+  @override
+  String get playerNext => '下一曲';
+
+  @override
+  String get playerPrevious => '上一曲';
+
+  @override
+  String get playerShuffle => '随机播放';
+
+  @override
+  String get playerShuffleOn => '开启随机';
+
+  @override
+  String get playerShuffleOff => '关闭随机';
+
+  @override
+  String get playerRepeatOff => '关闭循环';
+
+  @override
+  String get playerRepeatAll => '列表循环';
+
+  @override
+  String get playerRepeatOne => '单曲循环';
 }
 
 /// The translations for Chinese, as used in Taiwan, using the Han script (`zh_Hant_TW`).
@@ -360,4 +384,28 @@ class AppLocalizationsZhHantTw extends AppLocalizationsZh {
 
   @override
   String get playerAddToQueue => '加入佇列';
+
+  @override
+  String get playerNext => '下一曲';
+
+  @override
+  String get playerPrevious => '上一曲';
+
+  @override
+  String get playerShuffle => '隨機播放';
+
+  @override
+  String get playerShuffleOn => '開啟隨機';
+
+  @override
+  String get playerShuffleOff => '關閉隨機';
+
+  @override
+  String get playerRepeatOff => '關閉循環';
+
+  @override
+  String get playerRepeatAll => '列表循環';
+
+  @override
+  String get playerRepeatOne => '單曲循環';
 }

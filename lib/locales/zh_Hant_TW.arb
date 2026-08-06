@@ -64,5 +64,13 @@
   "playerPlay": "播放",
   "playerPause": "暫停",
   "playerPlayNow": "立即播放",
-  "playerAddToQueue": "加入佇列"
+  "playerAddToQueue": "加入佇列",
+  "playerNext": "下一曲",
+  "playerPrevious": "上一曲",
+  "playerShuffle": "隨機播放",
+  "playerShuffleOn": "開啟隨機",
+  "playerShuffleOff": "關閉隨機",
+  "playerRepeatOff": "關閉循環",
+  "playerRepeatAll": "列表循環",
+  "playerRepeatOne": "單曲循環"
 }

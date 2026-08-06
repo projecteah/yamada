@@ -64,5 +64,13 @@
   "playerPlay": "再生",
   "playerPause": "一時停止",
   "playerPlayNow": "今すぐ再生",
-  "playerAddToQueue": "キューに追加"
+  "playerAddToQueue": "キューに追加",
+  "playerNext": "次の曲",
+  "playerPrevious": "前の曲",
+  "playerShuffle": "シャッフル",
+  "playerShuffleOn": "シャッフルオン",
+  "playerShuffleOff": "シャッフルオフ",
+  "playerRepeatOff": "リピートオフ",
+  "playerRepeatAll": "全曲リピート",
+  "playerRepeatOne": "1曲リピート"
 }

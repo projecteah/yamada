@@ -96,7 +96,6 @@ class AppScaffold extends ConsumerWidget {
                     child: Material(
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(16),
-                        bottomLeft: Radius.circular(16),
                       ),
                       clipBehavior: Clip.antiAlias,
                       child: child,

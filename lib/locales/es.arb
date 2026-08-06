@@ -64,5 +64,13 @@
   "playerPlay": "Reproducir",
   "playerPause": "Pausar",
   "playerPlayNow": "Reproducir ahora",
-  "playerAddToQueue": "Añadir a la cola"
+  "playerAddToQueue": "Añadir a la cola",
+  "playerNext": "Siguiente",
+  "playerPrevious": "Anterior",
+  "playerShuffle": "Aleatorio",
+  "playerShuffleOn": "Aleatorio activado",
+  "playerShuffleOff": "Aleatorio desactivado",
+  "playerRepeatOff": "Repetir desactivado",
+  "playerRepeatAll": "Repetir todo",
+  "playerRepeatOne": "Repetir uno"
 }

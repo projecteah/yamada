@@ -454,6 +454,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Add to queue'**
   String get playerAddToQueue;
+
+  /// No description provided for @playerNext.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get playerNext;
+
+  /// No description provided for @playerPrevious.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get playerPrevious;
+
+  /// No description provided for @playerShuffle.
+  ///
+  /// In en, this message translates to:
+  /// **'Shuffle'**
+  String get playerShuffle;
+
+  /// No description provided for @playerShuffleOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Shuffle on'**
+  String get playerShuffleOn;
+
+  /// No description provided for @playerShuffleOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Shuffle off'**
+  String get playerShuffleOff;
+
+  /// No description provided for @playerRepeatOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeat off'**
+  String get playerRepeatOff;
+
+  /// No description provided for @playerRepeatAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeat all'**
+  String get playerRepeatAll;
+
+  /// No description provided for @playerRepeatOne.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeat one'**
+  String get playerRepeatOne;
 }
 
 class _AppLocalizationsDelegate
